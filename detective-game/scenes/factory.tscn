@@ -90,7 +90,7 @@ position = Vector2(294, 159)
 shape = SubResource("RectangleShape2D_3hls8")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=460035986]
-zoom = Vector2(2, 2)
+zoom = Vector2(3, 3)
 
 [node name="InvisibleWalls" type="StaticBody2D" parent="." unique_id=2129535338]
 

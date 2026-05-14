@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://c7weq58o3ptvc"]
+
+[ext_resource type="Script" uid="uid://brkkjve27vr0y" path="res://inventory_ui.gd" id="1_3n7vm"]
+
+[node name="Inventory" type="CanvasLayer" unique_id=808409213]
+
+[node name="InventoryUI" type="Control" parent="." unique_id=764758178]
+layout_mode = 3
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_bottom = 40.0
+grow_horizontal = 0
+script = ExtResource("1_3n7vm")
+
+[node name="ItemList" type="ItemList" parent="InventoryUI" unique_id=777041077]
+layout_mode = 0
+offset_left = -1405.0
+offset_top = 94.0
+offset_right = -47.0
+offset_bottom = 206.0

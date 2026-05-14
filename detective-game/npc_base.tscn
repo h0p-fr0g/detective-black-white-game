@@ -77,6 +77,7 @@ position = Vector2(-10, 38)
 shape = SubResource("CapsuleShape2D_tmksl")
 
 [node name="Label" type="Label" parent="." unique_id=2085303408]
+z_index = 5
 offset_left = -37.0
 offset_top = -28.0
 offset_right = 19.0

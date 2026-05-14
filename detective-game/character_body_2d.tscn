@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://px8iyfrb4dw7" path="res://character_body_2d.gd" id="1_f50pn"]
 [ext_resource type="Texture2D" uid="uid://s0m4c6up8eqq" path="res://assets/Idle.png" id="2_dd465"]
+[ext_resource type="PackedScene" uid="uid://c7weq58o3ptvc" path="res://Inventory.tscn" id="2_lhvu3"]
 [ext_resource type="Texture2D" uid="uid://d1103hpbhl8ff" path="res://assets/Jump.png" id="3_lhvu3"]
 [ext_resource type="Texture2D" uid="uid://xl1b4j4dckly" path="res://assets/Run.png" id="4_4sjlk"]
 [ext_resource type="Texture2D" uid="uid://by7m5j61jg3jb" path="res://assets/Walk.png" id="5_qp52p"]
@@ -295,6 +296,8 @@ height = 60.0
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=1033279704]
 z_index = 1
 script = ExtResource("1_f50pn")
+
+[node name="Inventory" parent="." unique_id=808409213 instance=ExtResource("2_lhvu3")]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1933102051]
 scale = Vector2(1.0951984, 1)

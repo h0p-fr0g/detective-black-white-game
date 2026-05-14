@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://dgkwndc8st8iy"]
+
+[ext_resource type="Script" uid="uid://byfpgqu4jnxx1" path="res://item.gd" id="1_3n7vm"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_bp1wp"]
+size = Vector2(20, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bp1wp"]
+size = Vector2(24, 24)
+
+[node name="Item" type="Area2D" unique_id=1465745035]
+script = ExtResource("1_3n7vm")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1588063668]
+texture = SubResource("PlaceholderTexture2D_bp1wp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1653715621]
+shape = SubResource("RectangleShape2D_bp1wp")
+
+[node name="Label" type="Label" parent="." unique_id=2110799022]
+z_index = 5
+offset_left = -46.0
+offset_top = -87.0
+offset_right = 40.0
+offset_bottom = -64.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Investigate"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
