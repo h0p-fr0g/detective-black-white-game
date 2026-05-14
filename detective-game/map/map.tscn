@@ -1,0 +1,67 @@
+[gd_scene format=3 uid="uid://c7g81efvnp34a"]
+
+[ext_resource type="Texture2D" uid="uid://drxs4xavmtnq8" path="res://map/map.png" id="1_hgrid"]
+[ext_resource type="PackedScene" uid="uid://bn7qm2iyf34lk" path="res://map/locations/location.tscn" id="2_a0dt8"]
+[ext_resource type="PackedScene" uid="uid://xf4fjkpbwfyw" path="res://city.tscn" id="3_e8e5r"]
+[ext_resource type="Texture2D" uid="uid://buc8o6ine20fx" path="res://map/locations/factory.png" id="3_kffv2"]
+[ext_resource type="Texture2D" uid="uid://bjkgb68myb8dy" path="res://map/locations/house.png" id="4_7lyie"]
+[ext_resource type="Texture2D" uid="uid://4sxvrrbgipyu" path="res://map/locations/forest.png" id="5_5jdw0"]
+[ext_resource type="PackedScene" uid="uid://cgnshdm5o6enq" path="res://factory.tscn" id="5_112ik"]
+[ext_resource type="PackedScene" uid="uid://dwkqwowb5jm" path="res://home.tscn" id="7_i5grx"]
+[ext_resource type="PackedScene" uid="uid://d3pbpfvk0vksp" path="res://forest.tscn" id="9_lct0g"]
+
+[node name="CanvasLayer" type="CanvasLayer" unique_id=540762562]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=797095605]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_hgrid")
+expand_mode = 1
+
+[node name="City" parent="." unique_id=1857448138 instance=ExtResource("2_a0dt8")]
+offset_left = 113.0
+offset_top = -230.0
+offset_right = 369.0
+offset_bottom = 26.0
+focus_neighbor_left = NodePath("../Factory")
+focus_neighbor_top = NodePath("../Forest")
+focus_neighbor_right = NodePath("../Forest")
+focus_neighbor_bottom = NodePath("../Home")
+scene = ExtResource("3_e8e5r")
+
+[node name="Factory" parent="." unique_id=1982211455 instance=ExtResource("2_a0dt8")]
+offset_left = -460.0
+offset_top = -277.0
+offset_right = -204.0
+offset_bottom = -21.0
+focus_neighbor_right = NodePath("../City")
+texture_normal = ExtResource("3_kffv2")
+texture_hover = ExtResource("3_kffv2")
+scene = ExtResource("5_112ik")
+
+[node name="Home" parent="." unique_id=603126600 instance=ExtResource("2_a0dt8")]
+offset_left = -582.0
+offset_top = 134.0
+offset_right = -326.0
+offset_bottom = 390.0
+focus_neighbor_top = NodePath("../City")
+focus_neighbor_right = NodePath("../City")
+texture_normal = ExtResource("4_7lyie")
+texture_hover = ExtResource("4_7lyie")
+scene = ExtResource("7_i5grx")
+
+[node name="Forest" parent="." unique_id=1379863327 instance=ExtResource("2_a0dt8")]
+offset_left = 445.0
+offset_top = -500.0
+offset_right = 701.0
+offset_bottom = -244.0
+focus_neighbor_left = NodePath("../City")
+focus_neighbor_bottom = NodePath("../City")
+texture_normal = ExtResource("5_5jdw0")
+texture_hover = ExtResource("5_5jdw0")
+scene = ExtResource("9_lct0g")
+
+[node name="Map" type="Node2D" parent="." unique_id=850541984]
