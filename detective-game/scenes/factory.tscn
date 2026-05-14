@@ -105,6 +105,5 @@ shape = SubResource("RectangleShape2D_hn12h")
 [node name="NPC_Base" parent="." unique_id=1075720957 instance=ExtResource("2_1y8me")]
 position = Vector2(172, 83)
 npc_name = "Dude"
-dialog_text = "Hello..."
 character_sprite = SubResource("SpriteFrames_1pe0h")
 flip_h = true

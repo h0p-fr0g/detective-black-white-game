@@ -1,7 +1,8 @@
 extends Area2D
 
 @export var npc_name: String = "Person"
-@export_multiline var dialog_text: String = "To be implemented..."
+@export var dialogue: DialogueData
+@export var dialogue_interacted: DialogueData
 @export var character_sprite: SpriteFrames
 @export var flip_h: bool = false
 
@@ -9,6 +10,7 @@ extends Area2D
 @onready var sprite = $AnimatedSprite2D
 
 var player_in_range = false
+var interacted = false
 
 func _ready():
 	tooltip.hide()
@@ -30,7 +32,5 @@ func _on_body_exited(body):
 
 func _process(_delta):
 	if player_in_range and Input.is_action_just_pressed("interact"):
-		say_hello()
-
-func say_hello():
-	tooltip.text = npc_name + " says: " + dialog_text
+		SignalBus.dialogue_started.emit(dialogue_interacted if interacted else dialogue)
+		interacted = true

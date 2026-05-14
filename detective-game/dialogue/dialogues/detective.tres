@@ -1,0 +1,29 @@
+[gd_resource type="Resource" script_class="DialogueData" format=3 uid="uid://cek4mj28ny05x"]
+
+[ext_resource type="Script" uid="uid://dfnb2v0a8awp" path="res://dialogue/dialogue_box/dialogue_entry.gd" id="1_7hdkd"]
+[ext_resource type="Texture2D" uid="uid://b31l38ff0mto3" path="res://dialogue/portraits/detective.png" id="2_t540k"]
+[ext_resource type="Texture2D" uid="uid://c5i8kv0lf6sqb" path="res://dialogue/portraits/werewolf.png" id="3_qeepd"]
+[ext_resource type="Script" uid="uid://ctol7mx6xrebc" path="res://dialogue/dialogue_box/dialogue_data.gd" id="4_lcswq"]
+
+[sub_resource type="Resource" id="Resource_ra1ae"]
+script = ExtResource("1_7hdkd")
+character_sprite = ExtResource("2_t540k")
+text = Array[String](["I am a very serious detective solving very serious crimes.", "I am very much not deranged", "Can't you tell by my luscious pony tail?"])
+metadata/_custom_type_script = "uid://dfnb2v0a8awp"
+
+[sub_resource type="Resource" id="Resource_3a0rr"]
+script = ExtResource("1_7hdkd")
+character_sprite = ExtResource("3_qeepd")
+text = Array[String](["LIES!", "you are very much deranged!", "You are also me and possibly a murderer AWOOOOOOO"])
+metadata/_custom_type_script = "uid://dfnb2v0a8awp"
+
+[sub_resource type="Resource" id="Resource_qoh6q"]
+script = ExtResource("1_7hdkd")
+character_sprite = ExtResource("2_t540k")
+text = Array[String](["NO!", "That's impossible!"])
+metadata/_custom_type_script = "uid://dfnb2v0a8awp"
+
+[resource]
+script = ExtResource("4_lcswq")
+dialogue_entries = Array[ExtResource("1_7hdkd")]([SubResource("Resource_ra1ae"), SubResource("Resource_3a0rr"), SubResource("Resource_qoh6q")])
+metadata/_custom_type_script = "uid://ctol7mx6xrebc"

@@ -1,0 +1,48 @@
+[gd_resource type="Resource" script_class="DialogueData" format=3 uid="uid://bbbscjb71jfr"]
+
+[ext_resource type="Script" uid="uid://dfnb2v0a8awp" path="res://dialogue/dialogue_box/dialogue_entry.gd" id="1_sbaev"]
+[ext_resource type="Script" uid="uid://ctol7mx6xrebc" path="res://dialogue/dialogue_box/dialogue_data.gd" id="1_usnrp"]
+[ext_resource type="Texture2D" uid="uid://ck0avn3g1xqp6" path="res://dialogue/portraits/npc.png" id="2_pehqc"]
+[ext_resource type="Texture2D" uid="uid://bsbcmhouti2at" path="res://dialogue/portraits/player.png" id="3_cd8ni"]
+[ext_resource type="Texture2D" uid="uid://c5i8kv0lf6sqb" path="res://dialogue/portraits/werewolf.png" id="4_qwh48"]
+
+[sub_resource type="Resource" id="Resource_mx4yq"]
+script = ExtResource("1_sbaev")
+character_sprite = ExtResource("2_pehqc")
+text = Array[String](["Who the hell are you?"])
+metadata/_custom_type_script = "uid://dfnb2v0a8awp"
+
+[sub_resource type="Resource" id="Resource_6s5ti"]
+script = ExtResource("1_sbaev")
+character_sprite = ExtResource("3_cd8ni")
+text = Array[String](["I have come to solve a serious crime!", "the crime to end all crimes!"])
+metadata/_custom_type_script = "uid://dfnb2v0a8awp"
+
+[sub_resource type="Resource" id="Resource_r2258"]
+script = ExtResource("1_sbaev")
+character_sprite = ExtResource("2_pehqc")
+text = Array[String](["how's that going?"])
+metadata/_custom_type_script = "uid://dfnb2v0a8awp"
+
+[sub_resource type="Resource" id="Resource_rgcw8"]
+script = ExtResource("1_sbaev")
+character_sprite = ExtResource("3_cd8ni")
+text = Array[String](["not so great", "the prime suspect is currently myself"])
+metadata/_custom_type_script = "uid://dfnb2v0a8awp"
+
+[sub_resource type="Resource" id="Resource_e5d2u"]
+script = ExtResource("1_sbaev")
+character_sprite = ExtResource("4_qwh48")
+text = Array[String](["or was it really me??? AWOOOO!"])
+metadata/_custom_type_script = "uid://dfnb2v0a8awp"
+
+[sub_resource type="Resource" id="Resource_bhgke"]
+script = ExtResource("1_sbaev")
+character_sprite = ExtResource("2_pehqc")
+text = Array[String](["...ok", "you got issues man!"])
+metadata/_custom_type_script = "uid://dfnb2v0a8awp"
+
+[resource]
+script = ExtResource("1_usnrp")
+dialogue_entries = Array[ExtResource("1_sbaev")]([SubResource("Resource_mx4yq"), SubResource("Resource_6s5ti"), SubResource("Resource_r2258"), SubResource("Resource_rgcw8"), SubResource("Resource_e5d2u"), SubResource("Resource_bhgke")])
+metadata/_custom_type_script = "uid://ctol7mx6xrebc"

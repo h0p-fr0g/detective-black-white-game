@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://pcvy37xubkna" path="res://character_body_2d.tscn" id="1_16pka"]
 [ext_resource type="PackedScene" uid="uid://ckchbjewye5x0" path="res://npc_base.tscn" id="2_j8bo8"]
 [ext_resource type="Texture2D" uid="uid://ccjmhc55sm4v5" path="res://assets/npc1/Idle.png" id="3_1jdk1"]
-[ext_resource type="PackedScene" uid="uid://dgkwndc8st8iy" path="res://Item.tscn" id="4_movw8"]
+[ext_resource type="PackedScene" path="res://Item.tscn" id="4_movw8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3hls8"]
 size = Vector2(6012, 20)

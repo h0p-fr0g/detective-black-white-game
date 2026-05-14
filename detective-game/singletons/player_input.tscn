@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://bhi7n3kg5f6yw"]
+
+[ext_resource type="Script" uid="uid://8x8c2lc01xxa" path="res://singletons/player_input.gd" id="1_slvq6"]
+[ext_resource type="PackedScene" uid="uid://c7g81efvnp34a" path="res://map/map.tscn" id="2_b3qj2"]
+[ext_resource type="Resource" uid="uid://cek4mj28ny05x" path="res://dialogue/dialogues/detective.tres" id="3_1e10b"]
+
+[node name="PlayerInput" type="Node" unique_id=771084232]
+script = ExtResource("1_slvq6")
+map_scene = ExtResource("2_b3qj2")
+example_dialogue = ExtResource("3_1e10b")

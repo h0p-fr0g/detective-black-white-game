@@ -2,6 +2,8 @@
 
 [ext_resource type="Script" uid="uid://dycn803nym273" path="res://npc_base.gd" id="1_tmksl"]
 [ext_resource type="Texture2D" uid="uid://s0m4c6up8eqq" path="res://assets/Idle.png" id="2_6txx1"]
+[ext_resource type="Resource" uid="uid://bbbscjb71jfr" path="res://dialogue/dialogues/npc.tres" id="2_s6gr2"]
+[ext_resource type="Resource" uid="uid://fxa8xrvmvtvr" path="res://dialogue/dialogues/npc_interacted.tres" id="3_chfhp"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_s6gr2"]
 atlas = ExtResource("2_6txx1")
@@ -66,8 +68,11 @@ height = 60.0
 
 [node name="NPC_Base" type="Area2D" unique_id=1075720957]
 script = ExtResource("1_tmksl")
+dialogue = ExtResource("2_s6gr2")
+dialogue_interacted = ExtResource("3_chfhp")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1501660920]
+process_mode = 3
 position = Vector2(-6, 3)
 sprite_frames = SubResource("SpriteFrames_6du4j")
 animation = &"idle"
