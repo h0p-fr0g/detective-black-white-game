@@ -14,9 +14,12 @@ offset_bottom = 40.0
 grow_horizontal = 0
 script = ExtResource("1_3n7vm")
 
-[node name="ItemList" type="ItemList" parent="InventoryUI" unique_id=777041077]
-layout_mode = 0
-offset_left = -1405.0
-offset_top = 94.0
-offset_right = -47.0
-offset_bottom = 206.0
+[node name="GridContainer" type="GridContainer" parent="InventoryUI" unique_id=1894124583]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_bottom = 40.0
+grow_horizontal = 0
+columns = 5

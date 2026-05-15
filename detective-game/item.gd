@@ -34,6 +34,6 @@ func _process(_delta):
 
 func pick_up():
 	if Inventory: 
-		Inventory.add_item(item_name)
+		Inventory.add_item(item_name, item_texture)		
 		print(item_name, " picked up!")	
 		queue_free()

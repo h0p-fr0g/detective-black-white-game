@@ -1,11 +1,11 @@
-[gd_scene format=3 uid="uid://c1hdb27h0qme6"]
+[gd_scene format=3 uid="uid://cxl52ci2dnspu"]
 
-[ext_resource type="PackedScene" uid="uid://pcvy37xubkna" path="res://character_body_2d.tscn" id="1_16pka"]
-[ext_resource type="PackedScene" uid="uid://ckchbjewye5x0" path="res://npc_base.tscn" id="2_j8bo8"]
-[ext_resource type="Texture2D" uid="uid://ccjmhc55sm4v5" path="res://assets/npc1/Idle.png" id="3_1jdk1"]
-[ext_resource type="PackedScene" uid="uid://csbefljmvbyr4" path="res://time_ui.tscn" id="3_oacpt"]
-[ext_resource type="PackedScene" uid="uid://dgkwndc8st8iy" path="res://Item.tscn" id="4_movw8"]
-[ext_resource type="Shader" uid="uid://ghi7dn6nf483" path="res://scenes/level.gdshader" id="6_2jj31"]
+[ext_resource type="PackedScene" uid="uid://pcvy37xubkna" path="res://character_body_2d.tscn" id="1_jhtsd"]
+[ext_resource type="PackedScene" uid="uid://dgkwndc8st8iy" path="res://Item.tscn" id="2_kny4u"]
+[ext_resource type="PackedScene" uid="uid://csbefljmvbyr4" path="res://time_ui.tscn" id="3_h66u7"]
+[ext_resource type="PackedScene" uid="uid://ckchbjewye5x0" path="res://npc_base.tscn" id="4_25ms6"]
+[ext_resource type="Texture2D" uid="uid://ccjmhc55sm4v5" path="res://assets/npc1/Idle.png" id="5_fakml"]
+[ext_resource type="Shader" uid="uid://ghi7dn6nf483" path="res://scenes/level.gdshader" id="6_1nvrk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3hls8"]
 size = Vector2(6012, 20)
@@ -20,31 +20,31 @@ size = Vector2(34.875, 249)
 size = Vector2(20, 20)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ihfcg"]
-atlas = ExtResource("3_1jdk1")
+atlas = ExtResource("5_fakml")
 region = Rect2(0, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rka8t"]
-atlas = ExtResource("3_1jdk1")
+atlas = ExtResource("5_fakml")
 region = Rect2(128, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5hph3"]
-atlas = ExtResource("3_1jdk1")
+atlas = ExtResource("5_fakml")
 region = Rect2(256, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_j7kpp"]
-atlas = ExtResource("3_1jdk1")
+atlas = ExtResource("5_fakml")
 region = Rect2(384, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bjebc"]
-atlas = ExtResource("3_1jdk1")
+atlas = ExtResource("5_fakml")
 region = Rect2(512, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5rr72"]
-atlas = ExtResource("3_1jdk1")
+atlas = ExtResource("5_fakml")
 region = Rect2(640, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gyffv"]
-atlas = ExtResource("3_1jdk1")
+atlas = ExtResource("5_fakml")
 region = Rect2(768, 0, 128, 128)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_1pe0h"]
@@ -77,12 +77,12 @@ animations = [{
 }]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_2jj31"]
-shader = ExtResource("6_2jj31")
+shader = ExtResource("6_1nvrk")
 shader_parameter/invert_amount = 0.0
 
 [node name="Level1" type="Node2D" unique_id=1876739268]
 
-[node name="Player" parent="." unique_id=1033279704 instance=ExtResource("1_16pka")]
+[node name="Player" parent="." unique_id=1033279704 instance=ExtResource("1_jhtsd")]
 position = Vector2(-48, 86)
 
 [node name="Floor" type="StaticBody2D" parent="." unique_id=673317696]
@@ -114,14 +114,14 @@ shape = SubResource("RectangleShape2D_hbghi")
 position = Vector2(338, 26)
 shape = SubResource("RectangleShape2D_hn12h")
 
-[node name="Item" parent="." unique_id=1465745035 instance=ExtResource("4_movw8")]
+[node name="Item" parent="." unique_id=1465745035 instance=ExtResource("2_kny4u")]
 position = Vector2(-188, 140)
 item_name = "Letter"
 item_texture = SubResource("PlaceholderTexture2D_movw8")
 
-[node name="TimeUI" parent="." unique_id=1036368114 instance=ExtResource("3_oacpt")]
+[node name="TimeUI" parent="." unique_id=1036368114 instance=ExtResource("3_h66u7")]
 
-[node name="NPC_Base" parent="." unique_id=1075720957 instance=ExtResource("2_j8bo8")]
+[node name="NPC_Base" parent="." unique_id=1075720957 instance=ExtResource("4_25ms6")]
 position = Vector2(212, 83)
 npc_name = "Dude"
 character_sprite = SubResource("SpriteFrames_1pe0h")
