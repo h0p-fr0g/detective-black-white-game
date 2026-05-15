@@ -2,13 +2,96 @@
 
 [ext_resource type="Texture2D" uid="uid://drxs4xavmtnq8" path="res://map/map.png" id="1_hgrid"]
 [ext_resource type="PackedScene" uid="uid://bn7qm2iyf34lk" path="res://map/locations/location.tscn" id="2_a0dt8"]
-[ext_resource type="PackedScene" uid="uid://c1hdb27h0qme6" path="res://scenes/city.tscn" id="3_e8e5r"]
+[ext_resource type="PackedScene" uid="uid://c1hdb27h0qme6" path="res://scenes/store.tscn" id="3_e8e5r"]
 [ext_resource type="Texture2D" uid="uid://buc8o6ine20fx" path="res://map/locations/factory.png" id="3_kffv2"]
 [ext_resource type="Texture2D" uid="uid://bjkgb68myb8dy" path="res://map/locations/house.png" id="4_7lyie"]
 [ext_resource type="Texture2D" uid="uid://4sxvrrbgipyu" path="res://map/locations/forest.png" id="5_5jdw0"]
-[ext_resource type="PackedScene" uid="uid://dn574rgaxfgxn" path="res://scenes/factory.tscn" id="5_112ik"]
-[ext_resource type="PackedScene" uid="uid://dwkqwowb5jm" path="res://scenes/home.tscn" id="7_i5grx"]
-[ext_resource type="PackedScene" uid="uid://cxn1rk08mf1gd" path="res://scenes/forest.tscn" id="9_lct0g"]
+[ext_resource type="PackedScene" uid="uid://dn574rgaxfgxn" path="res://scenes/bar.tscn" id="5_112ik"]
+[ext_resource type="PackedScene" uid="uid://pcvy37xubkna" path="res://character_body_2d.tscn" id="7_i5grx"]
+[ext_resource type="PackedScene" uid="uid://ckchbjewye5x0" path="res://npc_base.tscn" id="8_lct0g"]
+[ext_resource type="Texture2D" uid="uid://ccjmhc55sm4v5" path="res://assets/npc1/Idle.png" id="9_k8tny"]
+[ext_resource type="PackedScene" uid="uid://cxn1rk08mf1gd" path="res://scenes/apartments.tscn" id="9_lct0g"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3hls8"]
+size = Vector2(6012, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hbghi"]
+size = Vector2(8, 230)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hn12h"]
+size = Vector2(7.5, 249)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ihfcg"]
+atlas = ExtResource("9_k8tny")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rka8t"]
+atlas = ExtResource("9_k8tny")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5hph3"]
+atlas = ExtResource("9_k8tny")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j7kpp"]
+atlas = ExtResource("9_k8tny")
+region = Rect2(384, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bjebc"]
+atlas = ExtResource("9_k8tny")
+region = Rect2(512, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5rr72"]
+atlas = ExtResource("9_k8tny")
+region = Rect2(640, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gyffv"]
+atlas = ExtResource("9_k8tny")
+region = Rect2(768, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1pe0h"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ihfcg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rka8t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5hph3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j7kpp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bjebc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5rr72")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gyffv")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="PackedScene" id="PackedScene_ap8vc"]
+_bundled = {
+"conn_count": 0,
+"conns": PackedInt32Array(),
+"editable_instances": [],
+"id_paths": [PackedInt32Array(), PackedInt32Array(), PackedInt32Array(), PackedInt32Array(), PackedInt32Array(), PackedInt32Array(), PackedInt32Array(), PackedInt32Array(), PackedInt32Array()],
+"names": PackedStringArray("Level1", "Node2D", "Player", "position", "Floor", "StaticBody2D", "position", "ColorRect", "ColorRect", "offset_left", "offset_top", "offset_right", "offset_bottom", "color", "CollisionShape2D", "CollisionShape2D", "position", "shape", "Camera2D", "Camera2D", "zoom", "InvisibleWalls", "StaticBody2D", "CollisionShape2D", "CollisionShape2D", "position", "shape", "CollisionShape2D2", "CollisionShape2D", "position", "shape", "NPC_Base", "position", "npc_name", "dialog_text", "character_sprite", "flip_h"),
+"node_count": 10,
+"node_ids": PackedInt32Array(1876739268, 1033279704, 673317696, 1148321342, 3836422, 460035986, 2129535338, 1450419597, 513583656, 1075720957),
+"node_paths": [NodePath("."), NodePath("."), NodePath("./Floor"), NodePath("./Floor"), NodePath("."), NodePath("."), NodePath("./InvisibleWalls"), NodePath("./InvisibleWalls"), NodePath(".")],
+"nodes": PackedInt32Array(-1, -1, 1, 0, -1, 0, 0, 1073741824, 0, 2147483647, 2, 0, 1, 3, 1, 0, 1073741825, 0, 5, 4, -1, 1, 6, 2, 0, 1073741826, 0, 8, 7, -1, 5, 9, 3, 10, 4, 11, 5, 12, 6, 13, 7, 0, 1073741827, 0, 15, 14, -1, 2, 16, 8, 17, 9, 0, 1073741828, 0, 19, 18, -1, 1, 20, 10, 0, 1073741829, 0, 22, 21, -1, 0, 0, 1073741830, 0, 24, 23, -1, 2, 25, 11, 26, 12, 0, 1073741831, 0, 28, 27, -1, 2, 29, 13, 30, 14, 0, 1073741832, 0, 2147483647, 31, 15, 5, 32, 16, 33, 17, 34, 18, 35, 19, 36, 20, 0),
+"variants": [ExtResource("7_i5grx"), Vector2(25, 86), Vector2(0, 1), -2712.0, 149.0, 3300.0, 169.0, Color(0, 0, 0, 1), Vector2(294, 159), SubResource("RectangleShape2D_3hls8"), Vector2(2, 2), Vector2(-292, 35), SubResource("RectangleShape2D_hbghi"), Vector2(293, 24), SubResource("RectangleShape2D_hn12h"), ExtResource("8_lct0g"), Vector2(172, 83), "Dude", "Hello...", SubResource("SpriteFrames_1pe0h"), true],
+"version": 3
+}
 
 [node name="CanvasLayer" type="CanvasLayer" unique_id=540762562]
 
@@ -21,45 +104,45 @@ grow_vertical = 2
 texture = ExtResource("1_hgrid")
 expand_mode = 1
 
-[node name="City" parent="." unique_id=1857448138 instance=ExtResource("2_a0dt8")]
+[node name="Bar" parent="." unique_id=1857448138 instance=ExtResource("2_a0dt8")]
 offset_left = 113.0
 offset_top = -230.0
 offset_right = 369.0
 offset_bottom = 26.0
-focus_neighbor_left = NodePath("../Factory")
-focus_neighbor_top = NodePath("../Forest")
-focus_neighbor_right = NodePath("../Forest")
-focus_neighbor_bottom = NodePath("../Home")
+focus_neighbor_left = NodePath("../Store")
+focus_neighbor_top = NodePath("../Apartments")
+focus_neighbor_right = NodePath("../Apartments")
+focus_neighbor_bottom = NodePath("../My Office")
 scene = ExtResource("3_e8e5r")
 
-[node name="Factory" parent="." unique_id=1982211455 instance=ExtResource("2_a0dt8")]
+[node name="Store" parent="." unique_id=1982211455 instance=ExtResource("2_a0dt8")]
 offset_left = -460.0
 offset_top = -277.0
 offset_right = -204.0
 offset_bottom = -21.0
-focus_neighbor_right = NodePath("../City")
+focus_neighbor_right = NodePath("../Bar")
 texture_normal = ExtResource("3_kffv2")
 texture_hover = ExtResource("3_kffv2")
 scene = ExtResource("5_112ik")
 
-[node name="Home" parent="." unique_id=603126600 instance=ExtResource("2_a0dt8")]
+[node name="My Office" parent="." unique_id=603126600 instance=ExtResource("2_a0dt8")]
 offset_left = -582.0
 offset_top = 134.0
 offset_right = -326.0
 offset_bottom = 390.0
-focus_neighbor_top = NodePath("../City")
-focus_neighbor_right = NodePath("../City")
+focus_neighbor_top = NodePath("../Bar")
+focus_neighbor_right = NodePath("../Bar")
 texture_normal = ExtResource("4_7lyie")
 texture_hover = ExtResource("4_7lyie")
-scene = ExtResource("7_i5grx")
+scene = SubResource("PackedScene_ap8vc")
 
-[node name="Forest" parent="." unique_id=1379863327 instance=ExtResource("2_a0dt8")]
+[node name="Apartments" parent="." unique_id=1379863327 instance=ExtResource("2_a0dt8")]
 offset_left = 445.0
 offset_top = -500.0
 offset_right = 701.0
 offset_bottom = -244.0
-focus_neighbor_left = NodePath("../City")
-focus_neighbor_bottom = NodePath("../City")
+focus_neighbor_left = NodePath("../Bar")
+focus_neighbor_bottom = NodePath("../Bar")
 texture_normal = ExtResource("5_5jdw0")
 texture_hover = ExtResource("5_5jdw0")
 scene = ExtResource("9_lct0g")

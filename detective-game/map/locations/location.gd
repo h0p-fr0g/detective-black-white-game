@@ -3,6 +3,7 @@ extends TextureButton
 @export var scene : PackedScene
 
 func _ready() -> void:
+	$Label.text = name
 	if PlayerInput.last_scene_file_path == scene.resource_path:
 		grab_focus()
 

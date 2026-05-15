@@ -3,6 +3,10 @@
 [ext_resource type="Texture2D" uid="uid://cdx43tdo14fjf" path="res://map/locations/City.png" id="1_25qeq"]
 [ext_resource type="Script" uid="uid://b327t4ouvdfr5" path="res://map/locations/location.gd" id="2_vas0f"]
 
+[sub_resource type="LabelSettings" id="LabelSettings_25qeq"]
+font_size = 32
+font_color = Color(0, 0, 0, 1)
+
 [node name="Location" type="TextureButton" unique_id=842607480]
 anchors_preset = 8
 anchor_left = 0.5
@@ -19,6 +23,22 @@ pivot_offset_ratio = Vector2(0.5, 0.5)
 texture_normal = ExtResource("1_25qeq")
 texture_hover = ExtResource("1_25qeq")
 script = ExtResource("2_vas0f")
+
+[node name="Label" type="Label" parent="." unique_id=1995489826]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -29.0
+offset_top = -169.0
+offset_right = 30.0
+offset_bottom = -124.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "test"
+label_settings = SubResource("LabelSettings_25qeq")
 
 [connection signal="focus_entered" from="." to="." method="_on_focus_entered"]
 [connection signal="pressed" from="." to="." method="_on_pressed"]
