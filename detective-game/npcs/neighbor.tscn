@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://ffgeu5flf3kx"]
+
+[ext_resource type="PackedScene" uid="uid://ckchbjewye5x0" path="res://npc_base.tscn" id="1_nflwa"]
+
+[node name="neighbor" unique_id=1002817240 instance=ExtResource("1_nflwa")]

@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://i26u4rfyxa7"]
+
+[ext_resource type="PackedScene" uid="uid://ckchbjewye5x0" path="res://npc_base.tscn" id="1_xg6gc"]
+
+[node name="Driver" unique_id=1002817240 instance=ExtResource("1_xg6gc")]
