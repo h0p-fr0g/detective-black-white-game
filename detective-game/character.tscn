@@ -32,7 +32,7 @@ region = Rect2(3732, 0, 933, 1643)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lpiy1"]
 atlas = ExtResource("4_4sjlk")
-region = Rect2(0, 1643, 933, 1643)
+region = Rect2(3732, 1643, 933, 1643)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_yxww1"]
 atlas = ExtResource("5_qp52p")
@@ -56,7 +56,7 @@ region = Rect2(3732, 0, 933, 1643)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7tnxx"]
 atlas = ExtResource("5_qp52p")
-region = Rect2(0, 1643, 933, 1643)
+region = Rect2(3732, 1643, 933, 1643)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_lmwkj"]
 animations = [{
@@ -116,8 +116,8 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ij6vw"]
-radius = 16.0
-height = 60.0
+radius = 30.0
+height = 192.0
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=1033279704]
 z_index = 1
@@ -127,12 +127,11 @@ script = ExtResource("1_f50pn")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1933102051]
 process_mode = 3
-position = Vector2(0, -1.9073486e-06)
-scale = Vector2(0.0653323, 0.059653398)
+scale = Vector2(0.17463525, 0.15945534)
 sprite_frames = SubResource("SpriteFrames_lmwkj")
-animation = &"run"
-frame_progress = 0.095650576
+animation = &"walk"
+frame_progress = 0.8487658
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1799183469]
-position = Vector2(0, 14)
+position = Vector2(-15, 18)
 shape = SubResource("CapsuleShape2D_ij6vw")

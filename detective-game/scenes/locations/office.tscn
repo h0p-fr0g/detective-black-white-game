@@ -8,7 +8,7 @@
 [ext_resource type="Shader" uid="uid://ghi7dn6nf483" path="res://scenes/level.gdshader" id="5_yk55p"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qphb6"]
-size = Vector2(6012, 20)
+size = Vector2(6012, 43)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hub07"]
 size = Vector2(27, 230)
@@ -26,10 +26,10 @@ shader_parameter/invert_amount = 0.0
 [node name="Office" unique_id=1552120353 instance=ExtResource("1_ps4dc")]
 
 [node name="Player" parent="." index="1" unique_id=1033279704 instance=ExtResource("2_cf7xv")]
-position = Vector2(-48, 86)
+position = Vector2(-51, 24)
 
 [node name="Floor" type="StaticBody2D" parent="." index="2" unique_id=1488615809]
-position = Vector2(0, 1)
+position = Vector2(-11, 10)
 
 [node name="ColorRect" type="ColorRect" parent="Floor" index="0" unique_id=999470385]
 visible = false
@@ -40,7 +40,7 @@ offset_bottom = 169.0
 color = Color(0, 0, 0, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor" index="1" unique_id=1020263756]
-position = Vector2(302, 159)
+position = Vector2(302, 147.5)
 shape = SubResource("RectangleShape2D_qphb6")
 
 [node name="InvisibleWalls" type="StaticBody2D" parent="." index="3" unique_id=1321387656]
@@ -55,13 +55,13 @@ position = Vector2(338, 26)
 shape = SubResource("RectangleShape2D_2knxt")
 
 [node name="Files" parent="." index="4" unique_id=1465745035 instance=ExtResource("3_qv0li")]
-position = Vector2(-188, 140)
+position = Vector2(-186, 22)
 item_name = "Read"
 item_texture = SubResource("PlaceholderTexture2D_fmddn")
 investigatable = true
 
 [node name="Phone" parent="." index="5" unique_id=1858461430 instance=ExtResource("4_cf7xv")]
-position = Vector2(154, 138)
+position = Vector2(167, 13)
 
 [node name="TimeUI" parent="." index="6" unique_id=1036368114 instance=ExtResource("4_cc6ur")]
 
