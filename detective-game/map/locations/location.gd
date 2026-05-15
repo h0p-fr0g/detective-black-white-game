@@ -2,7 +2,11 @@ extends TextureButton
 
 @export var scene : PackedScene
 
-func _process(delta):
+func _ready() -> void:
+	if PlayerInput.last_scene_file_path == scene.resource_path:
+		grab_focus()
+
+func _process(delta) -> void:
 	var target = Vector2(1.2, 1.2) if has_focus() or is_hovered() else Vector2.ONE
 	scale = scale.lerp(target, delta * 10)
 	
