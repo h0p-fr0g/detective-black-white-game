@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://pcvy37xubkna" path="res://character_body_2d.tscn" id="1_hub07"]
 [ext_resource type="PackedScene" uid="uid://dgkwndc8st8iy" path="res://Item.tscn" id="2_2knxt"]
 [ext_resource type="PackedScene" uid="uid://csbefljmvbyr4" path="res://time_ui.tscn" id="3_fmddn"]
+[ext_resource type="PackedScene" uid="uid://c1qiyct5g6pqu" path="res://object_base.tscn" id="3_qphb6"]
 [ext_resource type="Shader" uid="uid://ghi7dn6nf483" path="res://scenes/level.gdshader" id="6_6hbky"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3hls8"]
@@ -55,10 +56,14 @@ shape = SubResource("RectangleShape2D_hbghi")
 position = Vector2(338, 26)
 shape = SubResource("RectangleShape2D_hn12h")
 
-[node name="Letter" parent="." unique_id=1465745035 instance=ExtResource("2_2knxt")]
+[node name="Case Files" parent="." unique_id=1465745035 instance=ExtResource("2_2knxt")]
 position = Vector2(-188, 140)
-item_name = "Phone"
+item_name = "Read"
 item_texture = SubResource("PlaceholderTexture2D_movw8")
+investigatable = true
+
+[node name="Telephone" parent="." unique_id=1858461430 instance=ExtResource("3_qphb6")]
+position = Vector2(189, 138)
 
 [node name="TimeUI" parent="." unique_id=1036368114 instance=ExtResource("3_fmddn")]
 
