@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cxl52ci2dnspu"]
 
-[ext_resource type="PackedScene" uid="uid://pcvy37xubkna" path="res://character_body_2d.tscn" id="1_jhtsd"]
+[ext_resource type="PackedScene" uid="uid://pcvy37xubkna" path="res://character.tscn" id="1_jhtsd"]
 [ext_resource type="PackedScene" uid="uid://dgkwndc8st8iy" path="res://Item.tscn" id="2_kny4u"]
 [ext_resource type="PackedScene" uid="uid://csbefljmvbyr4" path="res://time_ui.tscn" id="3_h66u7"]
 [ext_resource type="PackedScene" uid="uid://ckchbjewye5x0" path="res://npc_base.tscn" id="4_25ms6"]
