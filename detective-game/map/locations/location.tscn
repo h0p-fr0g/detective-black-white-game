@@ -3,7 +3,11 @@
 [ext_resource type="Texture2D" uid="uid://cdx43tdo14fjf" path="res://map/locations/City.png" id="1_25qeq"]
 [ext_resource type="Script" uid="uid://b327t4ouvdfr5" path="res://map/locations/location.gd" id="2_vas0f"]
 
+[sub_resource type="SystemFont" id="SystemFont_25qeq"]
+font_names = PackedStringArray("Comic Sans MS")
+
 [sub_resource type="LabelSettings" id="LabelSettings_25qeq"]
+font = SubResource("SystemFont_25qeq")
 font_size = 32
 font_color = Color(0, 0, 0, 1)
 
