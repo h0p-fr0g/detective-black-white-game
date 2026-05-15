@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://pcvy37xubkna" path="res://character_body_2d.tscn" id="2_cf7xv"]
 [ext_resource type="PackedScene" uid="uid://dgkwndc8st8iy" path="res://Item.tscn" id="3_qv0li"]
 [ext_resource type="PackedScene" uid="uid://csbefljmvbyr4" path="res://time_ui.tscn" id="4_cc6ur"]
+[ext_resource type="PackedScene" uid="uid://c1qiyct5g6pqu" path="res://object_base.tscn" id="4_cf7xv"]
 [ext_resource type="Shader" uid="uid://ghi7dn6nf483" path="res://scenes/level.gdshader" id="5_yk55p"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qphb6"]
@@ -53,14 +54,18 @@ shape = SubResource("RectangleShape2D_hub07")
 position = Vector2(338, 26)
 shape = SubResource("RectangleShape2D_2knxt")
 
-[node name="Letter" parent="." index="4" unique_id=1465745035 instance=ExtResource("3_qv0li")]
+[node name="Files" parent="." index="4" unique_id=1465745035 instance=ExtResource("3_qv0li")]
 position = Vector2(-188, 140)
-item_name = "Phone"
+item_name = "Read"
 item_texture = SubResource("PlaceholderTexture2D_fmddn")
+investigatable = true
 
-[node name="TimeUI" parent="." index="5" unique_id=1036368114 instance=ExtResource("4_cc6ur")]
+[node name="Phone" parent="." index="5" unique_id=1858461430 instance=ExtResource("4_cf7xv")]
+position = Vector2(154, 138)
 
-[node name="ShaderLayer" type="CanvasLayer" parent="." index="6" unique_id=1415348060]
+[node name="TimeUI" parent="." index="6" unique_id=1036368114 instance=ExtResource("4_cc6ur")]
+
+[node name="ShaderLayer" type="CanvasLayer" parent="." index="7" unique_id=1415348060]
 
 [node name="DayNightShader" type="ColorRect" parent="ShaderLayer" index="0" unique_id=1600853200]
 material = SubResource("ShaderMaterial_gdafm")

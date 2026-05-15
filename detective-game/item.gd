@@ -1,7 +1,10 @@
 extends Area2D
 
-@export var item_name: String = "Hint A"
+@export var item_name: String = ""
 @export var item_texture: Texture2D 
+@export var pickable: bool
+@export var investigatable: bool
+@export var popup: PopupData
 
 @onready var tooltip = $Label
 @onready var sprite = $Sprite2D
@@ -30,10 +33,16 @@ func _on_body_exited(body):
 
 func _process(_delta):
 	if player_in_range and Input.is_action_just_pressed("interact"):
+		investigate()
 		pick_up()
+		
+func investigate():
+	if investigatable:
+		SignalBus.popup_opened.emit(popup)
 
 func pick_up():
-	if Inventory: 
-		Inventory.add_item(item_name, item_texture)		
-		print(item_name, " picked up!")	
-		queue_free()
+	if pickable:
+		if Inventory: 
+			Inventory.add_item(item_name, item_texture)		
+			print(item_name, " picked up!")	
+			queue_free()

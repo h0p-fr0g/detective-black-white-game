@@ -1,0 +1,44 @@
+[gd_resource type="Resource" script_class="DialogueData" format=3 uid="uid://xmn20f5shakm"]
+
+[ext_resource type="Script" uid="uid://dfnb2v0a8awp" path="res://dialogue/dialogue_box/dialogue_entry.gd" id="1_h6fe2"]
+[ext_resource type="Script" uid="uid://ctol7mx6xrebc" path="res://dialogue/dialogue_box/dialogue_data.gd" id="2_7deh2"]
+
+[sub_resource type="Resource" id="Resource_h6fe2"]
+script = ExtResource("1_h6fe2")
+text = Array[String](["Detective Russel Moore speaking."])
+metadata/_custom_type_script = "uid://dfnb2v0a8awp"
+
+[sub_resource type="Resource" id="Resource_7deh2"]
+script = ExtResource("1_h6fe2")
+text = Array[String](["..."])
+metadata/_custom_type_script = "uid://dfnb2v0a8awp"
+
+[sub_resource type="Resource" id="Resource_n4to5"]
+script = ExtResource("1_h6fe2")
+text = Array[String](["Hello?"])
+metadata/_custom_type_script = "uid://dfnb2v0a8awp"
+
+[sub_resource type="Resource" id="Resource_eiv40"]
+script = ExtResource("1_h6fe2")
+text = Array[String]([" I know what you did. I was there. ", "...", "You might have thought that no one would find you. But I did. ", "I’ll make sure you pay the price for what you did. "])
+metadata/_custom_type_script = "uid://dfnb2v0a8awp"
+
+[sub_resource type="Resource" id="Resource_43w1i"]
+script = ExtResource("1_h6fe2")
+text = Array[String](["What? Who is this?"])
+metadata/_custom_type_script = "uid://dfnb2v0a8awp"
+
+[sub_resource type="Resource" id="Resource_enib0"]
+script = ExtResource("1_h6fe2")
+text = Array[String](["Remember Jud?", "Growwood town, 1938.", " I know you do.", "(click)"])
+metadata/_custom_type_script = "uid://dfnb2v0a8awp"
+
+[sub_resource type="Resource" id="Resource_mq171"]
+script = ExtResource("1_h6fe2")
+text = Array[String](["The Growwood town.."])
+metadata/_custom_type_script = "uid://dfnb2v0a8awp"
+
+[resource]
+script = ExtResource("2_7deh2")
+dialogue_entries = Array[ExtResource("1_h6fe2")]([SubResource("Resource_h6fe2"), SubResource("Resource_7deh2"), SubResource("Resource_n4to5"), SubResource("Resource_eiv40"), SubResource("Resource_43w1i"), SubResource("Resource_enib0"), SubResource("Resource_mq171")])
+metadata/_custom_type_script = "uid://ctol7mx6xrebc"

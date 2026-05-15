@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="PopupData" format=3 uid="uid://cxx0qa3icc5qn"]
+
+[ext_resource type="Script" uid="uid://bc7uwjix7j70h" path="res://popup/popup_box/popup_data.gd" id="1_ne0p6"]
+
+[resource]
+script = ExtResource("1_ne0p6")
+title = "Title"
+text = "Lorem ipsum"
+metadata/_custom_type_script = "uid://bc7uwjix7j70h"

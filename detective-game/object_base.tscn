@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://c1qiyct5g6pqu"]
+
+[ext_resource type="PackedScene" uid="uid://bnx4bdviwaaec" path="res://interactable.tscn" id="1_8lca6"]
+[ext_resource type="Resource" uid="uid://xmn20f5shakm" path="res://dialogue/dialogues/phonecall.tres" id="2_q5x8q"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_q5x8q"]
+
+[node name="Phone" type="Node2D" unique_id=1858461430]
+
+[node name="Interactable" parent="." unique_id=1201364754 instance=ExtResource("1_8lca6")]
+dialogue = ExtResource("2_q5x8q")
+dialogue_interacted = ExtResource("2_q5x8q")
+tooltip_text = "[E] take the call"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1091466529]
+scale = Vector2(26, 23.000002)
+texture = SubResource("PlaceholderTexture2D_q5x8q")

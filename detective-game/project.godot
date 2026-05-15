@@ -21,6 +21,7 @@ Inventory="*uid://ddp7ocsypdevx"
 DialogueBox="*uid://dr2py71um2ey"
 SignalBus="*uid://dkfmpww4kyld7"
 PlayerInput="*uid://bhi7n3kg5f6yw"
+GenericPopup="*uid://1okilop3oyri"
 
 [display]
 
