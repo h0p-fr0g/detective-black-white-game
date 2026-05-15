@@ -1,18 +1,18 @@
 [gd_scene format=3 uid="uid://c7g81efvnp34a"]
 
 [ext_resource type="Texture2D" uid="uid://drxs4xavmtnq8" path="res://map/map.png" id="1_hgrid"]
-[ext_resource type="PackedScene" uid="uid://bn7qm2iyf34lk" path="res://map/locations/location.tscn" id="2_a0dt8"]
-[ext_resource type="PackedScene" uid="uid://c1hdb27h0qme6" path="res://scenes/store.tscn" id="3_e8e5r"]
-[ext_resource type="Texture2D" uid="uid://buc8o6ine20fx" path="res://map/locations/factory.png" id="3_kffv2"]
-[ext_resource type="Texture2D" uid="uid://bjkgb68myb8dy" path="res://map/locations/house.png" id="4_7lyie"]
-[ext_resource type="Texture2D" uid="uid://4sxvrrbgipyu" path="res://map/locations/forest.png" id="5_5jdw0"]
-[ext_resource type="PackedScene" uid="uid://dn574rgaxfgxn" path="res://scenes/bar.tscn" id="5_112ik"]
-[ext_resource type="PackedScene" uid="uid://cnh8f8q5it88m" path="res://scenes/office.tscn" id="7_e8e5r"]
-[ext_resource type="PackedScene" uid="uid://cxn1rk08mf1gd" path="res://scenes/apartments.tscn" id="9_lct0g"]
+[ext_resource type="PackedScene" uid="uid://bn7qm2iyf34lk" path="res://map/markers/location_marker.tscn" id="2_a0dt8"]
+[ext_resource type="Texture2D" uid="uid://buc8o6ine20fx" path="res://map/markers/factory.png" id="3_kffv2"]
+[ext_resource type="PackedScene" uid="uid://cajrqcg2p8igx" path="res://scenes/locations/bar.tscn" id="3_lct0g"]
+[ext_resource type="Texture2D" uid="uid://bjkgb68myb8dy" path="res://map/markers/house.png" id="4_7lyie"]
+[ext_resource type="Texture2D" uid="uid://4sxvrrbgipyu" path="res://map/markers/forest.png" id="5_5jdw0"]
+[ext_resource type="PackedScene" uid="uid://cgl2tqxv4eqbm" path="res://scenes/locations/store.tscn" id="5_k8tny"]
+[ext_resource type="PackedScene" uid="uid://dy50yera21bof" path="res://scenes/locations/office.tscn" id="7_lct0g"]
+[ext_resource type="PackedScene" uid="uid://cssipx8uwc2o1" path="res://scenes/locations/apartments.tscn" id="9_e8e5r"]
 
-[node name="CanvasLayer" type="CanvasLayer" unique_id=540762562]
+[node name="Map" type="CanvasLayer" unique_id=540762562]
 
-[node name="TextureRect" type="TextureRect" parent="." unique_id=797095605]
+[node name="Background" type="TextureRect" parent="." unique_id=797095605]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -30,7 +30,7 @@ focus_neighbor_left = NodePath("../Store")
 focus_neighbor_top = NodePath("../Apartments")
 focus_neighbor_right = NodePath("../Apartments")
 focus_neighbor_bottom = NodePath("../My Office")
-scene = ExtResource("5_112ik")
+scene = ExtResource("3_lct0g")
 
 [node name="Store" parent="." unique_id=1982211455 instance=ExtResource("2_a0dt8")]
 offset_left = -460.0
@@ -40,7 +40,7 @@ offset_bottom = -21.0
 focus_neighbor_right = NodePath("../Bar")
 texture_normal = ExtResource("3_kffv2")
 texture_hover = ExtResource("3_kffv2")
-scene = ExtResource("3_e8e5r")
+scene = ExtResource("5_k8tny")
 
 [node name="My Office" parent="." unique_id=603126600 instance=ExtResource("2_a0dt8")]
 offset_left = -582.0
@@ -51,7 +51,7 @@ focus_neighbor_top = NodePath("../Bar")
 focus_neighbor_right = NodePath("../Bar")
 texture_normal = ExtResource("4_7lyie")
 texture_hover = ExtResource("4_7lyie")
-scene = ExtResource("7_e8e5r")
+scene = ExtResource("7_lct0g")
 
 [node name="Apartments" parent="." unique_id=1379863327 instance=ExtResource("2_a0dt8")]
 offset_left = 445.0
@@ -62,6 +62,4 @@ focus_neighbor_left = NodePath("../Bar")
 focus_neighbor_bottom = NodePath("../Bar")
 texture_normal = ExtResource("5_5jdw0")
 texture_hover = ExtResource("5_5jdw0")
-scene = ExtResource("9_lct0g")
-
-[node name="Map" type="Node2D" parent="." unique_id=850541984]
+scene = ExtResource("9_e8e5r")

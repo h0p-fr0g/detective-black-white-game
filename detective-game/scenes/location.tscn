@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://d1wut7tamf4x4"]
+
+[ext_resource type="Texture2D" uid="uid://drxs4xavmtnq8" path="res://map/map.png" id="1_gjgjs"]
+
+[node name="Location" type="Node2D" unique_id=1431993571]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1864833308]
+zoom = Vector2(3, 3)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1448382970]
+layer = -1
+
+[node name="Background" type="TextureRect" parent="CanvasLayer" unique_id=320484400]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_gjgjs")
+expand_mode = 1

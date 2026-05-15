@@ -1,8 +1,8 @@
-[gd_scene format=3 uid="uid://dn574rgaxfgxn"]
+[gd_scene format=3 uid="uid://c0uwgv12k11nx"]
 
-[ext_resource type="PackedScene" uid="uid://pcvy37xubkna" path="res://character_body_2d.tscn" id="1_xdadj"]
-[ext_resource type="PackedScene" uid="uid://ckchbjewye5x0" path="res://npc_base.tscn" id="2_1y8me"]
-[ext_resource type="Texture2D" uid="uid://ccjmhc55sm4v5" path="res://assets/npc1/Idle.png" id="3_n7ypv"]
+[ext_resource type="PackedScene" uid="uid://pcvy37xubkna" path="res://character_body_2d.tscn" id="1_u7igk"]
+[ext_resource type="PackedScene" uid="uid://ckchbjewye5x0" path="res://npc_base.tscn" id="2_nofun"]
+[ext_resource type="Texture2D" uid="uid://ccjmhc55sm4v5" path="res://assets/npc1/Idle.png" id="3_ykna1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3hls8"]
 size = Vector2(6012, 20)
@@ -14,31 +14,31 @@ size = Vector2(8, 230)
 size = Vector2(7.5, 249)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ihfcg"]
-atlas = ExtResource("3_n7ypv")
+atlas = ExtResource("3_ykna1")
 region = Rect2(0, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rka8t"]
-atlas = ExtResource("3_n7ypv")
+atlas = ExtResource("3_ykna1")
 region = Rect2(128, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5hph3"]
-atlas = ExtResource("3_n7ypv")
+atlas = ExtResource("3_ykna1")
 region = Rect2(256, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_j7kpp"]
-atlas = ExtResource("3_n7ypv")
+atlas = ExtResource("3_ykna1")
 region = Rect2(384, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bjebc"]
-atlas = ExtResource("3_n7ypv")
+atlas = ExtResource("3_ykna1")
 region = Rect2(512, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5rr72"]
-atlas = ExtResource("3_n7ypv")
+atlas = ExtResource("3_ykna1")
 region = Rect2(640, 0, 128, 128)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gyffv"]
-atlas = ExtResource("3_n7ypv")
+atlas = ExtResource("3_ykna1")
 region = Rect2(768, 0, 128, 128)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_1pe0h"]
@@ -72,7 +72,7 @@ animations = [{
 
 [node name="Level1" type="Node2D" unique_id=1876739268]
 
-[node name="Player" parent="." unique_id=1033279704 instance=ExtResource("1_xdadj")]
+[node name="Player" parent="." unique_id=1033279704 instance=ExtResource("1_u7igk")]
 position = Vector2(25, 86)
 
 [node name="Floor" type="StaticBody2D" parent="." unique_id=673317696]
@@ -102,7 +102,7 @@ shape = SubResource("RectangleShape2D_hbghi")
 position = Vector2(293, 24)
 shape = SubResource("RectangleShape2D_hn12h")
 
-[node name="NPC_Base" parent="." unique_id=1075720957 instance=ExtResource("2_1y8me")]
+[node name="NPC_Base" parent="." unique_id=1075720957 instance=ExtResource("2_nofun")]
 position = Vector2(172, 83)
 npc_name = "Dude"
 character_sprite = SubResource("SpriteFrames_1pe0h")

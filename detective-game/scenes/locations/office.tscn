@@ -1,0 +1,72 @@
+[gd_scene format=3 uid="uid://dy50yera21bof"]
+
+[ext_resource type="PackedScene" uid="uid://d1wut7tamf4x4" path="res://scenes/location.tscn" id="1_ps4dc"]
+[ext_resource type="PackedScene" uid="uid://pcvy37xubkna" path="res://character_body_2d.tscn" id="2_cf7xv"]
+[ext_resource type="PackedScene" uid="uid://dgkwndc8st8iy" path="res://Item.tscn" id="3_qv0li"]
+[ext_resource type="PackedScene" uid="uid://csbefljmvbyr4" path="res://time_ui.tscn" id="4_cc6ur"]
+[ext_resource type="Shader" uid="uid://ghi7dn6nf483" path="res://scenes/level.gdshader" id="5_yk55p"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qphb6"]
+size = Vector2(6012, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hub07"]
+size = Vector2(27, 230)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2knxt"]
+size = Vector2(34.875, 249)
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_fmddn"]
+size = Vector2(20, 20)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_gdafm"]
+shader = ExtResource("5_yk55p")
+shader_parameter/invert_amount = 0.0
+
+[node name="Office" unique_id=1552120353 instance=ExtResource("1_ps4dc")]
+
+[node name="Player" parent="." index="1" unique_id=1033279704 instance=ExtResource("2_cf7xv")]
+position = Vector2(-48, 86)
+
+[node name="Floor" type="StaticBody2D" parent="." index="2" unique_id=1488615809]
+position = Vector2(0, 1)
+
+[node name="ColorRect" type="ColorRect" parent="Floor" index="0" unique_id=999470385]
+visible = false
+offset_left = -2712.0
+offset_top = 149.0
+offset_right = 3300.0
+offset_bottom = 169.0
+color = Color(0, 0, 0, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor" index="1" unique_id=1020263756]
+position = Vector2(302, 159)
+shape = SubResource("RectangleShape2D_qphb6")
+
+[node name="InvisibleWalls" type="StaticBody2D" parent="." index="3" unique_id=1321387656]
+position = Vector2(-1, -1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InvisibleWalls" index="0" unique_id=2119009599]
+position = Vector2(-333, 35)
+shape = SubResource("RectangleShape2D_hub07")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="InvisibleWalls" index="1" unique_id=261245657]
+position = Vector2(338, 26)
+shape = SubResource("RectangleShape2D_2knxt")
+
+[node name="Letter" parent="." index="4" unique_id=1465745035 instance=ExtResource("3_qv0li")]
+position = Vector2(-188, 140)
+item_name = "Phone"
+item_texture = SubResource("PlaceholderTexture2D_fmddn")
+
+[node name="TimeUI" parent="." index="5" unique_id=1036368114 instance=ExtResource("4_cc6ur")]
+
+[node name="ShaderLayer" type="CanvasLayer" parent="." index="6" unique_id=1415348060]
+
+[node name="DayNightShader" type="ColorRect" parent="ShaderLayer" index="0" unique_id=1600853200]
+material = SubResource("ShaderMaterial_gdafm")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
