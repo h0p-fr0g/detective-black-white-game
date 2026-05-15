@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://csbefljmvbyr4"]
+
+[ext_resource type="Script" uid="uid://pid665n8gnih" path="res://time_ui.gd" id="1_s1rui"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xi4ts"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+
+[node name="TimeUI" type="CanvasLayer" unique_id=1036368114]
+script = ExtResource("1_s1rui")
+
+[node name="DayNightButton" type="Button" parent="." unique_id=1358737065]
+offset_left = 20.0
+offset_top = 20.0
+offset_right = 117.0
+offset_bottom = 51.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_xi4ts")
+text = "DAY/NIGHT"
+
+[connection signal="pressed" from="DayNightButton" to="." method="_on_day_night_button_pressed"]

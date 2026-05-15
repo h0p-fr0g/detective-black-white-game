@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://s0m4c6up8eqq" path="res://assets/Idle.png" id="2_6txx1"]
 [ext_resource type="Resource" uid="uid://bbbscjb71jfr" path="res://dialogue/dialogues/npc.tres" id="2_s6gr2"]
 [ext_resource type="Resource" uid="uid://fxa8xrvmvtvr" path="res://dialogue/dialogues/npc_interacted.tres" id="3_chfhp"]
+[ext_resource type="PackedScene" uid="uid://bnx4bdviwaaec" path="res://interactable.tscn" id="4_u3rnm"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_s6gr2"]
 atlas = ExtResource("2_6txx1")
@@ -62,35 +63,17 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_tmksl"]
-radius = 18.0
-height = 60.0
-
-[node name="NPC_Base" type="Area2D" unique_id=1075720957]
+[node name="NPC_Base" type="Node2D" unique_id=1002817240]
 script = ExtResource("1_tmksl")
+
+[node name="Interactable" parent="." unique_id=750671946 instance=ExtResource("4_u3rnm")]
+position = Vector2(-10, 38)
 dialogue = ExtResource("2_s6gr2")
 dialogue_interacted = ExtResource("3_chfhp")
+tooltip_text = "[E] talk"
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1501660920]
 process_mode = 3
 position = Vector2(-6, 3)
 sprite_frames = SubResource("SpriteFrames_6du4j")
 animation = &"idle"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=755548147]
-position = Vector2(-10, 38)
-shape = SubResource("CapsuleShape2D_tmksl")
-
-[node name="Label" type="Label" parent="." unique_id=2085303408]
-z_index = 5
-offset_left = -37.0
-offset_top = -28.0
-offset_right = 19.0
-offset_bottom = -5.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = "[E] Talk"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[connection signal="body_entered" from="." to="." method="_on_body_entered"]
-[connection signal="body_exited" from="." to="." method="_on_body_exited"]

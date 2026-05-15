@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://bd2imaxs70k36"]
+
+[node name="TextureRect" type="TextureRect" unique_id=191890516]
+custom_minimum_size = Vector2(32, 32)
+offset_right = 40.0
+offset_bottom = 40.0
+expand_mode = 1
+stretch_mode = 5
