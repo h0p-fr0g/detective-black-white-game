@@ -8,8 +8,11 @@
 [ext_resource type="Script" uid="uid://ckhjmwj4mduqe" path="res://files.gd" id="4_yk55p"]
 [ext_resource type="Script" uid="uid://dfnb2v0a8awp" path="res://dialogue/dialogue_box/dialogue_entry.gd" id="5_gy4ni"]
 [ext_resource type="Script" uid="uid://biiu5ynvnlvlc" path="res://phone_office.gd" id="5_qv0li"]
+[ext_resource type="Script" uid="uid://b7o0kup6fcwgo" path="res://dialogue/dialogue_box/dialogue_option.gd" id="5_x4px3"]
 [ext_resource type="Shader" uid="uid://ghi7dn6nf483" path="res://scenes/level.gdshader" id="5_yk55p"]
 [ext_resource type="Script" uid="uid://ctol7mx6xrebc" path="res://dialogue/dialogue_box/dialogue_data.gd" id="6_elu7l"]
+[ext_resource type="Texture2D" uid="uid://d3fr7yvagr2m8" path="res://assets/files.png" id="8_qpsbx"]
+[ext_resource type="Texture2D" uid="uid://c7awr73eh706w" path="res://scenes/locations/office.png" id="12_qpsbx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qphb6"]
 size = Vector2(6012, 43)
@@ -29,9 +32,6 @@ metadata/_custom_type_script = "uid://dfnb2v0a8awp"
 script = ExtResource("6_elu7l")
 dialogue_entries = Array[ExtResource("5_gy4ni")]([SubResource("Resource_x4px3")])
 metadata/_custom_type_script = "uid://ctol7mx6xrebc"
-
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_cc6ur"]
-size = Vector2(10, 10)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_gdafm"]
 shader = ExtResource("5_yk55p")
@@ -69,16 +69,16 @@ position = Vector2(338, 26)
 shape = SubResource("RectangleShape2D_2knxt")
 
 [node name="Files" parent="." index="4" unique_id=1465745035 instance=ExtResource("3_qv0li")]
-position = Vector2(-187, 22)
+position = Vector2(-127, 17)
 script = ExtResource("4_yk55p")
 monologue_after_reading = SubResource("Resource_qpsbx")
 item_name = "File"
-item_texture = SubResource("PlaceholderTexture2D_cc6ur")
+item_texture = ExtResource("8_qpsbx")
 pickable = true
 investigatable = true
 
 [node name="Phone" parent="." index="5" unique_id=1858461430 instance=ExtResource("4_cf7xv")]
-position = Vector2(167, 13)
+position = Vector2(115, -13)
 script = ExtResource("5_qv0li")
 
 [node name="TimeUI" parent="." index="6" unique_id=1036368114 instance=ExtResource("4_cc6ur")]
@@ -93,3 +93,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
+
+[node name="Background" parent="CanvasLayer" parent_id_path=PackedInt32Array(1448382970) index="0" unique_id=320484400]
+texture = ExtResource("12_qpsbx")

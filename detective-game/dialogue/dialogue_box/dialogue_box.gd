@@ -2,6 +2,9 @@ extends CanvasLayer
 
 var skipped = false
 
+@onready var portrait := $Box/Portrait
+@onready var text := $Box/Text
+
 func _ready() -> void:
 	SignalBus.dialogue_started.connect(_on_dialogue_started)
 	visible = false
@@ -14,11 +17,15 @@ func _on_dialogue_started(dialogue: DialogueData):
 	get_tree().paused = true
 	visible = true
 	for entry in dialogue.dialogue_entries:
-		$Portrait.texture = entry.character_sprite
+		portrait.texture = entry.character_sprite
 		for line in entry.text:
-			$Text.visible_characters = 0
-			$Text.text = line
+			text.visible_characters = 0
+			text.text = line
 			await displayLine(line)
+			
+			#if dialogue.choices:
+				#$Box/OptionA.
+			
 			while not skipped:
 				await get_tree().process_frame
 			skipped = false
@@ -28,11 +35,11 @@ func _on_dialogue_started(dialogue: DialogueData):
 
 func displayLine(line: String):
 	for i in line.length():
-		$Text.visible_characters = i + 1
+		text.visible_characters = i + 1
 		await get_tree().create_timer(0.03).timeout
 		
 		if skipped:
-			$Text.visible_characters = line.length()
+			text.visible_characters = line.length()
 			skipped = false
 			return
 

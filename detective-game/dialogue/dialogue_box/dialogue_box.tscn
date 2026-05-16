@@ -11,27 +11,50 @@ layer = 2
 script = ExtResource("2_fabun")
 
 [node name="Box" type="TextureRect" parent="." unique_id=831793214]
-anchors_preset = 5
+anchors_preset = 7
 anchor_left = 0.5
+anchor_top = 1.0
 anchor_right = 0.5
+anchor_bottom = 1.0
 offset_left = -960.0
+offset_top = -457.0
 offset_right = 960.0
-offset_bottom = 457.0
 grow_horizontal = 2
+grow_vertical = 0
 texture = ExtResource("1_fs1ng")
 
-[node name="Text" type="RichTextLabel" parent="." unique_id=818165262]
+[node name="Text" type="RichTextLabel" parent="Box" unique_id=818165262]
+layout_mode = 0
 offset_left = 399.0
 offset_top = 98.0
 offset_right = 1799.0
-offset_bottom = 358.0
+offset_bottom = 283.0
 theme = ExtResource("2_dtg6m")
 text = "i am saying things"
 
-[node name="Portrait" type="TextureRect" parent="." unique_id=1834815808]
+[node name="Portrait" type="TextureRect" parent="Box" unique_id=1834815808]
+layout_mode = 0
 offset_left = 78.0
 offset_top = 88.0
 offset_right = 258.0
 offset_bottom = 268.0
 scale = Vector2(1.6042498, 1.6042498)
 texture = ExtResource("4_dtg6m")
+
+[node name="OptionA" type="Button" parent="Box" unique_id=1242169154]
+layout_mode = 0
+offset_left = 490.0
+offset_top = 322.0
+offset_right = 990.0
+offset_bottom = 376.0
+theme = ExtResource("2_dtg6m")
+text = "Option A"
+
+[node name="OptionB" type="Button" parent="Box" unique_id=2114557230]
+layout_mode = 0
+offset_left = 1116.0
+offset_top = 322.0
+offset_right = 1616.0
+offset_bottom = 376.0
+theme = ExtResource("2_dtg6m")
+text = "Option B"
