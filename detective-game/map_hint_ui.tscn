@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://dyq0pxg8p067p"]
+
+[ext_resource type="Script" uid="uid://cpwgn6oraykip" path="res://map_hint_ui.gd" id="1_7wuem"]
+
+[node name="MapHintUI" type="CanvasLayer" unique_id=1770050707]
+script = ExtResource("1_7wuem")
+
+[node name="Label" type="Label" parent="." unique_id=2029052194]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -363.0
+offset_top = 28.0
+offset_right = -31.0
+offset_bottom = 185.0
+grow_horizontal = 0
+theme_override_font_sizes/font_size = 32
+text = "[M] Open Map"
+horizontal_alignment = 2

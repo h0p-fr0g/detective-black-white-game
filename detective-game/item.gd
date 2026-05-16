@@ -47,8 +47,9 @@ func investigate():
 	if investigatable:
 		SignalBus.popup_opened.emit(popup)
 
-func pick_up():
+func pick_up(destroy_now: bool = true):
 	if pickable:
 		if Inventory: 
 			Inventory.add_item(item_name, item_texture, popup)
-			queue_free()
+			if destroy_now:
+				queue_free()
