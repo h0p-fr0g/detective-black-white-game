@@ -1,13 +1,13 @@
 [gd_resource type="Resource" script_class="DialogueData" format=3 uid="uid://fxa8xrvmvtvr"]
 
-[ext_resource type="Script" path="res://dialogue/dialogue_box/dialogue_option.gd" id="1_pw585"]
+[ext_resource type="Script" uid="uid://b7o0kup6fcwgo" path="res://dialogue/dialogue_box/dialogue_option.gd" id="1_pw585"]
 [ext_resource type="Script" uid="uid://dfnb2v0a8awp" path="res://dialogue/dialogue_box/dialogue_entry.gd" id="1_sah44"]
-[ext_resource type="Texture2D" uid="uid://ck0avn3g1xqp6" path="res://dialogue/portraits/npc.png" id="2_5xi5g"]
+[ext_resource type="Texture2D" uid="uid://ck0avn3g1xqp6" path="res://dialogue/portraits/anonymous.png" id="3_pw585"]
 [ext_resource type="Script" uid="uid://ctol7mx6xrebc" path="res://dialogue/dialogue_box/dialogue_data.gd" id="5_o02t1"]
 
 [sub_resource type="Resource" id="Resource_mx4yq"]
 script = ExtResource("1_sah44")
-character_sprite = ExtResource("2_5xi5g")
+character_sprite = ExtResource("3_pw585")
 text = Array[String](["please go away!"])
 metadata/_custom_type_script = "uid://dfnb2v0a8awp"
 
