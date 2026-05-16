@@ -12,5 +12,6 @@ dialogue_interacted = ExtResource("2_q5x8q")
 tooltip_text = "[E] take the call"
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1091466529]
-scale = Vector2(0.5, 0.5)
+position = Vector2(-8, 2.9999998)
+scale = Vector2(0.14166667, 0.14166667)
 texture = ExtResource("3_cfose")

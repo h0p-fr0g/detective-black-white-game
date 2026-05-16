@@ -7,6 +7,22 @@ var is_ringing = true
 var ring_timer = 0.0
 
 func _ready():
+	if not GlobalFlags.phone_should_ring:
+		is_ringing = false
+		$Sprite2D.rotation = 0
+		
+		if tooltip_label:
+			tooltip_label.text = ""
+			tooltip_label.hide()
+			
+		interactable.set_process(false)
+		interactable.visible = false
+		interactable.set_deferred("monitoring", false)
+		interactable.set_deferred("monitorable", false)
+		
+		set_process(false)
+		return
+
 	if SignalBus:
 		SignalBus.dialogue_started.connect(_on_dialogue_started)
 
@@ -42,6 +58,7 @@ func _on_dialogue_started(dialogue_data: DialogueData):
 		if is_ringing:
 			is_ringing = false
 			$Sprite2D.rotation = 0
+			GlobalFlags.phone_should_ring = false
 						
 			tooltip_label.text = ""
 			tooltip_label.hide()

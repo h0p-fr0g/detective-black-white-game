@@ -11,6 +11,7 @@
 [ext_resource type="Script" path="res://dialogue/dialogue_box/dialogue_option.gd" id="5_x4px3"]
 [ext_resource type="Shader" uid="uid://ghi7dn6nf483" path="res://scenes/level.gdshader" id="5_yk55p"]
 [ext_resource type="Script" uid="uid://ctol7mx6xrebc" path="res://dialogue/dialogue_box/dialogue_data.gd" id="6_elu7l"]
+[ext_resource type="Texture2D" uid="uid://b31l38ff0mto3" path="res://dialogue/portraits/detective.png" id="7_o448m"]
 [ext_resource type="Texture2D" uid="uid://d3fr7yvagr2m8" path="res://assets/files.png" id="8_qpsbx"]
 [ext_resource type="Texture2D" uid="uid://c7awr73eh706w" path="res://scenes/locations/office.png" id="12_qpsbx"]
 [ext_resource type="PackedScene" uid="uid://dyq0pxg8p067p" path="res://map_hint_ui.tscn" id="13_gf4ik"]
@@ -66,7 +67,7 @@ shape = SubResource("RectangleShape2D_2knxt")
 position = Vector2(-127, 17)
 script = ExtResource("4_yk55p")
 monologue_after_reading = SubResource("Resource_gf4ik")
-item_name = "File"
+item_name = "Case Files"
 item_texture = ExtResource("8_qpsbx")
 pickable = true
 investigatable = true

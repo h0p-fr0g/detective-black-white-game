@@ -2,8 +2,51 @@
 
 [ext_resource type="PackedScene" uid="uid://d1wut7tamf4x4" path="res://scenes/location.tscn" id="1_cdlhe"]
 [ext_resource type="Texture2D" uid="uid://bcms6hljr4oo8" path="res://scenes/locations/crime_apartment.png" id="2_8ghh4"]
+[ext_resource type="PackedScene" uid="uid://pcvy37xubkna" path="res://character.tscn" id="3_ed63n"]
+[ext_resource type="PackedScene" uid="uid://csbefljmvbyr4" path="res://time_ui.tscn" id="4_2bhhy"]
+[ext_resource type="Shader" uid="uid://ghi7dn6nf483" path="res://scenes/level.gdshader" id="5_m4eku"]
+[ext_resource type="PackedScene" uid="uid://dyq0pxg8p067p" path="res://map_hint_ui.tscn" id="6_6uny2"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_5w5rt"]
+shader = ExtResource("5_m4eku")
+shader_parameter/invert_amount = 0.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ed63n"]
+size = Vector2(89.5, 236)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2bhhy"]
+size = Vector2(200.4375, 249)
 
 [node name="Location" unique_id=1431993571 instance=ExtResource("1_cdlhe")]
 
 [node name="Background" parent="CanvasLayer" parent_id_path=PackedInt32Array(1448382970) index="0" unique_id=320484400]
 texture = ExtResource("2_8ghh4")
+
+[node name="Player" parent="." index="2" unique_id=1033279704 instance=ExtResource("3_ed63n")]
+position = Vector2(-52, 39)
+
+[node name="TimeUI" parent="." index="3" unique_id=1036368114 instance=ExtResource("4_2bhhy")]
+
+[node name="ShaderLayer" type="CanvasLayer" parent="." index="4" unique_id=1367329852]
+
+[node name="DayNightShader" type="ColorRect" parent="ShaderLayer" index="0" unique_id=767445045]
+material = SubResource("ShaderMaterial_5w5rt")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="MapHintUI" parent="." index="5" unique_id=1770050707 instance=ExtResource("6_6uny2")]
+
+[node name="InvisibleWalls2" type="StaticBody2D" parent="." index="6" unique_id=1745085]
+position = Vector2(-1, -1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InvisibleWalls2" index="0" unique_id=1871781115]
+position = Vector2(-301.75, 38)
+shape = SubResource("RectangleShape2D_ed63n")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="InvisibleWalls2" index="1" unique_id=2077537689]
+position = Vector2(255.21875, 26)
+shape = SubResource("RectangleShape2D_2bhhy")
