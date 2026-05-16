@@ -1,5 +1,9 @@
 [gd_scene format=3 uid="uid://cssipx8uwc2o1"]
 
 [ext_resource type="PackedScene" uid="uid://d1wut7tamf4x4" path="res://scenes/location.tscn" id="1_kankx"]
+[ext_resource type="Texture2D" uid="uid://bpk84j1b1etv4" path="res://scenes/locations/apartments.png" id="2_wcapm"]
 
 [node name="Apartments" unique_id=1552120353 instance=ExtResource("1_kankx")]
+
+[node name="Background" parent="CanvasLayer" parent_id_path=PackedInt32Array(1448382970) index="0" unique_id=320484400]
+texture = ExtResource("2_wcapm")

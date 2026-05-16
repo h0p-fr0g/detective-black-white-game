@@ -1,5 +1,9 @@
 [gd_scene format=3 uid="uid://cajrqcg2p8igx"]
 
 [ext_resource type="PackedScene" uid="uid://d1wut7tamf4x4" path="res://scenes/location.tscn" id="1_5dekh"]
+[ext_resource type="Texture2D" uid="uid://c8tvmjumj2gra" path="res://scenes/locations/bar.png" id="2_0r30a"]
 
 [node name="Bar" unique_id=1552120353 instance=ExtResource("1_5dekh")]
+
+[node name="Background" parent="CanvasLayer" parent_id_path=PackedInt32Array(1448382970) index="0" unique_id=320484400]
+texture = ExtResource("2_0r30a")
