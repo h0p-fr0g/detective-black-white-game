@@ -58,3 +58,6 @@ offset_right = 1616.0
 offset_bottom = 376.0
 theme = ExtResource("2_dtg6m")
 text = "Option B"
+
+[connection signal="pressed" from="Box/OptionA" to="." method="_on_option_a_pressed"]
+[connection signal="pressed" from="Box/OptionB" to="." method="_on_option_b_pressed"]
