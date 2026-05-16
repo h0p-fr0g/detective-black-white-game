@@ -5,6 +5,7 @@ extends Area2D
 @export var pickable: bool
 @export var investigatable: bool
 @export var popup: PopupData
+@export var is_locked: bool = false
 
 @onready var tooltip = $Label
 @onready var sprite = $Sprite2D
@@ -14,6 +15,7 @@ var player_in_range = false
 func _ready():
 	tooltip.hide()
 	
+	
 	if item_texture:
 		sprite.texture = item_texture
 	
@@ -21,6 +23,8 @@ func _ready():
 	body_exited.connect(_on_body_exited)
 
 func _on_body_entered(body):
+	if is_locked:
+		return
 	if body.name == "Player":
 		player_in_range = true
 		tooltip.text = "[E] " + item_name
@@ -32,6 +36,9 @@ func _on_body_exited(body):
 		tooltip.hide()
 
 func _process(_delta):
+	if is_locked:
+		return
+
 	if player_in_range and Input.is_action_just_pressed("interact"):
 		investigate()
 		pick_up()
@@ -43,6 +50,5 @@ func investigate():
 func pick_up():
 	if pickable:
 		if Inventory: 
-			Inventory.add_item(item_name, item_texture)		
-			print(item_name, " picked up!")	
+			Inventory.add_item(item_name, item_texture, popup)
 			queue_free()

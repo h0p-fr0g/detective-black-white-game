@@ -7,25 +7,27 @@
 size = Vector2(20, 20)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bp1wp"]
-size = Vector2(24, 24)
+size = Vector2(63, 61)
 
 [node name="Item" type="Area2D" unique_id=1465745035]
 script = ExtResource("1_3n7vm")
 popup = ExtResource("2_ph0dh")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1588063668]
+position = Vector2(0, 9.536743e-07)
+scale = Vector2(2.6, 2.25)
 texture = SubResource("PlaceholderTexture2D_bp1wp")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1653715621]
 shape = SubResource("RectangleShape2D_bp1wp")
 
 [node name="Label" type="Label" parent="." unique_id=2110799022]
-z_index = 5
+z_index = 10
 offset_left = -46.0
 offset_top = -87.0
 offset_right = 40.0
 offset_bottom = -64.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 text = "Investigate"
 horizontal_alignment = 1
 vertical_alignment = 1

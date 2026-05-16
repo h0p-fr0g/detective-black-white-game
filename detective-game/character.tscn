@@ -12,11 +12,11 @@ region = Rect2(0, 0, 933, 1643)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_px5sl"]
 atlas = ExtResource("4_4sjlk")
-region = Rect2(0, 0, 933, 1643)
+region = Rect2(3732, 0, 933, 1643)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bwfjh"]
 atlas = ExtResource("4_4sjlk")
-region = Rect2(933, 0, 933, 1643)
+region = Rect2(2799, 0, 933, 1643)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_x1sy7"]
 atlas = ExtResource("4_4sjlk")
@@ -24,11 +24,11 @@ region = Rect2(1866, 0, 933, 1643)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_sm1rv"]
 atlas = ExtResource("4_4sjlk")
-region = Rect2(2799, 0, 933, 1643)
+region = Rect2(933, 0, 933, 1643)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jx0ln"]
 atlas = ExtResource("4_4sjlk")
-region = Rect2(3732, 0, 933, 1643)
+region = Rect2(0, 0, 933, 1643)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lpiy1"]
 atlas = ExtResource("4_4sjlk")
@@ -36,11 +36,11 @@ region = Rect2(3732, 1643, 933, 1643)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_yxww1"]
 atlas = ExtResource("5_qp52p")
-region = Rect2(0, 0, 933, 1643)
+region = Rect2(3732, 0, 933, 1643)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wdpcj"]
 atlas = ExtResource("5_qp52p")
-region = Rect2(933, 0, 933, 1643)
+region = Rect2(2799, 0, 933, 1643)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qi5as"]
 atlas = ExtResource("5_qp52p")
@@ -48,11 +48,11 @@ region = Rect2(1866, 0, 933, 1643)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jb3kq"]
 atlas = ExtResource("5_qp52p")
-region = Rect2(2799, 0, 933, 1643)
+region = Rect2(933, 0, 933, 1643)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_c1b4b"]
 atlas = ExtResource("5_qp52p")
-region = Rect2(3732, 0, 933, 1643)
+region = Rect2(0, 0, 933, 1643)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7tnxx"]
 atlas = ExtResource("5_qp52p")
@@ -129,8 +129,8 @@ script = ExtResource("1_f50pn")
 process_mode = 3
 scale = Vector2(0.17463525, 0.15945534)
 sprite_frames = SubResource("SpriteFrames_lmwkj")
-animation = &"walk"
-frame_progress = 0.8487658
+animation = &"run"
+frame_progress = 0.61213356
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1799183469]
 position = Vector2(-15, 18)

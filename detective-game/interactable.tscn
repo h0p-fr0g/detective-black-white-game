@@ -3,8 +3,8 @@
 [ext_resource type="Script" uid="uid://bppivnxq4tqm5" path="res://interactable.gd" id="1_wh154"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_tmksl"]
-radius = 18.0
-height = 60.0
+radius = 45.0
+height = 90.0
 
 [node name="Interactable" type="Area2D" unique_id=1201364754]
 script = ExtResource("1_wh154")
@@ -13,11 +13,12 @@ script = ExtResource("1_wh154")
 shape = SubResource("CapsuleShape2D_tmksl")
 
 [node name="Label" type="Label" parent="." unique_id=1008338781]
-offset_left = -21.0
-offset_top = -66.0
-offset_right = 64.0
-offset_bottom = -43.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+z_index = 10
+offset_left = -42.0
+offset_top = -57.0
+offset_right = 43.0
+offset_bottom = -34.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 text = "[E] interact"
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

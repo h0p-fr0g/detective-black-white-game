@@ -16,5 +16,8 @@ func _on_popup_opened(data: PopupData):
 
 
 func _on_button_close_pressed() -> void:
+	if SignalBus:
+		SignalBus.popup_closed.emit()
+		
 	get_tree().paused = false
 	hide()
