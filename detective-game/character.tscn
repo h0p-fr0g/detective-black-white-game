@@ -162,10 +162,10 @@ script = ExtResource("1_f50pn")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1933102051]
 process_mode = 3
+z_index = 1
 scale = Vector2(0.17463525, 0.15945534)
 sprite_frames = SubResource("SpriteFrames_lmwkj")
 animation = &"idle"
-frame_progress = 0.18578057
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1799183469]
 position = Vector2(-15, 18)
