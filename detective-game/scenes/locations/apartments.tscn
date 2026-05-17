@@ -96,3 +96,5 @@ character_sprite = SubResource("SpriteFrames_acae5")
 
 [node name="ApartmentDoor" parent="." index="5" unique_id=782799893 instance=ExtResource("5_x32hx")]
 position = Vector2(-238, 49)
+target_scene = "uid://canyjpwcn0r58"
+tooltip = "[E] enter apartment"

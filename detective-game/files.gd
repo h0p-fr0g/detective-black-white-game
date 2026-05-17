@@ -36,4 +36,6 @@ func _on_popup_closed():
 		PlayerInput.map_unlocked = true
 		SignalBus.map_unlocked.emit()
 		
+		GlobalFlags.files_searched = true;
+		
 		queue_free()

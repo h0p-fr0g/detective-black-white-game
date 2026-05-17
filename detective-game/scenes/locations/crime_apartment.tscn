@@ -3,15 +3,15 @@
 [ext_resource type="PackedScene" uid="uid://d1wut7tamf4x4" path="res://scenes/location.tscn" id="1_cdlhe"]
 [ext_resource type="Texture2D" uid="uid://bcms6hljr4oo8" path="res://scenes/locations/crime_apartment.png" id="2_8ghh4"]
 [ext_resource type="PackedScene" uid="uid://pcvy37xubkna" path="res://character.tscn" id="3_ed63n"]
-[ext_resource type="PackedScene" uid="uid://csbefljmvbyr4" path="res://time_ui.tscn" id="4_2bhhy"]
 [ext_resource type="Shader" uid="uid://ghi7dn6nf483" path="res://scenes/level.gdshader" id="5_m4eku"]
 [ext_resource type="PackedScene" uid="uid://dw0s5l2c1mnvg" path="res://floor_door.tscn" id="7_2bhhy"]
-[ext_resource type="Script" uid="uid://b7o0kup6fcwgo" path="res://dialogue/dialogue_box/dialogue_option.gd" id="8_i8ic6"]
 [ext_resource type="Script" uid="uid://dfnb2v0a8awp" path="res://dialogue/dialogue_box/dialogue_entry.gd" id="9_5w5rt"]
 [ext_resource type="Texture2D" uid="uid://b31l38ff0mto3" path="res://dialogue/portraits/detective.png" id="10_it25q"]
 [ext_resource type="Script" uid="uid://ctol7mx6xrebc" path="res://dialogue/dialogue_box/dialogue.gd" id="11_2uw7w"]
 [ext_resource type="PackedScene" uid="uid://crsr5br0owet0" path="res://picture.tscn" id="12_5w5rt"]
+[ext_resource type="Texture2D" uid="uid://bappl6wjp7hjk" path="res://assets/photo.png" id="12_it25q"]
 [ext_resource type="PackedScene" uid="uid://bvq4fnit1mkbl" path="res://desk.tscn" id="13_2uw7w"]
+[ext_resource type="Texture2D" uid="uid://c5i8kv0lf6sqb" path="res://dialogue/portraits/werewolf.png" id="13_it25q"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_5w5rt"]
 shader = ExtResource("5_m4eku")
@@ -25,12 +25,40 @@ size = Vector2(173.4375, 249)
 
 [sub_resource type="Resource" id="Resource_it25q"]
 script = ExtResource("9_5w5rt")
-text = Array[String](["Should investiagte more"])
+text = Array[String](["I should investigate this place."])
 metadata/_custom_type_script = "uid://dfnb2v0a8awp"
 
 [sub_resource type="Resource" id="Resource_2uw7w"]
 script = ExtResource("11_2uw7w")
 dialogue_entries = Array[ExtResource("9_5w5rt")]([SubResource("Resource_it25q")])
+
+[sub_resource type="Resource" id="Resource_5w5rt"]
+script = ExtResource("9_5w5rt")
+text = Array[String](["There is a picture under the mattress."])
+metadata/_custom_type_script = "uid://dfnb2v0a8awp"
+
+[sub_resource type="Resource" id="Resource_u78uo"]
+script = ExtResource("9_5w5rt")
+text = Array[String](["The picture is bent around the edges, a black and white image of an older girl and a younger boy standing in a park, the former smiling while the later is awkwardly hunched. ", "On the other side of the photo is a list of numbers, barely visible."])
+image = ExtResource("12_it25q")
+metadata/_custom_type_script = "uid://dfnb2v0a8awp"
+
+[sub_resource type="Resource" id="Resource_5onba"]
+script = ExtResource("11_2uw7w")
+dialogue_entries = Array[ExtResource("9_5w5rt")]([SubResource("Resource_5w5rt"), SubResource("Resource_u78uo")])
+metadata/_custom_type_script = "uid://ctol7mx6xrebc"
+
+[sub_resource type="Resource" id="Resource_60bcd"]
+script = ExtResource("9_5w5rt")
+character_sprite = ExtResource("13_it25q")
+text = Array[String](["...", " It’s Judith.... I know her, don’t I? ", "Why can’t I remember anything about her??"])
+image = ExtResource("12_it25q")
+metadata/_custom_type_script = "uid://dfnb2v0a8awp"
+
+[sub_resource type="Resource" id="Resource_bvay6"]
+script = ExtResource("11_2uw7w")
+dialogue_entries = Array[ExtResource("9_5w5rt")]([SubResource("Resource_60bcd")])
+metadata/_custom_type_script = "uid://ctol7mx6xrebc"
 
 [node name="Location" unique_id=1431993571 instance=ExtResource("1_cdlhe")]
 
@@ -40,9 +68,7 @@ texture = ExtResource("2_8ghh4")
 [node name="Player" parent="." index="2" unique_id=1033279704 instance=ExtResource("3_ed63n")]
 position = Vector2(-52, 39)
 
-[node name="TimeUI" parent="." index="3" unique_id=1036368114 instance=ExtResource("4_2bhhy")]
-
-[node name="ShaderLayer" type="CanvasLayer" parent="." index="4" unique_id=1367329852]
+[node name="ShaderLayer" type="CanvasLayer" parent="." index="3" unique_id=1367329852]
 
 [node name="DayNightShader" type="ColorRect" parent="ShaderLayer" index="0" unique_id=767445045]
 material = SubResource("ShaderMaterial_5w5rt")
@@ -53,7 +79,7 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 
-[node name="InvisibleWalls2" type="StaticBody2D" parent="." index="5" unique_id=1745085]
+[node name="InvisibleWalls2" type="StaticBody2D" parent="." index="4" unique_id=1745085]
 position = Vector2(-1, -1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InvisibleWalls2" index="0" unique_id=1871781115]
@@ -64,11 +90,14 @@ shape = SubResource("RectangleShape2D_ed63n")
 position = Vector2(268.71875, 26)
 shape = SubResource("RectangleShape2D_2bhhy")
 
-[node name="HallwayDoor" parent="." index="6" unique_id=1078652393 instance=ExtResource("7_2bhhy")]
+[node name="HallwayDoor" parent="." index="5" unique_id=1078652393 instance=ExtResource("7_2bhhy")]
 position = Vector2(161, 74)
 missing_clues_dialogue = SubResource("Resource_2uw7w")
 
-[node name="Desk" parent="." index="7" unique_id=229102061 instance=ExtResource("13_2uw7w")]
+[node name="Desk" parent="." index="6" unique_id=229102061 instance=ExtResource("13_2uw7w")]
 position = Vector2(42, 76)
 
-[node name="Picture" parent="." index="8" unique_id=584623188 instance=ExtResource("12_5w5rt")]
+[node name="Picture" parent="." index="7" unique_id=584623188 instance=ExtResource("12_5w5rt")]
+position = Vector2(-181, 112)
+dialogue_before_invert = SubResource("Resource_5onba")
+dialogue_after_invert = SubResource("Resource_bvay6")
