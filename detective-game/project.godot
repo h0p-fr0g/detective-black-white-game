@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="DetectiveGame"
-run/main_scene="uid://dy50yera21bof"
+run/main_scene="uid://j8yr66x4l7ks"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
