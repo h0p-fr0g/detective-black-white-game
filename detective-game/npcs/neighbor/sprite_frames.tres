@@ -1,33 +1,30 @@
 [gd_resource type="SpriteFrames" format=3 uid="uid://b52rqd2bkk627"]
 
-[ext_resource type="Texture2D" uid="uid://b41oj4hckvp0e" path="res://npcs/neighbor/sprite.PNG" id="1_as6k6"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_68g0u"]
-atlas = ExtResource("1_as6k6")
-region = Rect2(0, 0, 933, 1643)
+[ext_resource type="Texture2D" uid="uid://ca2cqxq1scvgn" path="res://npcs/clerk/clerk.PNG" id="1_68g0u"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_x4v3y"]
-atlas = ExtResource("1_as6k6")
-region = Rect2(933, 0, 933, 1643)
+atlas = ExtResource("1_68g0u")
+region = Rect2(0, 0, 933, 1643)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_c802j"]
-atlas = ExtResource("1_as6k6")
-region = Rect2(1866, 0, 933, 1643)
+atlas = ExtResource("1_68g0u")
+region = Rect2(933, 0, 933, 1643)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_pf6do"]
-atlas = ExtResource("1_as6k6")
-region = Rect2(2799, 0, 933, 1643)
+atlas = ExtResource("1_68g0u")
+region = Rect2(1866, 0, 933, 1643)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jriw8"]
-atlas = ExtResource("1_as6k6")
+atlas = ExtResource("1_68g0u")
+region = Rect2(2799, 0, 933, 1643)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u4xsg"]
+atlas = ExtResource("1_68g0u")
 region = Rect2(3732, 0, 933, 1643)
 
 [resource]
 animations = [{
 "frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_68g0u")
-}, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_x4v3y")
 }, {
@@ -39,6 +36,9 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_jriw8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u4xsg")
 }],
 "loop": true,
 "name": &"idle",

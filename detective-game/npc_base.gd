@@ -2,17 +2,14 @@ extends Node2D
 class_name NPCBase
 
 @export var npc_name: String = "Person"
-@export var character_sprite: SpriteFrames
 @export var flip_h: bool = false
 @export var second_dialogue: Dialogue
 
 @onready var sprite = $AnimatedSprite2D
 
 func _ready():
-	if character_sprite:
-		sprite.sprite_frames = character_sprite
-		sprite.flip_h = flip_h
-		sprite.play("idle")
+	sprite.flip_h = flip_h
+	sprite.play("idle")
 
 
 func _on_interacted() -> void:

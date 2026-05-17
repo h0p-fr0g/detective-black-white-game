@@ -1,0 +1,43 @@
+[gd_resource type="Resource" script_class="Dialogue" format=3 uid="uid://digcudmxmclou"]
+
+[ext_resource type="Script" uid="uid://dfnb2v0a8awp" path="res://dialogue/dialogue_box/dialogue_entry.gd" id="1_qqixt"]
+[ext_resource type="Script" uid="uid://ctol7mx6xrebc" path="res://dialogue/dialogue_box/dialogue.gd" id="2_cq4v5"]
+[ext_resource type="Texture2D" uid="uid://b5y8lmkwcakic" path="res://npcs/clerk/portrait.png" id="2_xc6on"]
+[ext_resource type="Texture2D" uid="uid://b31l38ff0mto3" path="res://dialogue/portraits/detective.png" id="3_sr2ts"]
+
+[sub_resource type="Resource" id="Resource_b7lk3"]
+script = ExtResource("1_qqixt")
+character_sprite = ExtResource("2_xc6on")
+text = Array[String](["Good evening, Detective. "])
+metadata/_custom_type_script = "uid://dfnb2v0a8awp"
+
+[sub_resource type="Resource" id="Resource_ovhf6"]
+script = ExtResource("1_qqixt")
+text = Array[String](["I am looking into the unsolved case of Judith Fleming. ", "According to the statement taken by the police, you saw the attack occur on the night of 26th? "])
+metadata/_custom_type_script = "uid://dfnb2v0a8awp"
+
+[sub_resource type="Resource" id="Resource_7h3hg"]
+script = ExtResource("1_qqixt")
+character_sprite = ExtResource("2_xc6on")
+text = Array[String](["Ah, that case. Right, I had given a statement. ", "I thought it had been solved by now?", ""])
+metadata/_custom_type_script = "uid://dfnb2v0a8awp"
+
+[sub_resource type="Resource" id="Resource_w2chk"]
+script = ExtResource("1_qqixt")
+text = Array[String](["No, it still remains unsolved. "])
+metadata/_custom_type_script = "uid://dfnb2v0a8awp"
+
+[sub_resource type="Resource" id="Resource_e8igm"]
+script = ExtResource("1_qqixt")
+character_sprite = ExtResource("2_xc6on")
+text = Array[String](["Well. That is unfortunate. "])
+metadata/_custom_type_script = "uid://dfnb2v0a8awp"
+
+[sub_resource type="Resource" id="Resource_jw6m3"]
+script = ExtResource("1_qqixt")
+metadata/_custom_type_script = "uid://dfnb2v0a8awp"
+
+[resource]
+script = ExtResource("2_cq4v5")
+dialogue_entries = Array[ExtResource("1_qqixt")]([SubResource("Resource_b7lk3"), SubResource("Resource_ovhf6"), SubResource("Resource_7h3hg"), SubResource("Resource_w2chk"), SubResource("Resource_e8igm"), SubResource("Resource_jw6m3")])
+metadata/_custom_type_script = "uid://ctol7mx6xrebc"
