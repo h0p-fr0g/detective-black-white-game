@@ -5,17 +5,32 @@
 [ext_resource type="PackedScene" uid="uid://pcvy37xubkna" path="res://character.tscn" id="3_ed63n"]
 [ext_resource type="PackedScene" uid="uid://csbefljmvbyr4" path="res://time_ui.tscn" id="4_2bhhy"]
 [ext_resource type="Shader" uid="uid://ghi7dn6nf483" path="res://scenes/level.gdshader" id="5_m4eku"]
-[ext_resource type="PackedScene" uid="uid://dyq0pxg8p067p" path="res://map_hint_ui.tscn" id="6_6uny2"]
+[ext_resource type="PackedScene" uid="uid://dw0s5l2c1mnvg" path="res://floor_door.tscn" id="7_2bhhy"]
+[ext_resource type="Script" uid="uid://b7o0kup6fcwgo" path="res://dialogue/dialogue_box/dialogue_option.gd" id="8_i8ic6"]
+[ext_resource type="Script" uid="uid://dfnb2v0a8awp" path="res://dialogue/dialogue_box/dialogue_entry.gd" id="9_5w5rt"]
+[ext_resource type="Texture2D" uid="uid://b31l38ff0mto3" path="res://dialogue/portraits/detective.png" id="10_it25q"]
+[ext_resource type="Script" uid="uid://ctol7mx6xrebc" path="res://dialogue/dialogue_box/dialogue.gd" id="11_2uw7w"]
+[ext_resource type="PackedScene" uid="uid://crsr5br0owet0" path="res://picture.tscn" id="12_5w5rt"]
+[ext_resource type="PackedScene" uid="uid://bvq4fnit1mkbl" path="res://desk.tscn" id="13_2uw7w"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_5w5rt"]
 shader = ExtResource("5_m4eku")
 shader_parameter/invert_amount = 0.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ed63n"]
-size = Vector2(89.5, 236)
+size = Vector2(165.5, 236)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2bhhy"]
-size = Vector2(200.4375, 249)
+size = Vector2(173.4375, 249)
+
+[sub_resource type="Resource" id="Resource_it25q"]
+script = ExtResource("9_5w5rt")
+text = Array[String](["Should investiagte more"])
+metadata/_custom_type_script = "uid://dfnb2v0a8awp"
+
+[sub_resource type="Resource" id="Resource_2uw7w"]
+script = ExtResource("11_2uw7w")
+dialogue_entries = Array[ExtResource("9_5w5rt")]([SubResource("Resource_it25q")])
 
 [node name="Location" unique_id=1431993571 instance=ExtResource("1_cdlhe")]
 
@@ -38,15 +53,22 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 
-[node name="MapHintUI" parent="." index="5" unique_id=1770050707 instance=ExtResource("6_6uny2")]
-
-[node name="InvisibleWalls2" type="StaticBody2D" parent="." index="6" unique_id=1745085]
+[node name="InvisibleWalls2" type="StaticBody2D" parent="." index="5" unique_id=1745085]
 position = Vector2(-1, -1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InvisibleWalls2" index="0" unique_id=1871781115]
-position = Vector2(-301.75, 38)
+position = Vector2(-263.75, 38)
 shape = SubResource("RectangleShape2D_ed63n")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="InvisibleWalls2" index="1" unique_id=2077537689]
-position = Vector2(255.21875, 26)
+position = Vector2(268.71875, 26)
 shape = SubResource("RectangleShape2D_2bhhy")
+
+[node name="HallwayDoor" parent="." index="6" unique_id=1078652393 instance=ExtResource("7_2bhhy")]
+position = Vector2(161, 74)
+missing_clues_dialogue = SubResource("Resource_2uw7w")
+
+[node name="Desk" parent="." index="7" unique_id=229102061 instance=ExtResource("13_2uw7w")]
+position = Vector2(42, 76)
+
+[node name="Picture" parent="." index="8" unique_id=584623188 instance=ExtResource("12_5w5rt")]

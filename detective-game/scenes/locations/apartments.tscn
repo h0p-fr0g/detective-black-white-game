@@ -1,10 +1,25 @@
 [gd_scene format=3 uid="uid://cssipx8uwc2o1"]
 
 [ext_resource type="PackedScene" uid="uid://d1wut7tamf4x4" path="res://scenes/location.tscn" id="1_kankx"]
+[ext_resource type="Script" uid="uid://bcvieitklcgjk" path="res://scenes/locations/apartments.gd" id="2_p0hnr"]
 [ext_resource type="Texture2D" uid="uid://bpk84j1b1etv4" path="res://scenes/locations/apartments.png" id="2_wcapm"]
+[ext_resource type="Script" uid="uid://b7o0kup6fcwgo" path="res://dialogue/dialogue_box/dialogue_option.gd" id="3_acae5"]
 [ext_resource type="PackedScene" uid="uid://pcvy37xubkna" path="res://character.tscn" id="3_qqrc6"]
+[ext_resource type="Script" uid="uid://dfnb2v0a8awp" path="res://dialogue/dialogue_box/dialogue_entry.gd" id="4_fmfn7"]
 [ext_resource type="PackedScene" uid="uid://ffgeu5flf3kx" path="res://npcs/neighbor/neighbor.tscn" id="4_pcgea"]
+[ext_resource type="Texture2D" uid="uid://b31l38ff0mto3" path="res://dialogue/portraits/detective.png" id="5_ckwgm"]
 [ext_resource type="PackedScene" uid="uid://d0r5c7oixeqlt" path="res://apartment_door.tscn" id="5_x32hx"]
+[ext_resource type="Script" uid="uid://ctol7mx6xrebc" path="res://dialogue/dialogue_box/dialogue.gd" id="6_osr8p"]
+[ext_resource type="Texture2D" uid="uid://b41oj4hckvp0e" path="res://npcs/neighbor/sprite.PNG" id="10_fmfn7"]
+
+[sub_resource type="Resource" id="Resource_cpchi"]
+script = ExtResource("4_fmfn7")
+text = Array[String](["The neighbor next door, from apartment 34, heard a commotion that night. ", "I will retake her statement after looking at the crime scene.  "])
+metadata/_custom_type_script = "uid://dfnb2v0a8awp"
+
+[sub_resource type="Resource" id="Resource_x6lpp"]
+script = ExtResource("6_osr8p")
+dialogue_entries = Array[ExtResource("4_fmfn7")]([SubResource("Resource_cpchi")])
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qqrc6"]
 size = Vector2(89.5, 236)
@@ -12,7 +27,52 @@ size = Vector2(89.5, 236)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pcgea"]
 size = Vector2(200.4375, 249)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_ckwgm"]
+atlas = ExtResource("10_fmfn7")
+region = Rect2(0, 0, 933, 1643)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_osr8p"]
+atlas = ExtResource("10_fmfn7")
+region = Rect2(933, 0, 933, 1643)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cpchi"]
+atlas = ExtResource("10_fmfn7")
+region = Rect2(1866, 0, 933, 1643)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x6lpp"]
+atlas = ExtResource("10_fmfn7")
+region = Rect2(2799, 0, 933, 1643)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8amch"]
+atlas = ExtResource("10_fmfn7")
+region = Rect2(3732, 0, 933, 1643)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_acae5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ckwgm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_osr8p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cpchi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x6lpp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8amch")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 2.0
+}]
+
 [node name="Apartments" unique_id=1552120353 instance=ExtResource("1_kankx")]
+script = ExtResource("2_p0hnr")
+first_visit_monologue = SubResource("Resource_x6lpp")
 
 [node name="Background" parent="CanvasLayer" parent_id_path=PackedInt32Array(1448382970) index="0" unique_id=320484400]
 texture = ExtResource("2_wcapm")
@@ -33,6 +93,7 @@ shape = SubResource("RectangleShape2D_pcgea")
 
 [node name="Neighbor" parent="." index="4" unique_id=1002817240 instance=ExtResource("4_pcgea")]
 position = Vector2(6, 10)
+character_sprite = SubResource("SpriteFrames_acae5")
 
 [node name="ApartmentDoor" parent="." index="5" unique_id=782799893 instance=ExtResource("5_x32hx")]
 position = Vector2(-238, 49)

@@ -4,6 +4,8 @@ var skipped = false
 var a_pressed = false
 var b_pressed = false
 
+var current_dialogue: Dialogue
+
 @onready var portrait := $Box/Portrait
 @onready var text := $Box/Text
 @onready var option_a_text := $Box/OptionA
@@ -20,6 +22,8 @@ func _on_dialogue_started(dialogue: Dialogue):
 	if visible:
 		push_error("tried to start dialogue while dialogue is already active!")
 		return
+	
+	current_dialogue = dialogue
 	
 	get_tree().paused = true
 	visible = true
@@ -57,6 +61,10 @@ func _on_dialogue_started(dialogue: Dialogue):
 				visible = false
 				get_tree().paused = false
 				
+
+				if SignalBus:
+					SignalBus.dialogue_finished.emit(current_dialogue)
+				
 				SignalBus.dialogue_started.emit(option_a.next_dialogue if a_pressed else option_b.next_dialogue)
 				return
 			
@@ -66,6 +74,11 @@ func _on_dialogue_started(dialogue: Dialogue):
 			
 	visible = false	
 	get_tree().paused = false
+	
+	if SignalBus:
+		SignalBus.dialogue_finished.emit(current_dialogue)
+	
+	current_dialogue = null
 
 
 func displayLine(line: String):

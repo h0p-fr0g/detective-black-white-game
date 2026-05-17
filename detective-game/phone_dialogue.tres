@@ -47,4 +47,3 @@ metadata/_custom_type_script = "uid://dfnb2v0a8awp"
 [resource]
 script = ExtResource("2_7deh2")
 dialogue_entries = Array[ExtResource("1_h6fe2")]([SubResource("Resource_h6fe2"), SubResource("Resource_7deh2"), SubResource("Resource_n4to5"), SubResource("Resource_eiv40"), SubResource("Resource_43w1i"), SubResource("Resource_enib0"), SubResource("Resource_mq171")])
-metadata/_custom_type_script = "uid://ctol7mx6xrebc"

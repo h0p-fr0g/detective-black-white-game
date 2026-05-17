@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://dw0s5l2c1mnvg"]
+
+[ext_resource type="PackedScene" uid="uid://bnx4bdviwaaec" path="res://interactable.tscn" id="1_ee03o"]
+[ext_resource type="Script" uid="uid://c477m475y0hl7" path="res://floor_door.gd" id="1_p14kn"]
+
+[node name="floorDoor" type="Node2D" unique_id=1078652393]
+script = ExtResource("1_p14kn")
+target_scene = "uid://cssipx8uwc2o1"
+
+[node name="Interactable" parent="." unique_id=1201364754 instance=ExtResource("1_ee03o")]
+tooltip_text = "[E] leave apartment "
+
+[connection signal="interacted" from="Interactable" to="." method="_on_interacted"]

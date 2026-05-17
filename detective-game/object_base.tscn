@@ -8,7 +8,6 @@
 
 [node name="Interactable" parent="." unique_id=1201364754 instance=ExtResource("1_8lca6")]
 dialogue = ExtResource("2_q5x8q")
-dialogue_interacted = ExtResource("2_q5x8q")
 tooltip_text = "[E] take the call"
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1091466529]
