@@ -24,25 +24,28 @@ texture = ExtResource("2_ig5kc")
 expand_mode = 1
 stretch_mode = 6
 
-[node name="CenterContainer" type="CenterContainer" parent="." unique_id=648502266]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer" unique_id=577147169]
-layout_mode = 2
-theme_override_constants/separation = 20
-
-[node name="Play" type="Button" parent="CenterContainer/VBoxContainer" unique_id=486988563]
-layout_mode = 2
+[node name="Play" type="Button" parent="." unique_id=486988563]
+layout_mode = 0
+offset_left = 928.0
+offset_top = 499.0
+offset_right = 991.0
+offset_bottom = 530.0
 text = "Play"
 
-[node name="Credits" type="Button" parent="CenterContainer/VBoxContainer" unique_id=1338780362]
-layout_mode = 2
+[node name="Credits" type="Button" parent="." unique_id=1338780362]
+layout_mode = 0
+offset_left = 928.0
+offset_top = 524.0
+offset_right = 991.0
+offset_bottom = 555.0
 text = "Credits"
 
-[connection signal="pressed" from="CenterContainer/VBoxContainer/Play" to="." method="_on_play_button_pressed"]
-[connection signal="pressed" from="CenterContainer/VBoxContainer/Credits" to="." method="_on_credits_button_pressed"]
+[node name="Label" type="Label" parent="." unique_id=1831069119]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "test"
+
+[connection signal="pressed" from="Play" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="Credits" to="." method="_on_credits_button_pressed"]
