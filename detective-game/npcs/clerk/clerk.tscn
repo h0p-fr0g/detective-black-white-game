@@ -1,9 +1,25 @@
 [gd_scene format=3 uid="uid://gc7enmwq4tye"]
 
 [ext_resource type="PackedScene" uid="uid://ckchbjewye5x0" path="res://npc_base.tscn" id="1_7htwq"]
+[ext_resource type="Script" uid="uid://dfnb2v0a8awp" path="res://dialogue/dialogue_box/dialogue_entry.gd" id="2_2j6qv"]
 [ext_resource type="Resource" uid="uid://digcudmxmclou" path="res://npcs/clerk/dialogue.tres" id="2_dfp3b"]
+[ext_resource type="Texture2D" uid="uid://b5y8lmkwcakic" path="res://npcs/clerk/portrait.png" id="3_o0grc"]
+[ext_resource type="Script" uid="uid://ctol7mx6xrebc" path="res://dialogue/dialogue_box/dialogue.gd" id="4_w2mgq"]
+
+[sub_resource type="Resource" id="Resource_gnvpk"]
+script = ExtResource("2_2j6qv")
+character_sprite = ExtResource("3_o0grc")
+text = Array[String](["...so are you gonna buy something or what?"])
+metadata/_custom_type_script = "uid://dfnb2v0a8awp"
+
+[sub_resource type="Resource" id="Resource_7tf3k"]
+script = ExtResource("4_w2mgq")
+dialogue_entries = Array[ExtResource("2_2j6qv")]([SubResource("Resource_gnvpk")])
+metadata/_custom_type_script = "uid://ctol7mx6xrebc"
 
 [node name="Clerk" unique_id=1002817240 instance=ExtResource("1_7htwq")]
+npc_name = "Ronald"
+second_dialogue = SubResource("Resource_7tf3k")
 
 [node name="Interactable" parent="." index="0" unique_id=750671946]
 dialogue = ExtResource("2_dfp3b")

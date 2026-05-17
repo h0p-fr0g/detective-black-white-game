@@ -59,6 +59,9 @@ func display_dialogue(dialogue: Dialogue):
 func display_entry(entry: DialogueEntry):
 	portrait.texture = entry.character_sprite
 	
+	text.visible_characters = 0
+	image.hide()
+	
 	if entry.text:
 		for i in entry.text.size():	
 			if entry.image != null:
@@ -147,9 +150,11 @@ func display_choice(entry: DialogueEntry):
 	else:
 		chosen_option.completed = true
 	
-	if not chosen_option.complete_choice:
+	if not (chosen_option.complete_choice or all_options_complete):
 		await display_entry(entry)
 
+func all_options_complete(options: Array[DialogueOption]) -> bool:
+	return not options.all(func(option): return option.completed)
 
 func _input(p_input_event: InputEvent) -> void:
 	if visible and p_input_event.is_action_pressed(&"skip_dialogue"):
