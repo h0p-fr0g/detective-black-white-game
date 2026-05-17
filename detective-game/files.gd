@@ -21,7 +21,7 @@ func _process(_delta):
 			is_reading_in_office = true
 			
 			investigate()
-			pick_up(false) 
+			#pick_up(false) 
 			hide()
 			set_deferred("monitoring", false)
 			set_deferred("monitorable", false)

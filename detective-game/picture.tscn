@@ -2,11 +2,12 @@
 
 [ext_resource type="Script" uid="uid://xhk1ne4lb1on" path="res://picture.gd" id="1_l6pn7"]
 [ext_resource type="PackedScene" uid="uid://bnx4bdviwaaec" path="res://interactable.tscn" id="2_xtl2j"]
-[ext_resource type="Script" uid="uid://b7o0kup6fcwgo" path="res://dialogue/dialogue_box/dialogue_option.gd" id="3_713ve"]
 [ext_resource type="Script" uid="uid://dfnb2v0a8awp" path="res://dialogue/dialogue_box/dialogue_entry.gd" id="4_jx1u7"]
 [ext_resource type="Texture2D" uid="uid://b31l38ff0mto3" path="res://dialogue/portraits/detective.png" id="5_hwfum"]
+[ext_resource type="Texture2D" uid="uid://c5i8kv0lf6sqb" path="res://dialogue/portraits/werewolf.png" id="6_hwfum"]
 [ext_resource type="Texture2D" uid="uid://bappl6wjp7hjk" path="res://assets/photo.png" id="6_jx1u7"]
 [ext_resource type="Script" uid="uid://ctol7mx6xrebc" path="res://dialogue/dialogue_box/dialogue.gd" id="6_xsycv"]
+[ext_resource type="Texture2D" uid="uid://c7ex6rbmwvalc" path="res://assets/rippedphoto.png" id="7_xsycv"]
 
 [sub_resource type="Resource" id="Resource_jx1u7"]
 script = ExtResource("4_jx1u7")
@@ -21,6 +22,28 @@ metadata/_custom_type_script = "uid://dfnb2v0a8awp"
 [sub_resource type="Resource" id="Resource_xsycv"]
 script = ExtResource("6_xsycv")
 dialogue_entries = Array[ExtResource("4_jx1u7")]([SubResource("Resource_jx1u7"), SubResource("Resource_b26td")])
+metadata/_custom_type_script = "uid://ctol7mx6xrebc"
+
+[sub_resource type="Resource" id="Resource_kebju"]
+script = ExtResource("4_jx1u7")
+character_sprite = ExtResource("6_hwfum")
+text = Array[String](["test"])
+image = ExtResource("7_xsycv")
+metadata/_custom_type_script = "uid://dfnb2v0a8awp"
+
+[sub_resource type="Resource" id="Resource_t6vxw"]
+script = ExtResource("6_xsycv")
+dialogue_entries = Array[ExtResource("4_jx1u7")]([SubResource("Resource_kebju")])
+metadata/_custom_type_script = "uid://ctol7mx6xrebc"
+
+[sub_resource type="Resource" id="Resource_47vum"]
+script = ExtResource("4_jx1u7")
+text = Array[String](["test"])
+metadata/_custom_type_script = "uid://dfnb2v0a8awp"
+
+[sub_resource type="Resource" id="Resource_4nob3"]
+script = ExtResource("6_xsycv")
+dialogue_entries = Array[ExtResource("4_jx1u7")]([SubResource("Resource_47vum"), null])
 metadata/_custom_type_script = "uid://ctol7mx6xrebc"
 
 [sub_resource type="Resource" id="Resource_hwfum"]
@@ -42,6 +65,8 @@ metadata/_custom_type_script = "uid://ctol7mx6xrebc"
 [node name="Picture" type="Node2D" unique_id=584623188]
 script = ExtResource("1_l6pn7")
 dialogue_before_invert = SubResource("Resource_xsycv")
+dialogue_after_invert = SubResource("Resource_t6vxw")
+ending_dialogue = SubResource("Resource_4nob3")
 
 [node name="Interactable" parent="." unique_id=1201364754 instance=ExtResource("2_xtl2j")]
 dialogue = SubResource("Resource_ghrya")

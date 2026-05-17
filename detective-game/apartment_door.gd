@@ -14,6 +14,9 @@ func _on_interacted() -> void:
 			SignalBus.dialogue_started.emit(missing_phone_call)
 		elif(not GlobalFlags.files_searched):
 			SignalBus.dialogue_started.emit(missing_files)
+		else:
+			get_tree().change_scene_to_file(target_scene)
 		return
 	
+
 	get_tree().change_scene_to_file(target_scene)
