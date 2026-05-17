@@ -1,0 +1,83 @@
+[gd_resource type="Resource" script_class="Dialogue" format=3 uid="uid://cveptv3keenjq"]
+
+[ext_resource type="Script" uid="uid://dfnb2v0a8awp" path="res://dialogue/dialogue_box/dialogue_entry.gd" id="1_jw6m6"]
+[ext_resource type="Texture2D" uid="uid://d182s0omgtwec" path="res://npcs/neighbor/portrait.png" id="2_3pmmj"]
+[ext_resource type="Texture2D" uid="uid://b31l38ff0mto3" path="res://dialogue/portraits/detective.png" id="3_e1dwr"]
+[ext_resource type="Script" uid="uid://ctol7mx6xrebc" path="res://dialogue/dialogue_box/dialogue.gd" id="4_ghe43"]
+
+[sub_resource type="Resource" id="Resource_1f3gx"]
+script = ExtResource("1_jw6m6")
+character_sprite = ExtResource("2_3pmmj")
+text = Array[String](["Hello again, Detective.", "Do you have any more questions for me?"])
+metadata/_custom_type_script = "uid://dfnb2v0a8awp"
+
+[sub_resource type="Resource" id="Resource_fmfn7"]
+script = ExtResource("1_jw6m6")
+text = Array[String](["You told me that you weren’t home that night, but another witness claims to have seen you here."])
+metadata/_custom_type_script = "uid://dfnb2v0a8awp"
+
+[sub_resource type="Resource" id="Resource_ckwgm"]
+script = ExtResource("1_jw6m6")
+character_sprite = ExtResource("2_3pmmj")
+text = Array[String](["They must be wrong then, for as I said before, I was visiting my sister that day."])
+metadata/_custom_type_script = "uid://dfnb2v0a8awp"
+
+[sub_resource type="Resource" id="Resource_osr8p"]
+script = ExtResource("1_jw6m6")
+text = Array[String](["No, I am certain you were here. You said it yourself, you are always here, every night."])
+metadata/_custom_type_script = "uid://dfnb2v0a8awp"
+
+[sub_resource type="Resource" id="Resource_8amch"]
+script = ExtResource("1_jw6m6")
+character_sprite = ExtResource("2_3pmmj")
+text = Array[String](["..."])
+metadata/_custom_type_script = "uid://dfnb2v0a8awp"
+
+[sub_resource type="Resource" id="Resource_ivfo2"]
+script = ExtResource("1_jw6m6")
+text = Array[String](["Is there are reason that you lied about something as important as this?"])
+metadata/_custom_type_script = "uid://dfnb2v0a8awp"
+
+[sub_resource type="Resource" id="Resource_qqkk4"]
+script = ExtResource("1_jw6m6")
+character_sprite = ExtResource("2_3pmmj")
+text = Array[String](["Detective, for your sake, it would be best if you didn’t investigate any further. ", "You’re not going to like truth. "])
+metadata/_custom_type_script = "uid://dfnb2v0a8awp"
+
+[sub_resource type="Resource" id="Resource_q3rxg"]
+script = ExtResource("1_jw6m6")
+text = Array[String](["I... I must find out the truth. ", "It is the missing piece. The thing that I cannot seem to remember no matter how hard I try."])
+metadata/_custom_type_script = "uid://dfnb2v0a8awp"
+
+[sub_resource type="Resource" id="Resource_cjtyk"]
+script = ExtResource("1_jw6m6")
+character_sprite = ExtResource("2_3pmmj")
+text = Array[String](["I see. ", "Well, I heard more than the radio that day. ", "It was an argument, late night, one that ended with a loud thud."])
+metadata/_custom_type_script = "uid://dfnb2v0a8awp"
+
+[sub_resource type="Resource" id="Resource_yjd8f"]
+script = ExtResource("1_jw6m6")
+text = Array[String](["Did you happen to see the perpetrator that night as well?"])
+metadata/_custom_type_script = "uid://dfnb2v0a8awp"
+
+[sub_resource type="Resource" id="Resource_g2g7n"]
+script = ExtResource("1_jw6m6")
+character_sprite = ExtResource("2_3pmmj")
+text = Array[String](["No. I only caught a glimpse of him. ", "It was Judith’s brother who saw him clearly. ", "...", "Though, it is no mystery really, who it was that night. ", "There were not many who would have visited Judith."])
+metadata/_custom_type_script = "uid://dfnb2v0a8awp"
+
+[sub_resource type="Resource" id="Resource_0w8lu"]
+script = ExtResource("1_jw6m6")
+text = Array[String](["You know who commited the crime? Who was it?"])
+metadata/_custom_type_script = "uid://dfnb2v0a8awp"
+
+[sub_resource type="Resource" id="Resource_vhq1n"]
+script = ExtResource("1_jw6m6")
+character_sprite = ExtResource("2_3pmmj")
+text = Array[String](["That is all I can tell you, detective. I bid you goodnight."])
+metadata/_custom_type_script = "uid://dfnb2v0a8awp"
+
+[resource]
+script = ExtResource("4_ghe43")
+dialogue_entries = Array[ExtResource("1_jw6m6")]([SubResource("Resource_1f3gx"), SubResource("Resource_fmfn7"), SubResource("Resource_ckwgm"), SubResource("Resource_osr8p"), SubResource("Resource_8amch"), SubResource("Resource_ivfo2"), SubResource("Resource_qqkk4"), SubResource("Resource_q3rxg"), SubResource("Resource_cjtyk"), SubResource("Resource_yjd8f"), SubResource("Resource_g2g7n"), SubResource("Resource_0w8lu"), SubResource("Resource_vhq1n")])
+metadata/_custom_type_script = "uid://ctol7mx6xrebc"
