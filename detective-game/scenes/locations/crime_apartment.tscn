@@ -78,7 +78,7 @@ metadata/_custom_type_script = "uid://ctol7mx6xrebc"
 texture = ExtResource("2_8ghh4")
 
 [node name="Player" parent="." index="2" unique_id=1033279704 instance=ExtResource("3_ed63n")]
-position = Vector2(-48, 38)
+position = Vector2(182, 38)
 
 [node name="ShaderLayer" type="CanvasLayer" parent="." index="3" unique_id=1367329852]
 
@@ -99,11 +99,11 @@ position = Vector2(-263.75, 38)
 shape = SubResource("RectangleShape2D_ed63n")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="InvisibleWalls2" index="1" unique_id=2077537689]
-position = Vector2(268.71875, 26)
+position = Vector2(346, 26)
 shape = SubResource("RectangleShape2D_2bhhy")
 
 [node name="HallwayDoor" parent="." index="5" unique_id=1078652393 instance=ExtResource("7_2bhhy")]
-position = Vector2(196, 81)
+position = Vector2(250, 81)
 missing_clues_dialogue = SubResource("Resource_2uw7w")
 
 [node name="Desk" parent="." index="6" unique_id=229102061 instance=ExtResource("13_2uw7w")]
