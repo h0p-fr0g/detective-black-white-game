@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cdx43tdo14fjf"
-path="res://.godot/imported/City.png-fff51579058893aef9bd75737ae9798d.ctex"
+uid="uid://bjkgb68myb8dy"
+path="res://.godot/imported/office.png-8ac546804cd0687e5706e0d897be5829.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://map/markers/City.png"
-dest_files=["res://.godot/imported/City.png-fff51579058893aef9bd75737ae9798d.ctex"]
+source_file="res://map/markers/office.png"
+dest_files=["res://.godot/imported/office.png-8ac546804cd0687e5706e0d897be5829.ctex"]
 
 [params]
 

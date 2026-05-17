@@ -2,13 +2,14 @@
 
 [ext_resource type="Texture2D" uid="uid://drxs4xavmtnq8" path="res://map/map.png" id="1_hgrid"]
 [ext_resource type="PackedScene" uid="uid://bn7qm2iyf34lk" path="res://map/markers/location_marker.tscn" id="2_a0dt8"]
-[ext_resource type="Texture2D" uid="uid://buc8o6ine20fx" path="res://map/markers/factory.png" id="3_kffv2"]
+[ext_resource type="Texture2D" uid="uid://buc8o6ine20fx" path="res://map/markers/bar.png" id="3_kffv2"]
 [ext_resource type="PackedScene" uid="uid://cajrqcg2p8igx" path="res://scenes/locations/bar.tscn" id="3_lct0g"]
-[ext_resource type="Texture2D" uid="uid://bjkgb68myb8dy" path="res://map/markers/house.png" id="4_7lyie"]
-[ext_resource type="Texture2D" uid="uid://4sxvrrbgipyu" path="res://map/markers/forest.png" id="5_5jdw0"]
+[ext_resource type="Texture2D" uid="uid://bjkgb68myb8dy" path="res://map/markers/office.png" id="4_7lyie"]
+[ext_resource type="Texture2D" uid="uid://4sxvrrbgipyu" path="res://map/markers/apartments.png" id="5_5jdw0"]
 [ext_resource type="PackedScene" uid="uid://cgl2tqxv4eqbm" path="res://scenes/locations/store.tscn" id="5_k8tny"]
 [ext_resource type="PackedScene" uid="uid://dy50yera21bof" path="res://scenes/locations/office.tscn" id="7_lct0g"]
 [ext_resource type="PackedScene" uid="uid://cssipx8uwc2o1" path="res://scenes/locations/apartments.tscn" id="9_e8e5r"]
+[ext_resource type="Texture2D" uid="uid://ckib7eofj1h3q" path="res://map/markers/strings.png" id="10_112ik"]
 
 [node name="Map" type="CanvasLayer" unique_id=540762562]
 
@@ -22,31 +23,31 @@ texture = ExtResource("1_hgrid")
 expand_mode = 1
 
 [node name="Bar" parent="." unique_id=1857448138 instance=ExtResource("2_a0dt8")]
-offset_left = 113.0
-offset_top = -230.0
-offset_right = 369.0
-offset_bottom = 26.0
+offset_left = -382.0
+offset_top = 78.0
+offset_right = 22.0
+offset_bottom = 477.0
 focus_neighbor_left = NodePath("../Store")
 focus_neighbor_top = NodePath("../Apartments")
 focus_neighbor_right = NodePath("../Apartments")
 focus_neighbor_bottom = NodePath("../My Office")
+texture_normal = ExtResource("3_kffv2")
+texture_hover = ExtResource("3_kffv2")
 scene = ExtResource("3_lct0g")
 
 [node name="Store" parent="." unique_id=1982211455 instance=ExtResource("2_a0dt8")]
-offset_left = -460.0
-offset_top = -277.0
-offset_right = -204.0
-offset_bottom = -21.0
+offset_left = 25.0
+offset_top = -470.0
+offset_right = 429.0
+offset_bottom = -71.0
 focus_neighbor_right = NodePath("../Bar")
-texture_normal = ExtResource("3_kffv2")
-texture_hover = ExtResource("3_kffv2")
 scene = ExtResource("5_k8tny")
 
 [node name="My Office" parent="." unique_id=603126600 instance=ExtResource("2_a0dt8")]
-offset_left = -582.0
-offset_top = 134.0
-offset_right = -326.0
-offset_bottom = 390.0
+offset_left = -689.0
+offset_top = -336.0
+offset_right = -285.0
+offset_bottom = 63.0
 focus_neighbor_top = NodePath("../Bar")
 focus_neighbor_right = NodePath("../Bar")
 texture_normal = ExtResource("4_7lyie")
@@ -54,12 +55,22 @@ texture_hover = ExtResource("4_7lyie")
 scene = ExtResource("7_lct0g")
 
 [node name="Apartments" parent="." unique_id=1379863327 instance=ExtResource("2_a0dt8")]
-offset_left = 445.0
-offset_top = -500.0
-offset_right = 701.0
-offset_bottom = -244.0
+offset_left = 245.0
+offset_top = -41.0
+offset_right = 649.0
+offset_bottom = 358.0
 focus_neighbor_left = NodePath("../Bar")
 focus_neighbor_bottom = NodePath("../Bar")
 texture_normal = ExtResource("5_5jdw0")
 texture_hover = ExtResource("5_5jdw0")
 scene = ExtResource("9_e8e5r")
+
+[node name="Strings" type="TextureRect" parent="." unique_id=717015568]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("10_112ik")
+expand_mode = 1

@@ -37,37 +37,37 @@ text = "i am saying things"
 [node name="Portrait" type="TextureRect" parent="Box" unique_id=1834815808]
 layout_mode = 0
 offset_left = 64.0
-offset_top = 56.0
+offset_top = 48.0
 offset_right = 244.0
-offset_bottom = 236.0
+offset_bottom = 228.0
 scale = Vector2(1.4028407, 1.4028407)
 texture = ExtResource("4_dtg6m")
 expand_mode = 1
 
 [node name="OptionA" type="Button" parent="Box" unique_id=1242169154]
 layout_mode = 0
-offset_left = 405.0
-offset_top = 100.0
-offset_right = 1805.0
-offset_bottom = 154.0
+offset_left = 396.0
+offset_top = 77.0
+offset_right = 1796.0
+offset_bottom = 131.0
 theme = ExtResource("2_dtg6m")
 text = "Option A"
 
 [node name="OptionB" type="Button" parent="Box" unique_id=2114557230]
 layout_mode = 0
-offset_left = 405.0
-offset_top = 170.0
-offset_right = 1805.0
-offset_bottom = 224.0
+offset_left = 396.0
+offset_top = 147.0
+offset_right = 1796.0
+offset_bottom = 201.0
 theme = ExtResource("2_dtg6m")
 text = "Option B"
 
 [node name="OptionC" type="Button" parent="Box" unique_id=1394634383]
 layout_mode = 0
-offset_left = 405.0
-offset_top = 240.0
-offset_right = 1805.0
-offset_bottom = 294.0
+offset_left = 396.0
+offset_top = 217.0
+offset_right = 1796.0
+offset_bottom = 271.0
 size_flags_horizontal = 8
 theme = ExtResource("2_dtg6m")
 text = "Option C"
@@ -81,6 +81,7 @@ offset_left = -802.0
 offset_top = -551.0
 offset_right = -431.0
 offset_bottom = -160.72726
+grow_horizontal = 0
 
 [connection signal="pressed" from="Box/OptionA" to="." method="_on_option_a_pressed"]
 [connection signal="pressed" from="Box/OptionB" to="." method="_on_option_b_pressed"]

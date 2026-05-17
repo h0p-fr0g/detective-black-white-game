@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bn7qm2iyf34lk"]
 
-[ext_resource type="Texture2D" uid="uid://cdx43tdo14fjf" path="res://map/markers/City.png" id="1_25qeq"]
+[ext_resource type="Texture2D" uid="uid://cdx43tdo14fjf" path="res://map/markers/store.png" id="1_25qeq"]
 [ext_resource type="Script" uid="uid://b327t4ouvdfr5" path="res://map/markers/location_marker.gd" id="2_vas0f"]
 
 [sub_resource type="SystemFont" id="SystemFont_25qeq"]
@@ -18,10 +18,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -128.0
-offset_top = -128.0
-offset_right = 128.0
-offset_bottom = 128.0
+offset_left = -301.0
+offset_top = -303.0
+offset_right = 103.0
+offset_bottom = 96.0
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset_ratio = Vector2(0.5, 0.5)
@@ -30,6 +30,7 @@ texture_hover = ExtResource("1_25qeq")
 script = ExtResource("2_vas0f")
 
 [node name="Label" type="Label" parent="." unique_id=1995489826]
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
