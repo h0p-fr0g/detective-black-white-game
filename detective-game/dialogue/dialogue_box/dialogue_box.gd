@@ -150,12 +150,15 @@ func display_choice(entry: DialogueEntry):
 	else:
 		chosen_option.completed = true
 	
-	if not (chosen_option.complete_choice or all_options_complete):
+	if not (chosen_option.complete_choice or all_options_complete(options)):
 		await display_entry(entry)
 
 func all_options_complete(options: Array[DialogueOption]) -> bool:
-	return not options.all(func(option): return option.completed)
-
+	for option in options:
+		if not option.completed:
+			return false
+	return true
+	
 func _input(p_input_event: InputEvent) -> void:
 	if visible and p_input_event.is_action_pressed(&"skip_dialogue"):
 		skipped = true
