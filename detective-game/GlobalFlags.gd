@@ -6,6 +6,7 @@ var crime_apartment_entered: bool = false
 var first_time_in_apartments: bool = true
 var desk_investigated: bool = false
 var picture_found: bool = false
+var talked_to_clerk: bool = false
 
 #Locations
 var location_office_unlocked: bool = true 
@@ -21,10 +22,6 @@ func trigger_invert_shader(enable: bool) -> void:
 	if shader_rect:
 		var mat = shader_rect.material
 		if mat is ShaderMaterial:
-			# HIER DIE KORREKTUR: Wir nutzen direkt das 'enable'!
-			# Wenn true -> 1.0, wenn false -> 0.0. Kein Togglen mehr!
+
 			var new_value = 1.0 if enable else 0.0
 			mat.set_shader_parameter("invert_amount", new_value)
-			print("Shader auf ", new_value, " gesetzt (erzwungen durch Parameter).")
-	else:
-		print("Fehler: DayNightShader wurde nicht gefunden!")

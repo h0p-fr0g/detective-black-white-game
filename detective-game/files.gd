@@ -21,10 +21,8 @@ func _process(_delta):
 			is_reading_in_office = true
 			
 			investigate()
-			pick_up(false) 
-			hide()
-			set_deferred("monitoring", false)
-			set_deferred("monitorable", false)
+
+			is_locked = true 
 
 func _on_popup_closed():
 	if is_reading_in_office:
@@ -36,6 +34,6 @@ func _on_popup_closed():
 		PlayerInput.map_unlocked = true
 		SignalBus.map_unlocked.emit()
 		
-		GlobalFlags.files_searched = true;
+		GlobalFlags.files_searched = true
 		
-		queue_free()
+		is_locked = false

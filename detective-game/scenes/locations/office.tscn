@@ -3,11 +3,9 @@
 [ext_resource type="PackedScene" uid="uid://d1wut7tamf4x4" path="res://scenes/location.tscn" id="1_ps4dc"]
 [ext_resource type="PackedScene" uid="uid://pcvy37xubkna" path="res://character.tscn" id="2_cf7xv"]
 [ext_resource type="PackedScene" uid="uid://dgkwndc8st8iy" path="res://Item.tscn" id="3_qv0li"]
-[ext_resource type="PackedScene" uid="uid://csbefljmvbyr4" path="res://time_ui.tscn" id="4_cc6ur"]
 [ext_resource type="PackedScene" uid="uid://c1qiyct5g6pqu" path="res://object_base.tscn" id="4_cf7xv"]
 [ext_resource type="Script" uid="uid://ckhjmwj4mduqe" path="res://files.gd" id="4_yk55p"]
 [ext_resource type="Script" uid="uid://dfnb2v0a8awp" path="res://dialogue/dialogue_box/dialogue_entry.gd" id="5_gy4ni"]
-[ext_resource type="Script" uid="uid://b7o0kup6fcwgo" path="res://dialogue/dialogue_box/dialogue_option.gd" id="5_o448m"]
 [ext_resource type="Script" uid="uid://biiu5ynvnlvlc" path="res://phone_office.gd" id="5_qv0li"]
 [ext_resource type="Shader" uid="uid://ghi7dn6nf483" path="res://scenes/level.gdshader" id="5_yk55p"]
 [ext_resource type="Script" uid="uid://ctol7mx6xrebc" path="res://dialogue/dialogue_box/dialogue.gd" id="6_elu7l"]
@@ -88,7 +86,6 @@ script = ExtResource("4_yk55p")
 monologue_after_reading = SubResource("Resource_gf4ik")
 item_name = "Old Case Files"
 item_texture = ExtResource("8_qpsbx")
-pickable = true
 investigatable = true
 is_locked = true
 
@@ -96,9 +93,7 @@ is_locked = true
 position = Vector2(115, -13)
 script = ExtResource("5_qv0li")
 
-[node name="TimeUI" parent="." index="6" unique_id=1036368114 instance=ExtResource("4_cc6ur")]
-
-[node name="ShaderLayer" type="CanvasLayer" parent="." index="7" unique_id=1415348060]
+[node name="ShaderLayer" type="CanvasLayer" parent="." index="6" unique_id=1415348060]
 
 [node name="DayNightShader" type="ColorRect" parent="ShaderLayer" index="0" unique_id=1600853200]
 material = SubResource("ShaderMaterial_gdafm")
@@ -112,7 +107,7 @@ mouse_filter = 2
 [node name="Background" parent="CanvasLayer" parent_id_path=PackedInt32Array(1448382970) index="0" unique_id=320484400]
 texture = ExtResource("12_qpsbx")
 
-[node name="ApartmentDoor" parent="." index="9" unique_id=782799893 instance=ExtResource("15_7p1mh")]
+[node name="ApartmentDoor" parent="." index="8" unique_id=782799893 instance=ExtResource("15_7p1mh")]
 position = Vector2(235, 54)
 target_scene = "uid://c7g81efvnp34a"
 tooltip = "[E] leave office"

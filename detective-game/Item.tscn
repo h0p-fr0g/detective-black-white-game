@@ -7,7 +7,7 @@
 size = Vector2(20, 20)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bp1wp"]
-size = Vector2(63, 61)
+size = Vector2(39.5, 38.5)
 
 [node name="Item" type="Area2D" unique_id=1465745035]
 scale = Vector2(0.5, 0.5)
@@ -15,7 +15,8 @@ script = ExtResource("1_3n7vm")
 popup = ExtResource("2_ph0dh")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1588063668]
-position = Vector2(0, 9.536743e-07)
+position = Vector2(-1.1920929e-07, 0)
+scale = Vector2(0.45000002, 0.45)
 texture = SubResource("PlaceholderTexture2D_bp1wp")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1653715621]

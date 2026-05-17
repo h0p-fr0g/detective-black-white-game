@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://1okilop3oyri"]
 
 [ext_resource type="Script" uid="uid://p2gr1y4xpx1r" path="res://popup/popup_box/generic_popup.gd" id="1_pcrqj"]
+[ext_resource type="Texture2D" uid="uid://b2cw3j3ry72qg" path="res://assets/filesopen.png" id="2_va2dq"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h7wil"]
 bg_color = Color(0, 0, 0, 1)
@@ -14,14 +15,6 @@ border_color = Color(1, 1, 1, 1)
 visible = false
 script = ExtResource("1_pcrqj")
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=610115291]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0, 0, 0, 0.5882353)
-
 [node name="CenterContainer" type="CenterContainer" parent="." unique_id=1050166102]
 anchors_preset = 15
 anchor_right = 1.0
@@ -33,33 +26,17 @@ grow_vertical = 2
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_h7wil")
 
-[node name="MarginContainer" type="MarginContainer" parent="CenterContainer/PanelContainer" unique_id=542797383]
-layout_mode = 2
-theme_override_constants/margin_left = 20
-theme_override_constants/margin_top = 20
-theme_override_constants/margin_right = 20
-theme_override_constants/margin_bottom = 20
-
-[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/PanelContainer/MarginContainer" unique_id=108424530]
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/PanelContainer" unique_id=108424530]
 layout_mode = 2
 
-[node name="Heading" type="Label" parent="CenterContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=502616317]
+[node name="TextureRect" type="TextureRect" parent="CenterContainer/PanelContainer/VBoxContainer" unique_id=408400566]
+custom_minimum_size = Vector2(300, 400)
 layout_mode = 2
-text = "Proof"
+texture = ExtResource("2_va2dq")
 
-[node name="HSeparator" type="HSeparator" parent="CenterContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=1015252473]
-layout_mode = 2
-
-[node name="Text" type="Label" parent="CenterContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=888509395]
-custom_minimum_size = Vector2(300, 0)
-layout_mode = 2
-text = "Lorem ipsum"
-horizontal_alignment = 1
-autowrap_mode = 3
-
-[node name="Button_Close" type="Button" parent="CenterContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=1583228639]
+[node name="Button_Close" type="Button" parent="CenterContainer/PanelContainer/VBoxContainer" unique_id=1583228639]
 process_mode = 3
 layout_mode = 2
 text = "Close"
 
-[connection signal="pressed" from="CenterContainer/PanelContainer/MarginContainer/VBoxContainer/Button_Close" to="." method="_on_button_close_pressed"]
+[connection signal="pressed" from="CenterContainer/PanelContainer/VBoxContainer/Button_Close" to="." method="_on_button_close_pressed"]
