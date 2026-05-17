@@ -1,6 +1,7 @@
 [gd_resource type="LabelSettings" format=3 uid="uid://dv3vi0u0xlt7f"]
 
 [sub_resource type="SystemFont" id="SystemFont_2qaxc"]
+font_names = PackedStringArray("Arial Rounded MT")
 
 [resource]
 font = SubResource("SystemFont_2qaxc")
