@@ -3,42 +3,9 @@
 [ext_resource type="Script" uid="uid://b7o0kup6fcwgo" path="res://dialogue/dialogue_box/dialogue_option.gd" id="1_dapi0"]
 [ext_resource type="Script" uid="uid://dfnb2v0a8awp" path="res://dialogue/dialogue_box/dialogue_entry.gd" id="2_10sol"]
 [ext_resource type="Texture2D" uid="uid://d182s0omgtwec" path="res://npcs/neighbor/portrait.png" id="3_44w73"]
+[ext_resource type="Script" uid="uid://b2gefm6124243" path="res://dialogue/dialogue_box/dialogue_choice.gd" id="4_10sol"]
 [ext_resource type="Script" uid="uid://ctol7mx6xrebc" path="res://dialogue/dialogue_box/dialogue.gd" id="4_qcm6j"]
 [ext_resource type="Texture2D" uid="uid://b31l38ff0mto3" path="res://dialogue/portraits/detective.png" id="5_it4hd"]
-
-[sub_resource type="Resource" id="Resource_pbc2k"]
-script = ExtResource("2_10sol")
-character_sprite = ExtResource("3_44w73")
-text = Array[String](["Nothing different from the usual. ", "Judith liked to have the radio on all the time when she was home. Which was more often than not."])
-metadata/_custom_type_script = "uid://dfnb2v0a8awp"
-
-[sub_resource type="Resource" id="Resource_8rwm4"]
-script = ExtResource("4_qcm6j")
-dialogue_entries = Array[ExtResource("2_10sol")]([SubResource("Resource_pbc2k")])
-metadata/_custom_type_script = "uid://ctol7mx6xrebc"
-
-[sub_resource type="Resource" id="Resource_uf3hs"]
-script = ExtResource("1_dapi0")
-text = "Did you happen to notice anything strange that night? "
-next_dialogue = SubResource("Resource_8rwm4")
-metadata/_custom_type_script = "uid://b7o0kup6fcwgo"
-
-[sub_resource type="Resource" id="Resource_k8ao7"]
-script = ExtResource("2_10sol")
-character_sprite = ExtResource("3_44w73")
-text = Array[String](["She was a kind girl. ", "First day she moved here, she brought cookies over. ", "...", "She wasn’t bothered by the state of this place, nor the people that lived here.", "...", "I think her brother was more concerned about it than she ever was. ", "It was why he visited when he could. ", "Including that day.", "...", "But I’m not sure. I wasn’t out on the balcony to see it. ", "Rainy days and I don’t get along, you see."])
-metadata/_custom_type_script = "uid://dfnb2v0a8awp"
-
-[sub_resource type="Resource" id="Resource_023tf"]
-script = ExtResource("4_qcm6j")
-dialogue_entries = Array[ExtResource("2_10sol")]([SubResource("Resource_k8ao7")])
-metadata/_custom_type_script = "uid://ctol7mx6xrebc"
-
-[sub_resource type="Resource" id="Resource_70jxk"]
-script = ExtResource("1_dapi0")
-text = "What can you tell me about Judith? "
-next_dialogue = SubResource("Resource_023tf")
-metadata/_custom_type_script = "uid://b7o0kup6fcwgo"
 
 [sub_resource type="Resource" id="Resource_sifky"]
 script = ExtResource("2_10sol")
@@ -79,13 +46,108 @@ character_sprite = ExtResource("3_44w73")
 text = Array[String](["Yes, I do remember her. What of it?"])
 metadata/_custom_type_script = "uid://dfnb2v0a8awp"
 
+[sub_resource type="Resource" id="Resource_582cq"]
+script = ExtResource("2_10sol")
+text = Array[String](["Where were you that night?"])
+metadata/_custom_type_script = "uid://dfnb2v0a8awp"
+
+[sub_resource type="Resource" id="Resource_10sol"]
+script = ExtResource("2_10sol")
+character_sprite = ExtResource("3_44w73")
+text = Array[String](["I was here, as I am every night."])
+metadata/_custom_type_script = "uid://dfnb2v0a8awp"
+
+[sub_resource type="Resource" id="Resource_44w73"]
+script = ExtResource("4_qcm6j")
+dialogue_entries = Array[ExtResource("2_10sol")]([SubResource("Resource_582cq"), SubResource("Resource_10sol")])
+metadata/_custom_type_script = "uid://ctol7mx6xrebc"
+
+[sub_resource type="Resource" id="Resource_qcm6j"]
+script = ExtResource("1_dapi0")
+text = "Where were you that night?"
+next_dialogue = SubResource("Resource_44w73")
+metadata/_custom_type_script = "uid://b7o0kup6fcwgo"
+
+[sub_resource type="Resource" id="Resource_ut4jq"]
+script = ExtResource("2_10sol")
+text = Array[String](["Did you happen to notice anything strange that night? "])
+metadata/_custom_type_script = "uid://dfnb2v0a8awp"
+
+[sub_resource type="Resource" id="Resource_it4hd"]
+script = ExtResource("2_10sol")
+character_sprite = ExtResource("3_44w73")
+text = Array[String](["Nothing different from the usual. ", "Judith liked to have the radio on all the time when she was home. Which was more often than not."])
+metadata/_custom_type_script = "uid://dfnb2v0a8awp"
+
+[sub_resource type="Resource" id="Resource_pbc2k"]
+script = ExtResource("4_qcm6j")
+dialogue_entries = Array[ExtResource("2_10sol")]([SubResource("Resource_ut4jq"), SubResource("Resource_it4hd")])
+metadata/_custom_type_script = "uid://ctol7mx6xrebc"
+
+[sub_resource type="Resource" id="Resource_8rwm4"]
+script = ExtResource("1_dapi0")
+text = "Did you happen to notice anything strange that night? "
+next_dialogue = SubResource("Resource_pbc2k")
+metadata/_custom_type_script = "uid://b7o0kup6fcwgo"
+
+[sub_resource type="Resource" id="Resource_axhbs"]
+script = ExtResource("2_10sol")
+text = Array[String](["What can you tell me about Judith? "])
+metadata/_custom_type_script = "uid://dfnb2v0a8awp"
+
+[sub_resource type="Resource" id="Resource_uf3hs"]
+script = ExtResource("2_10sol")
+character_sprite = ExtResource("3_44w73")
+text = Array[String](["She was a kind girl. ", "First day she moved here, she brought cookies over. ", "...", "She wasn’t bothered by the state of this place, nor the people that lived here.", "I think her brother was more concerned about it than she ever was. ", "It was why he visited when he could. ", "Including that day.", "...", "But I’m not sure. That was the one night that I wasn’t home.", "I was visiting my sister,  you see."])
+metadata/_custom_type_script = "uid://dfnb2v0a8awp"
+
+[sub_resource type="Resource" id="Resource_k8ao7"]
+script = ExtResource("4_qcm6j")
+dialogue_entries = Array[ExtResource("2_10sol")]([SubResource("Resource_axhbs"), SubResource("Resource_uf3hs")])
+metadata/_custom_type_script = "uid://ctol7mx6xrebc"
+
+[sub_resource type="Resource" id="Resource_o8wh2"]
+script = ExtResource("2_10sol")
+text = Array[String](["You were visiting your sister?"])
+metadata/_custom_type_script = "uid://dfnb2v0a8awp"
+
+[sub_resource type="Resource" id="Resource_023tf"]
+script = ExtResource("2_10sol")
+character_sprite = ExtResource("3_44w73")
+text = Array[String](["Yes", "(talking about her sister)"])
+metadata/_custom_type_script = "uid://dfnb2v0a8awp"
+
+[sub_resource type="Resource" id="Resource_70jxk"]
+script = ExtResource("4_qcm6j")
+dialogue_entries = Array[ExtResource("2_10sol")]([SubResource("Resource_o8wh2"), SubResource("Resource_023tf")])
+metadata/_custom_type_script = "uid://ctol7mx6xrebc"
+
 [sub_resource type="Resource" id="Resource_gskkf"]
+script = ExtResource("1_dapi0")
+text = "You were visiting your sister?"
+next_dialogue = SubResource("Resource_70jxk")
+complete_choice = true
+metadata/_custom_type_script = "uid://b7o0kup6fcwgo"
+
+[sub_resource type="Resource" id="Resource_0m4ed"]
+script = ExtResource("1_dapi0")
+text = "What can you tell me about Judith? "
+next_dialogue = SubResource("Resource_k8ao7")
+replace_with_option = SubResource("Resource_gskkf")
+metadata/_custom_type_script = "uid://b7o0kup6fcwgo"
+
+[sub_resource type="Resource" id="Resource_gm7sx"]
+script = ExtResource("4_10sol")
+options = Array[ExtResource("1_dapi0")]([SubResource("Resource_qcm6j"), SubResource("Resource_8rwm4"), SubResource("Resource_0m4ed")])
+metadata/_custom_type_script = "uid://b2gefm6124243"
+
+[sub_resource type="Resource" id="Resource_jkhg7"]
 script = ExtResource("2_10sol")
 text = Array[String]([""])
+choice = SubResource("Resource_gm7sx")
 metadata/_custom_type_script = "uid://dfnb2v0a8awp"
 
 [resource]
 script = ExtResource("4_qcm6j")
-dialogue_entries = Array[ExtResource("2_10sol")]([SubResource("Resource_sifky"), SubResource("Resource_a48t8"), SubResource("Resource_w72qs"), SubResource("Resource_t8h33"), SubResource("Resource_ock2u"), SubResource("Resource_n4t7f"), SubResource("Resource_obin4"), SubResource("Resource_gskkf")])
-choices = Array[ExtResource("1_dapi0")]([SubResource("Resource_uf3hs"), SubResource("Resource_70jxk")])
+dialogue_entries = Array[ExtResource("2_10sol")]([SubResource("Resource_sifky"), SubResource("Resource_a48t8"), SubResource("Resource_w72qs"), SubResource("Resource_t8h33"), SubResource("Resource_ock2u"), SubResource("Resource_n4t7f"), SubResource("Resource_obin4"), SubResource("Resource_jkhg7")])
 metadata/_custom_type_script = "uid://ctol7mx6xrebc"

@@ -5,6 +5,20 @@
 [ext_resource type="Script" uid="uid://b5toss73m20ku" path="res://npcs/neighbor/neighbor.gd" id="2_io7vj"]
 [ext_resource type="SpriteFrames" uid="uid://b52rqd2bkk627" path="res://npcs/neighbor/sprite_frames.tres" id="2_kgilj"]
 [ext_resource type="Resource" uid="uid://ch0mfeeh4ff02" path="res://npcs/neighbor/dialogue.tres" id="4_io7vj"]
+[ext_resource type="Texture2D" uid="uid://d182s0omgtwec" path="res://npcs/neighbor/portrait.png" id="5_pnj0w"]
+[ext_resource type="Script" uid="uid://dfnb2v0a8awp" path="res://dialogue/dialogue_box/dialogue_entry.gd" id="5_y2p1q"]
+[ext_resource type="Script" uid="uid://ctol7mx6xrebc" path="res://dialogue/dialogue_box/dialogue.gd" id="6_pnj0w"]
+
+[sub_resource type="Resource" id="Resource_5t78j"]
+script = ExtResource("5_y2p1q")
+character_sprite = ExtResource("5_pnj0w")
+text = Array[String](["BRUH we talked already!"])
+metadata/_custom_type_script = "uid://dfnb2v0a8awp"
+
+[sub_resource type="Resource" id="Resource_52xx1"]
+script = ExtResource("6_pnj0w")
+dialogue_entries = Array[ExtResource("5_y2p1q")]([SubResource("Resource_5t78j")])
+metadata/_custom_type_script = "uid://ctol7mx6xrebc"
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_io7vj"]
 atlas = ExtResource("2_7fqc5")
@@ -52,6 +66,7 @@ animations = [{
 [node name="Neighbor" unique_id=1002817240 instance=ExtResource("1_nflwa")]
 script = ExtResource("2_io7vj")
 character_sprite = ExtResource("2_kgilj")
+second_dialogue = SubResource("Resource_52xx1")
 
 [node name="Interactable" parent="." index="0" unique_id=750671946]
 dialogue = ExtResource("4_io7vj")
