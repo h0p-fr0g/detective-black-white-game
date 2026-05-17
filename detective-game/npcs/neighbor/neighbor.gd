@@ -1,7 +1,7 @@
 extends NPCBase
 
 func _ready():
-	if not GlobalFlags.crime_apartment_entered:
+	if not GlobalFlags.desk_investigated or not GlobalFlags.picture_found:
 		queue_free()
 		return
 	
