@@ -2,11 +2,9 @@
 
 [ext_resource type="Script" uid="uid://c054a3xhdbbiq" path="res://apartment_door.gd" id="1_2tlr2"]
 [ext_resource type="PackedScene" uid="uid://bnx4bdviwaaec" path="res://interactable.tscn" id="1_g60hy"]
-[ext_resource type="PackedScene" uid="uid://canyjpwcn0r58" path="res://scenes/locations/crime_apartment.tscn" id="2_eyvxx"]
 
 [node name="ApartmentDoor" type="Node2D" unique_id=782799893]
 script = ExtResource("1_2tlr2")
-scene = ExtResource("2_eyvxx")
 
 [node name="Interactable" parent="." unique_id=1201364754 instance=ExtResource("1_g60hy")]
 tooltip_text = "[E] enter apartment"

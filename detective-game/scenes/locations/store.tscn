@@ -2,8 +2,44 @@
 
 [ext_resource type="PackedScene" uid="uid://d1wut7tamf4x4" path="res://scenes/location.tscn" id="1_jmp1n"]
 [ext_resource type="Texture2D" uid="uid://r1igqc3rsu54" path="res://scenes/locations/store.png" id="2_e2gyr"]
+[ext_resource type="PackedScene" uid="uid://pcvy37xubkna" path="res://character.tscn" id="3_xnhfs"]
+[ext_resource type="PackedScene" uid="uid://gc7enmwq4tye" path="res://npcs/clerk/clerk.tscn" id="4_aca0m"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aca0m"]
+size = Vector2(27, 230)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_war7h"]
+size = Vector2(34.875, 249)
 
 [node name="Store" unique_id=1552120353 instance=ExtResource("1_jmp1n")]
 
 [node name="Background" parent="CanvasLayer" parent_id_path=PackedInt32Array(1448382970) index="0" unique_id=320484400]
 texture = ExtResource("2_e2gyr")
+
+[node name="Floor" type="StaticBody2D" parent="." index="2" unique_id=850103501]
+position = Vector2(-11, 10)
+
+[node name="ColorRect" type="ColorRect" parent="Floor" index="0" unique_id=1433081884]
+visible = false
+offset_left = -2712.0
+offset_top = 149.0
+offset_right = 3300.0
+offset_bottom = 169.0
+color = Color(0, 0, 0, 1)
+
+[node name="InvisibleWalls" type="StaticBody2D" parent="." index="3" unique_id=64434793]
+position = Vector2(-1, -1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InvisibleWalls" index="0" unique_id=1790598106]
+position = Vector2(-258, 35)
+shape = SubResource("RectangleShape2D_aca0m")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="InvisibleWalls" index="1" unique_id=33094065]
+position = Vector2(262, 26)
+shape = SubResource("RectangleShape2D_war7h")
+
+[node name="Player" parent="." index="4" unique_id=1033279704 instance=ExtResource("3_xnhfs")]
+position = Vector2(-153, 39)
+
+[node name="Clerk" parent="." index="5" unique_id=1002817240 instance=ExtResource("4_aca0m")]
+position = Vector2(36, 15)

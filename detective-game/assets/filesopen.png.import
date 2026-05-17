@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b5y8lmkwcakic"
-path="res://.godot/imported/portrait.png-4d5c5e1e365354c8c4b176b4bb2992ac.ctex"
+uid="uid://b2cw3j3ry72qg"
+path="res://.godot/imported/filesopen.png-ff42fa892276a50330feacc3bbf59264.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://npcs/clerk/portrait.png"
-dest_files=["res://.godot/imported/portrait.png-4d5c5e1e365354c8c4b176b4bb2992ac.ctex"]
+source_file="res://assets/filesopen.png"
+dest_files=["res://.godot/imported/filesopen.png-ff42fa892276a50330feacc3bbf59264.ctex"]
 
 [params]
 
