@@ -8,6 +8,6 @@ script = ExtResource("1_p14kn")
 target_scene = "uid://cssipx8uwc2o1"
 
 [node name="Interactable" parent="." unique_id=1201364754 instance=ExtResource("1_ee03o")]
-tooltip_text = "[E] leave apartment "
+tooltip_text = "[E] leave"
 
 [connection signal="interacted" from="Interactable" to="." method="_on_interacted"]

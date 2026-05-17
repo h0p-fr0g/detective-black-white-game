@@ -73,7 +73,7 @@ metadata/_custom_type_script = "uid://ctol7mx6xrebc"
 texture = ExtResource("2_8ghh4")
 
 [node name="Player" parent="." index="2" unique_id=1033279704 instance=ExtResource("3_ed63n")]
-position = Vector2(182, 38)
+position = Vector2(159, 38)
 
 [node name="InvisibleWalls2" type="StaticBody2D" parent="." index="3" unique_id=1745085]
 position = Vector2(-1, -1)
@@ -87,7 +87,7 @@ position = Vector2(346, 26)
 shape = SubResource("RectangleShape2D_2bhhy")
 
 [node name="HallwayDoor" parent="." index="4" unique_id=1078652393 instance=ExtResource("7_2bhhy")]
-position = Vector2(250, 81)
+position = Vector2(230, 81)
 missing_clues_dialogue = SubResource("Resource_2uw7w")
 
 [node name="Desk" parent="." index="5" unique_id=229102061 instance=ExtResource("13_2uw7w")]

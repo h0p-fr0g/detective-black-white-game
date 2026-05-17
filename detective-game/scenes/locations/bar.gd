@@ -2,6 +2,8 @@ extends Node2D
 
 @export var inverted_dialogue: Dialogue
 @export var black_dialogue: Dialogue
+@export var last_dialogue: Dialogue
+
 #@export var credits: PackedScene
 
 var stage = 0
@@ -29,7 +31,12 @@ func _on_dialogue_finished(dialogue):
 		GlobalFlags.trigger_invert_shader(false)
 		$DeadDriver.visible = true
 		$Blackscreen.visible = false
-		await get_tree().create_timer(5.0).timeout
+		await get_tree().create_timer(2.0).timeout
+		SignalBus.dialogue_started.emit(last_dialogue)
+		stage = 3
+		
+	elif stage == 3:
+		await get_tree().create_timer(4.0).timeout
 		$Title.visible = true
 		await get_tree().create_timer(5.0).timeout
 		$Title.visible = false

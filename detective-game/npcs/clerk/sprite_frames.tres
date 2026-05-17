@@ -1,3 +1,46 @@
 [gd_resource type="SpriteFrames" format=3 uid="uid://dm5l1700be5w1"]
 
+[ext_resource type="Texture2D" uid="uid://ca2cqxq1scvgn" path="res://npcs/clerk/clerk.PNG" id="1_7x22u"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dvb5j"]
+atlas = ExtResource("1_7x22u")
+region = Rect2(0, 0, 933, 1643)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bchmq"]
+atlas = ExtResource("1_7x22u")
+region = Rect2(933, 0, 933, 1643)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_arer2"]
+atlas = ExtResource("1_7x22u")
+region = Rect2(1866, 0, 933, 1643)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r0ssg"]
+atlas = ExtResource("1_7x22u")
+region = Rect2(2799, 0, 933, 1643)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5lirg"]
+atlas = ExtResource("1_7x22u")
+region = Rect2(3732, 0, 933, 1643)
+
 [resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dvb5j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bchmq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_arer2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r0ssg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5lirg")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]

@@ -6,6 +6,7 @@
 [ext_resource type="Script" uid="uid://bl5nycf6rs4sy" path="res://npcs/clerk/clerk.gd" id="2_o0grc"]
 [ext_resource type="Texture2D" uid="uid://b5y8lmkwcakic" path="res://npcs/clerk/portrait.png" id="3_o0grc"]
 [ext_resource type="Script" uid="uid://ctol7mx6xrebc" path="res://dialogue/dialogue_box/dialogue.gd" id="4_w2mgq"]
+[ext_resource type="SpriteFrames" uid="uid://dm5l1700be5w1" path="res://npcs/clerk/sprite_frames.tres" id="7_w2mgq"]
 
 [sub_resource type="Resource" id="Resource_gnvpk"]
 script = ExtResource("2_2j6qv")
@@ -27,4 +28,5 @@ second_dialogue = SubResource("Resource_7tf3k")
 dialogue = ExtResource("2_dfp3b")
 
 [node name="AnimatedSprite2D" parent="." index="1" unique_id=1501660920]
-frame_progress = 0.25183183
+sprite_frames = ExtResource("7_w2mgq")
+frame_progress = 0.0
