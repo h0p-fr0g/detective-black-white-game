@@ -1,79 +1,19 @@
 [gd_scene format=3 uid="uid://ckchbjewye5x0"]
 
 [ext_resource type="Script" uid="uid://dycn803nym273" path="res://npc_base.gd" id="1_tmksl"]
-[ext_resource type="Texture2D" uid="uid://s0m4c6up8eqq" path="res://assets/Idle.png" id="2_6txx1"]
-[ext_resource type="Resource" uid="uid://bbbscjb71jfr" path="res://dialogue/dialogues/npc.tres" id="2_s6gr2"]
-[ext_resource type="Resource" uid="uid://fxa8xrvmvtvr" path="res://dialogue/dialogues/npc_interacted.tres" id="3_chfhp"]
 [ext_resource type="PackedScene" uid="uid://bnx4bdviwaaec" path="res://interactable.tscn" id="4_u3rnm"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_s6gr2"]
-atlas = ExtResource("2_6txx1")
-region = Rect2(0, 0, 128, 128)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_chfhp"]
-atlas = ExtResource("2_6txx1")
-region = Rect2(128, 0, 128, 128)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_u3rnm"]
-atlas = ExtResource("2_6txx1")
-region = Rect2(256, 0, 128, 128)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_i6fm7"]
-atlas = ExtResource("2_6txx1")
-region = Rect2(384, 0, 128, 128)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_w5jlk"]
-atlas = ExtResource("2_6txx1")
-region = Rect2(512, 0, 128, 128)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ixk3a"]
-atlas = ExtResource("2_6txx1")
-region = Rect2(640, 0, 128, 128)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ts42d"]
-atlas = ExtResource("2_6txx1")
-region = Rect2(768, 0, 128, 128)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_6du4j"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_s6gr2")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_chfhp")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_u3rnm")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_i6fm7")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_w5jlk")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ixk3a")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ts42d")
-}],
-"loop": true,
-"name": &"idle",
-"speed": 5.0
-}]
+[ext_resource type="SpriteFrames" uid="uid://b52rqd2bkk627" path="res://npcs/neighbor/sprite_frames.tres" id="5_u3rnm"]
 
 [node name="NPC_Base" type="Node2D" unique_id=1002817240]
 script = ExtResource("1_tmksl")
 
 [node name="Interactable" parent="." unique_id=750671946 instance=ExtResource("4_u3rnm")]
 position = Vector2(-10, 38)
-dialogue = ExtResource("2_s6gr2")
-dialogue_interacted = ExtResource("3_chfhp")
 tooltip_text = "[E] talk"
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1501660920]
 process_mode = 3
 position = Vector2(-6, 3)
-sprite_frames = SubResource("SpriteFrames_6du4j")
+scale = Vector2(0.19174255, 0.19174255)
+sprite_frames = ExtResource("5_u3rnm")
 animation = &"idle"

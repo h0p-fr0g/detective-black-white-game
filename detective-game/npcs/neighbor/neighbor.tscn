@@ -1,0 +1,63 @@
+[gd_scene format=3 uid="uid://ffgeu5flf3kx"]
+
+[ext_resource type="PackedScene" uid="uid://ckchbjewye5x0" path="res://npc_base.tscn" id="1_nflwa"]
+[ext_resource type="Texture2D" uid="uid://b41oj4hckvp0e" path="res://npcs/neighbor/sprite.PNG" id="2_7fqc5"]
+[ext_resource type="Script" uid="uid://b5toss73m20ku" path="res://npcs/neighbor/neighbor.gd" id="2_io7vj"]
+[ext_resource type="SpriteFrames" uid="uid://b52rqd2bkk627" path="res://npcs/neighbor/sprite_frames.tres" id="2_kgilj"]
+[ext_resource type="Resource" uid="uid://ch0mfeeh4ff02" path="res://npcs/neighbor/dialogue.tres" id="3_hr81u"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kgilj"]
+atlas = ExtResource("2_7fqc5")
+region = Rect2(0, 0, 933, 1643)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nl7x1"]
+atlas = ExtResource("2_7fqc5")
+region = Rect2(933, 0, 933, 1643)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s6hyf"]
+atlas = ExtResource("2_7fqc5")
+region = Rect2(1866, 0, 933, 1643)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_igarv"]
+atlas = ExtResource("2_7fqc5")
+region = Rect2(2799, 0, 933, 1643)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kpsc2"]
+atlas = ExtResource("2_7fqc5")
+region = Rect2(3732, 0, 933, 1643)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_k86mg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kgilj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nl7x1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s6hyf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_igarv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kpsc2")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Neighbor" unique_id=1002817240 instance=ExtResource("1_nflwa")]
+script = ExtResource("2_io7vj")
+character_sprite = ExtResource("2_kgilj")
+
+[node name="Interactable" parent="." index="0" unique_id=750671946]
+dialogue = ExtResource("3_hr81u")
+
+[node name="AnimatedSprite2D" parent="." index="1" unique_id=1501660920]
+scale = Vector2(0.17425258, 0.17425258)
+sprite_frames = SubResource("SpriteFrames_k86mg")
+animation = &"default"
+frame_progress = 0.86935043

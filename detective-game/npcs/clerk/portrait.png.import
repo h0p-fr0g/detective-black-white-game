@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bpu6degnw8rgw"
-path="res://.godot/imported/betty.png-3eb1345806041eb932ae1504b9b44c33.ctex"
+uid="uid://tgex3c1hpas"
+path="res://.godot/imported/portrait.png-4d5c5e1e365354c8c4b176b4bb2992ac.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://dialogue/portraits/betty.png"
-dest_files=["res://.godot/imported/betty.png-3eb1345806041eb932ae1504b9b44c33.ctex"]
+source_file="res://npcs/clerk/portrait.png"
+dest_files=["res://.godot/imported/portrait.png-4d5c5e1e365354c8c4b176b4bb2992ac.ctex"]
 
 [params]
 

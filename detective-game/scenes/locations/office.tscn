@@ -7,11 +7,11 @@
 [ext_resource type="PackedScene" uid="uid://c1qiyct5g6pqu" path="res://object_base.tscn" id="4_cf7xv"]
 [ext_resource type="Script" uid="uid://ckhjmwj4mduqe" path="res://files.gd" id="4_yk55p"]
 [ext_resource type="Script" uid="uid://dfnb2v0a8awp" path="res://dialogue/dialogue_box/dialogue_entry.gd" id="5_gy4ni"]
+[ext_resource type="Script" uid="uid://b7o0kup6fcwgo" path="res://dialogue/dialogue_box/dialogue_option.gd" id="5_o448m"]
 [ext_resource type="Script" uid="uid://biiu5ynvnlvlc" path="res://phone_office.gd" id="5_qv0li"]
-[ext_resource type="Script" path="res://dialogue/dialogue_box/dialogue_option.gd" id="5_x4px3"]
 [ext_resource type="Shader" uid="uid://ghi7dn6nf483" path="res://scenes/level.gdshader" id="5_yk55p"]
-[ext_resource type="Script" uid="uid://ctol7mx6xrebc" path="res://dialogue/dialogue_box/dialogue_data.gd" id="6_elu7l"]
-[ext_resource type="Texture2D" uid="uid://b31l38ff0mto3" path="res://dialogue/portraits/detective.png" id="7_o448m"]
+[ext_resource type="Script" uid="uid://ctol7mx6xrebc" path="res://dialogue/dialogue_box/dialogue.gd" id="6_elu7l"]
+[ext_resource type="Texture2D" uid="uid://b31l38ff0mto3" path="res://dialogue/portraits/detective.png" id="7_7p1mh"]
 [ext_resource type="Texture2D" uid="uid://d3fr7yvagr2m8" path="res://assets/files.png" id="8_qpsbx"]
 [ext_resource type="Texture2D" uid="uid://c7awr73eh706w" path="res://scenes/locations/office.png" id="12_qpsbx"]
 [ext_resource type="PackedScene" uid="uid://dyq0pxg8p067p" path="res://map_hint_ui.tscn" id="13_gf4ik"]
@@ -22,14 +22,14 @@ size = Vector2(27, 230)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2knxt"]
 size = Vector2(34.875, 249)
 
-[sub_resource type="Resource" id="Resource_qpsbx"]
+[sub_resource type="Resource" id="Resource_gncak"]
 script = ExtResource("5_gy4ni")
 text = Array[String](["It must be one of the ones that did not have enough evidence for me to look over.", "...", "For whatever reason, the caller thinks I know something. Could it have to do with the gap in my memories?"])
 metadata/_custom_type_script = "uid://dfnb2v0a8awp"
 
 [sub_resource type="Resource" id="Resource_gf4ik"]
 script = ExtResource("6_elu7l")
-dialogue_entries = Array[ExtResource("5_gy4ni")]([SubResource("Resource_qpsbx")])
+dialogue_entries = Array[ExtResource("5_gy4ni")]([SubResource("Resource_gncak")])
 metadata/_custom_type_script = "uid://ctol7mx6xrebc"
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_gdafm"]

@@ -16,7 +16,7 @@ func _ready() -> void:
 	visible = false
 
 
-func _on_dialogue_started(dialogue: DialogueData):
+func _on_dialogue_started(dialogue: Dialogue):
 	if visible:
 		push_error("tried to start dialogue while dialogue is already active!")
 		return

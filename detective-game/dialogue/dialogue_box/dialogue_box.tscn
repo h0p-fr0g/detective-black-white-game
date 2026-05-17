@@ -46,19 +46,19 @@ expand_mode = 1
 
 [node name="OptionA" type="Button" parent="Box" unique_id=1242169154]
 layout_mode = 0
-offset_left = 490.0
-offset_top = 242.0
-offset_right = 990.0
-offset_bottom = 296.0
+offset_left = 762.0
+offset_top = 141.0
+offset_right = 1262.0
+offset_bottom = 195.0
 theme = ExtResource("2_dtg6m")
 text = "Option A"
 
 [node name="OptionB" type="Button" parent="Box" unique_id=2114557230]
 layout_mode = 0
-offset_left = 1116.0
-offset_top = 242.0
-offset_right = 1616.0
-offset_bottom = 296.0
+offset_left = 761.0
+offset_top = 233.0
+offset_right = 1261.0
+offset_bottom = 287.0
 theme = ExtResource("2_dtg6m")
 text = "Option B"
 

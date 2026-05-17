@@ -1,5 +1,5 @@
 extends Resource
-class_name DialogueData
+class_name Dialogue
 
 @export var dialogue_entries : Array[DialogueEntry]
 @export var choices: Array[DialogueOption]
