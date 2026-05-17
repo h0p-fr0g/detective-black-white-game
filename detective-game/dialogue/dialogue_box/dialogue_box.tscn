@@ -46,30 +46,41 @@ expand_mode = 1
 
 [node name="OptionA" type="Button" parent="Box" unique_id=1242169154]
 layout_mode = 0
-offset_left = 400.0
-offset_top = 82.0
-offset_right = 1800.0
-offset_bottom = 136.0
+offset_left = 405.0
+offset_top = 100.0
+offset_right = 1805.0
+offset_bottom = 154.0
 theme = ExtResource("2_dtg6m")
 text = "Option A"
 
 [node name="OptionB" type="Button" parent="Box" unique_id=2114557230]
 layout_mode = 0
-offset_left = 400.0
-offset_top = 152.0
-offset_right = 1800.0
-offset_bottom = 206.0
+offset_left = 405.0
+offset_top = 170.0
+offset_right = 1805.0
+offset_bottom = 224.0
 theme = ExtResource("2_dtg6m")
 text = "Option B"
 
 [node name="OptionC" type="Button" parent="Box" unique_id=1394634383]
 layout_mode = 0
-offset_left = 400.0
-offset_top = 222.0
-offset_right = 1800.0
-offset_bottom = 276.0
+offset_left = 405.0
+offset_top = 240.0
+offset_right = 1805.0
+offset_bottom = 294.0
+size_flags_horizontal = 8
 theme = ExtResource("2_dtg6m")
 text = "Option C"
+
+[node name="Image" type="TextureRect" parent="Box" unique_id=1465812791]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -802.0
+offset_top = -551.0
+offset_right = -431.0
+offset_bottom = -160.72726
 
 [connection signal="pressed" from="Box/OptionA" to="." method="_on_option_a_pressed"]
 [connection signal="pressed" from="Box/OptionB" to="." method="_on_option_b_pressed"]

@@ -14,6 +14,7 @@ var current_dialogue: Dialogue
 @onready var option_a_button := $Box/OptionA
 @onready var option_b_button := $Box/OptionB
 @onready var option_c_button := $Box/OptionC
+@onready var image := $Box/Image
 
 func _ready() -> void:
 	SignalBus.dialogue_started.connect(_on_dialogue_started)
@@ -28,6 +29,7 @@ func _on_dialogue_started(dialogue: Dialogue):
 		push_error("tried to start dialogue while dialogue is already active!")
 		return
 	
+	var dialogue_to_signal = dialogue
 	current_dialogue = dialogue
 	
 	get_tree().paused = true
@@ -38,10 +40,14 @@ func _on_dialogue_started(dialogue: Dialogue):
 	visible = false
 	get_tree().paused = false
 	
-	if SignalBus:
-		SignalBus.dialogue_finished.emit(current_dialogue)
+	if current_dialogue == dialogue_to_signal:
+		visible = false	
+		get_tree().paused = false
+		image.hide()
+		current_dialogue = null
 	
-	current_dialogue = null
+	if SignalBus:
+		SignalBus.dialogue_finished.emit(dialogue_to_signal)
 
 
 func display_dialogue(dialogue: Dialogue):
@@ -55,6 +61,12 @@ func display_entry(entry: DialogueEntry):
 	
 	if entry.text:
 		for i in entry.text.size():	
+			if entry.image != null:
+				image.texture = entry.image
+				image.show()
+			else:
+				image.hide()
+
 			var line = entry.text[i] 
 			text.visible_characters = 0
 			text.text = line

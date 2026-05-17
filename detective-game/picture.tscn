@@ -2,11 +2,49 @@
 
 [ext_resource type="Script" uid="uid://xhk1ne4lb1on" path="res://picture.gd" id="1_l6pn7"]
 [ext_resource type="PackedScene" uid="uid://bnx4bdviwaaec" path="res://interactable.tscn" id="2_xtl2j"]
+[ext_resource type="Script" uid="uid://b7o0kup6fcwgo" path="res://dialogue/dialogue_box/dialogue_option.gd" id="3_713ve"]
+[ext_resource type="Script" uid="uid://dfnb2v0a8awp" path="res://dialogue/dialogue_box/dialogue_entry.gd" id="4_jx1u7"]
+[ext_resource type="Texture2D" uid="uid://b31l38ff0mto3" path="res://dialogue/portraits/detective.png" id="5_hwfum"]
+[ext_resource type="Texture2D" uid="uid://bappl6wjp7hjk" path="res://assets/photo.png" id="6_jx1u7"]
+[ext_resource type="Script" uid="uid://ctol7mx6xrebc" path="res://dialogue/dialogue_box/dialogue.gd" id="6_xsycv"]
+
+[sub_resource type="Resource" id="Resource_jx1u7"]
+script = ExtResource("4_jx1u7")
+metadata/_custom_type_script = "uid://dfnb2v0a8awp"
+
+[sub_resource type="Resource" id="Resource_b26td"]
+script = ExtResource("4_jx1u7")
+text = Array[String](["The picture is bent around the edges, a black and white image of an older girl and a younger boy standing in a park, the former smiling while the later is awkwardly hunched.", ""])
+image = ExtResource("6_jx1u7")
+metadata/_custom_type_script = "uid://dfnb2v0a8awp"
+
+[sub_resource type="Resource" id="Resource_xsycv"]
+script = ExtResource("6_xsycv")
+dialogue_entries = Array[ExtResource("4_jx1u7")]([SubResource("Resource_jx1u7"), SubResource("Resource_b26td")])
+metadata/_custom_type_script = "uid://ctol7mx6xrebc"
+
+[sub_resource type="Resource" id="Resource_hwfum"]
+script = ExtResource("4_jx1u7")
+text = Array[String](["There is a picture under the mattress."])
+metadata/_custom_type_script = "uid://dfnb2v0a8awp"
+
+[sub_resource type="Resource" id="Resource_ofiug"]
+script = ExtResource("4_jx1u7")
+text = Array[String](["The picture is bent around the edges, a black and white image of an older girl and a younger boy standing in a park, the former smiling while the later is awkwardly hunched.", "On the other side of the photo is a list of numbers, barely visible, but he is able to make them out."])
+image = ExtResource("6_jx1u7")
+metadata/_custom_type_script = "uid://dfnb2v0a8awp"
+
+[sub_resource type="Resource" id="Resource_ghrya"]
+script = ExtResource("6_xsycv")
+dialogue_entries = Array[ExtResource("4_jx1u7")]([SubResource("Resource_hwfum"), SubResource("Resource_ofiug")])
+metadata/_custom_type_script = "uid://ctol7mx6xrebc"
 
 [node name="Picture" type="Node2D" unique_id=584623188]
 script = ExtResource("1_l6pn7")
+dialogue_before_invert = SubResource("Resource_xsycv")
 
 [node name="Interactable" parent="." unique_id=1201364754 instance=ExtResource("2_xtl2j")]
+dialogue = SubResource("Resource_ghrya")
 tooltip_text = "[E] inspect mattress"
 
 [connection signal="interacted" from="Interactable" to="." method="_on_interactable_interacted"]
