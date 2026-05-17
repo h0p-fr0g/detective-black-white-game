@@ -10,7 +10,7 @@
 [ext_resource type="Script" uid="uid://b7o0kup6fcwgo" path="res://dialogue/dialogue_box/dialogue_option.gd" id="5_o448m"]
 [ext_resource type="Script" uid="uid://biiu5ynvnlvlc" path="res://phone_office.gd" id="5_qv0li"]
 [ext_resource type="Shader" uid="uid://ghi7dn6nf483" path="res://scenes/level.gdshader" id="5_yk55p"]
-[ext_resource type="Script" uid="uid://ctol7mx6xrebc" path="res://dialogue/dialogue_box/dialogue.gd" id="6_elu7l"]
+[ext_resource type="Script" path="res://dialogue/dialogue_box/dialogue.gd" id="6_elu7l"]
 [ext_resource type="Texture2D" uid="uid://b31l38ff0mto3" path="res://dialogue/portraits/detective.png" id="7_7p1mh"]
 [ext_resource type="Texture2D" uid="uid://d3fr7yvagr2m8" path="res://assets/files.png" id="8_qpsbx"]
 [ext_resource type="Texture2D" uid="uid://c7awr73eh706w" path="res://scenes/locations/office.png" id="12_qpsbx"]
@@ -24,13 +24,12 @@ size = Vector2(34.875, 249)
 
 [sub_resource type="Resource" id="Resource_gncak"]
 script = ExtResource("5_gy4ni")
-text = Array[String](["It must be one of the ones that did not have enough evidence for me to look over.", "...", "For whatever reason, the caller thinks I know something. Could it have to do with the gap in my memories?"])
+text = Array[String](["It must be one of the ones that did not have enough evidence for me to look over.", "...", "For whatever reason, the caller seems to think I know something. Could it have to do with the gap in my memories?"])
 metadata/_custom_type_script = "uid://dfnb2v0a8awp"
 
 [sub_resource type="Resource" id="Resource_gf4ik"]
 script = ExtResource("6_elu7l")
 dialogue_entries = Array[ExtResource("5_gy4ni")]([SubResource("Resource_gncak")])
-metadata/_custom_type_script = "uid://ctol7mx6xrebc"
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_gdafm"]
 shader = ExtResource("5_yk55p")
@@ -67,7 +66,7 @@ shape = SubResource("RectangleShape2D_2knxt")
 position = Vector2(-127, 17)
 script = ExtResource("4_yk55p")
 monologue_after_reading = SubResource("Resource_gf4ik")
-item_name = "Case Files"
+item_name = "Old Case Files"
 item_texture = ExtResource("8_qpsbx")
 pickable = true
 investigatable = true
