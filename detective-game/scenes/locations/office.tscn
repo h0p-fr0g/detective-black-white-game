@@ -11,7 +11,10 @@
 [ext_resource type="Script" uid="uid://ctol7mx6xrebc" path="res://dialogue/dialogue_box/dialogue.gd" id="6_elu7l"]
 [ext_resource type="Texture2D" uid="uid://b31l38ff0mto3" path="res://dialogue/portraits/detective.png" id="7_7p1mh"]
 [ext_resource type="Texture2D" uid="uid://d3fr7yvagr2m8" path="res://assets/files.png" id="8_qpsbx"]
+[ext_resource type="Resource" uid="uid://cshu7ki1df5bo" path="res://second_phone_dialogue.tres" id="11_gf4ik"]
+[ext_resource type="Resource" uid="uid://dw677sdfc5smh" path="res://second_try.tres" id="12_o448m"]
 [ext_resource type="Texture2D" uid="uid://c7awr73eh706w" path="res://scenes/locations/office.png" id="12_qpsbx"]
+[ext_resource type="Resource" uid="uid://bvficlas6k8b8" path="res://third_try.tres" id="13_7p1mh"]
 [ext_resource type="PackedScene" uid="uid://d0r5c7oixeqlt" path="res://apartment_door.tscn" id="15_7p1mh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hub07"]
@@ -92,6 +95,9 @@ is_locked = true
 [node name="Phone" parent="." index="5" unique_id=1858461430 instance=ExtResource("4_cf7xv")]
 position = Vector2(115, -13)
 script = ExtResource("5_qv0li")
+make_call_dialogue = ExtResource("11_gf4ik")
+second_try_dialogue = ExtResource("12_o448m")
+third_try_dialogue = ExtResource("13_7p1mh")
 
 [node name="ShaderLayer" type="CanvasLayer" parent="." index="6" unique_id=1415348060]
 

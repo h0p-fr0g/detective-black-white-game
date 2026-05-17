@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="Dialogue" format=3 uid="uid://bvficlas6k8b8"]
+
+[ext_resource type="Script" uid="uid://dfnb2v0a8awp" path="res://dialogue/dialogue_box/dialogue_entry.gd" id="1_chhdh"]
+[ext_resource type="Texture2D" uid="uid://b31l38ff0mto3" path="res://dialogue/portraits/detective.png" id="2_b60tq"]
+[ext_resource type="Script" uid="uid://ctol7mx6xrebc" path="res://dialogue/dialogue_box/dialogue.gd" id="2_hb4r7"]
+
+[sub_resource type="Resource" id="Resource_gpgpa"]
+script = ExtResource("1_chhdh")
+text = Array[String](["You called me back. Have you decided to face your past?", "Meet me at the bar, the one by the highway.", "(click)", "Calm down. You’re a detective, not a wild animal."])
+metadata/_custom_type_script = "uid://dfnb2v0a8awp"
+
+[resource]
+script = ExtResource("2_hb4r7")
+dialogue_entries = Array[ExtResource("1_chhdh")]([SubResource("Resource_gpgpa")])
+metadata/_custom_type_script = "uid://ctol7mx6xrebc"
