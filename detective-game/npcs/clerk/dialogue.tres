@@ -1,0 +1,89 @@
+[gd_resource type="Resource" script_class="Dialogue" format=3 uid="uid://digcudmxmclou"]
+
+[ext_resource type="Script" uid="uid://dfnb2v0a8awp" path="res://dialogue/dialogue_box/dialogue_entry.gd" id="1_qqixt"]
+[ext_resource type="Script" uid="uid://ctol7mx6xrebc" path="res://dialogue/dialogue_box/dialogue.gd" id="2_cq4v5"]
+[ext_resource type="Texture2D" uid="uid://b5y8lmkwcakic" path="res://npcs/clerk/portrait.png" id="2_xc6on"]
+[ext_resource type="Texture2D" uid="uid://b31l38ff0mto3" path="res://dialogue/portraits/detective.png" id="3_sr2ts"]
+[ext_resource type="Script" uid="uid://b7o0kup6fcwgo" path="res://dialogue/dialogue_box/dialogue_option.gd" id="4_b7lk3"]
+[ext_resource type="Script" uid="uid://b2gefm6124243" path="res://dialogue/dialogue_box/dialogue_choice.gd" id="6_ovhf6"]
+
+[sub_resource type="Resource" id="Resource_b7lk3"]
+script = ExtResource("1_qqixt")
+character_sprite = ExtResource("2_xc6on")
+text = Array[String](["Good evening, Detective. "])
+metadata/_custom_type_script = "uid://dfnb2v0a8awp"
+
+[sub_resource type="Resource" id="Resource_ovhf6"]
+script = ExtResource("1_qqixt")
+text = Array[String](["I am looking into the unsolved case of Judith Fleming. ", "According to the statement taken by the police, you saw the attack occur on the night of 26th? "])
+metadata/_custom_type_script = "uid://dfnb2v0a8awp"
+
+[sub_resource type="Resource" id="Resource_7h3hg"]
+script = ExtResource("1_qqixt")
+character_sprite = ExtResource("2_xc6on")
+text = Array[String](["Ah, that case. Right, I had given a statement. ", "I thought it had been solved by now?", ""])
+metadata/_custom_type_script = "uid://dfnb2v0a8awp"
+
+[sub_resource type="Resource" id="Resource_w2chk"]
+script = ExtResource("1_qqixt")
+text = Array[String](["No, it still remains unsolved. "])
+metadata/_custom_type_script = "uid://dfnb2v0a8awp"
+
+[sub_resource type="Resource" id="Resource_e8igm"]
+script = ExtResource("1_qqixt")
+character_sprite = ExtResource("2_xc6on")
+text = Array[String](["Well. That is unfortunate. "])
+metadata/_custom_type_script = "uid://dfnb2v0a8awp"
+
+[sub_resource type="Resource" id="Resource_gwghw"]
+script = ExtResource("1_qqixt")
+character_sprite = ExtResource("2_xc6on")
+text = Array[String](["I was closing the store like usual, and I happened to look across the street.", "One of the apartment’s still had the lights on, and I could hear yelling from all the way here. I thought it was odd. "])
+metadata/_custom_type_script = "uid://dfnb2v0a8awp"
+
+[sub_resource type="Resource" id="Resource_81gla"]
+script = ExtResource("1_qqixt")
+text = Array[String](["Why did you think it was odd? Is it not a common occurance around here?"])
+metadata/_custom_type_script = "uid://dfnb2v0a8awp"
+
+[sub_resource type="Resource" id="Resource_trv77"]
+script = ExtResource("1_qqixt")
+character_sprite = ExtResource("2_xc6on")
+text = Array[String](["Oh no, Detective. This town is a quiet place. "])
+metadata/_custom_type_script = "uid://dfnb2v0a8awp"
+
+[sub_resource type="Resource" id="Resource_05rky"]
+script = ExtResource("1_qqixt")
+text = Array[String](["Is that all you saw that night or is there something you wish to add?"])
+metadata/_custom_type_script = "uid://dfnb2v0a8awp"
+
+[sub_resource type="Resource" id="Resource_8ndb2"]
+script = ExtResource("2_cq4v5")
+dialogue_entries = Array[ExtResource("1_qqixt")]([SubResource("Resource_gwghw"), SubResource("Resource_81gla"), SubResource("Resource_trv77"), SubResource("Resource_05rky")])
+metadata/_custom_type_script = "uid://ctol7mx6xrebc"
+
+[sub_resource type="Resource" id="Resource_st7oa"]
+script = ExtResource("4_b7lk3")
+text = "Do you mind recounting what you saw that night when you were closing the store?"
+next_dialogue = SubResource("Resource_8ndb2")
+metadata/_custom_type_script = "uid://b7o0kup6fcwgo"
+
+[sub_resource type="Resource" id="Resource_id83g"]
+script = ExtResource("4_b7lk3")
+text = "By any chance did you happen to see any movement from the apartment next door?"
+metadata/_custom_type_script = "uid://b7o0kup6fcwgo"
+
+[sub_resource type="Resource" id="Resource_iaexf"]
+script = ExtResource("6_ovhf6")
+options = Array[ExtResource("4_b7lk3")]([SubResource("Resource_st7oa"), SubResource("Resource_id83g")])
+metadata/_custom_type_script = "uid://b2gefm6124243"
+
+[sub_resource type="Resource" id="Resource_jw6m3"]
+script = ExtResource("1_qqixt")
+choice = SubResource("Resource_iaexf")
+metadata/_custom_type_script = "uid://dfnb2v0a8awp"
+
+[resource]
+script = ExtResource("2_cq4v5")
+dialogue_entries = Array[ExtResource("1_qqixt")]([SubResource("Resource_b7lk3"), SubResource("Resource_ovhf6"), SubResource("Resource_7h3hg"), SubResource("Resource_w2chk"), SubResource("Resource_e8igm"), SubResource("Resource_jw6m3")])
+metadata/_custom_type_script = "uid://ctol7mx6xrebc"

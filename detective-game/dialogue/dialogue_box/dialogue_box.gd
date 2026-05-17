@@ -58,26 +58,29 @@ func display_dialogue(dialogue: Dialogue):
 
 func display_entry(entry: DialogueEntry):
 	portrait.texture = entry.character_sprite
-	for i in entry.text.size():	
-		
-		if entry.image != null:
-			image.texture = entry.image
-			image.show()
-		else:
-			image.hide()
-		
-		var line = entry.text[i] 
-		text.visible_characters = 0
-		text.text = line
-		await display_line(line)
-		
-		if entry.choice and i == entry.text.size() - 1:
-			await display_choice(entry)
-			return
+	
+	if entry.text:
+		for i in entry.text.size():	
+			if entry.image != null:
+				image.texture = entry.image
+				image.show()
+			else:
+				image.hide()
+
+			var line = entry.text[i] 
+			text.visible_characters = 0
+			text.text = line
+			await display_line(line)
 			
-		while not skipped:
-			await get_tree().process_frame
-		skipped = false
+			if entry.choice and i == entry.text.size() - 1:
+				break
+				
+			while not skipped:
+				await get_tree().process_frame
+			skipped = false
+	
+	if entry.choice:
+		await display_choice(entry)
 
 
 func display_line(line: String):
