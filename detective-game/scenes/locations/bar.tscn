@@ -2,9 +2,36 @@
 
 [ext_resource type="PackedScene" uid="uid://d1wut7tamf4x4" path="res://scenes/location.tscn" id="1_5dekh"]
 [ext_resource type="Texture2D" uid="uid://c8tvmjumj2gra" path="res://scenes/locations/bar.png" id="2_0r30a"]
+[ext_resource type="Script" uid="uid://u4q4gwurynq0" path="res://scenes/locations/bar.gd" id="2_unida"]
+[ext_resource type="Script" uid="uid://dfnb2v0a8awp" path="res://dialogue/dialogue_box/dialogue_entry.gd" id="3_c6ijc"]
 [ext_resource type="PackedScene" uid="uid://pcvy37xubkna" path="res://character.tscn" id="3_s3o5y"]
 [ext_resource type="PackedScene" uid="uid://d0r5c7oixeqlt" path="res://apartment_door.tscn" id="4_06a06"]
+[ext_resource type="Texture2D" uid="uid://c5i8kv0lf6sqb" path="res://dialogue/portraits/werewolf.png" id="4_rnaqv"]
 [ext_resource type="PackedScene" uid="uid://i26u4rfyxa7" path="res://npcs/driver/driver.tscn" id="5_06a06"]
+[ext_resource type="Script" uid="uid://ctol7mx6xrebc" path="res://dialogue/dialogue_box/dialogue.gd" id="5_xo0r6"]
+[ext_resource type="Texture2D" uid="uid://ck0avn3g1xqp6" path="res://dialogue/portraits/anonymous.png" id="10_rnaqv"]
+
+[sub_resource type="Resource" id="Resource_ijit6"]
+script = ExtResource("3_c6ijc")
+character_sprite = ExtResource("4_rnaqv")
+text = Array[String](["..."])
+metadata/_custom_type_script = "uid://dfnb2v0a8awp"
+
+[sub_resource type="Resource" id="Resource_57rxf"]
+script = ExtResource("5_xo0r6")
+dialogue_entries = Array[ExtResource("3_c6ijc")]([SubResource("Resource_ijit6")])
+metadata/_custom_type_script = "uid://ctol7mx6xrebc"
+
+[sub_resource type="Resource" id="Resource_rnaqv"]
+script = ExtResource("3_c6ijc")
+character_sprite = ExtResource("4_rnaqv")
+text = Array[String](["It wasn't me!"])
+metadata/_custom_type_script = "uid://dfnb2v0a8awp"
+
+[sub_resource type="Resource" id="Resource_xo0r6"]
+script = ExtResource("5_xo0r6")
+dialogue_entries = Array[ExtResource("3_c6ijc")]([SubResource("Resource_rnaqv")])
+metadata/_custom_type_script = "uid://ctol7mx6xrebc"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_unida"]
 size = Vector2(27, 230)
@@ -12,7 +39,12 @@ size = Vector2(27, 230)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uvwea"]
 size = Vector2(34.875, 249)
 
+[sub_resource type="LabelSettings" id="LabelSettings_rnaqv"]
+
 [node name="Bar" unique_id=1552120353 instance=ExtResource("1_5dekh")]
+script = ExtResource("2_unida")
+inverted_dialogue = SubResource("Resource_57rxf")
+black_dialogue = SubResource("Resource_xo0r6")
 
 [node name="Background" parent="CanvasLayer" parent_id_path=PackedInt32Array(1448382970) index="0" unique_id=320484400]
 texture = ExtResource("2_0r30a")
@@ -38,3 +70,46 @@ tooltip = "[E] leave bar"
 
 [node name="Driver" parent="." index="5" unique_id=1002817240 instance=ExtResource("5_06a06")]
 position = Vector2(-153, 16)
+
+[node name="Blackscreen" type="Sprite2D" parent="." index="6" unique_id=1631476594]
+visible = false
+z_index = 2
+position = Vector2(673, -2935)
+scale = Vector2(81.81017, 37.294098)
+texture = ExtResource("10_rnaqv")
+
+[node name="DeadDriver" type="Sprite2D" parent="." index="8" unique_id=1608031620]
+visible = false
+position = Vector2(-18, 147)
+texture = ExtResource("10_rnaqv")
+
+[node name="Title" type="Label" parent="." index="9" unique_id=572319368]
+visible = false
+offset_left = -266.0
+offset_top = -148.0
+offset_right = 14.0
+offset_bottom = -125.0
+scale = Vector2(1.8689584, 1.8689584)
+text = "The Strange Case of Detective Moore"
+horizontal_alignment = 1
+
+[node name="Credits" type="Label" parent="." index="10" unique_id=1519719286]
+visible = false
+offset_left = -139.0
+offset_top = -135.0
+offset_right = 141.0
+offset_bottom = -86.0
+text = "a game by
+Dana, Martin, Mel and Patrick"
+label_settings = SubResource("LabelSettings_rnaqv")
+horizontal_alignment = 1
+
+[node name="Thanks" type="Label" parent="." index="11" unique_id=1087015851]
+visible = false
+offset_left = -139.0
+offset_top = -135.0
+offset_right = 141.0
+offset_bottom = -86.0
+text = "Thank you for playing!"
+label_settings = SubResource("LabelSettings_rnaqv")
+horizontal_alignment = 1

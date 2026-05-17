@@ -1,6 +1,11 @@
 [gd_scene format=3 uid="uid://d1wut7tamf4x4"]
 
 [ext_resource type="Texture2D" uid="uid://drxs4xavmtnq8" path="res://map/map.png" id="1_gjgjs"]
+[ext_resource type="Shader" uid="uid://ghi7dn6nf483" path="res://scenes/level.gdshader" id="2_j6npq"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_nnb31"]
+shader = ExtResource("2_j6npq")
+shader_parameter/invert_amount = 0.0
 
 [node name="Location" type="Node2D" unique_id=1431993571]
 
@@ -18,3 +23,14 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_gjgjs")
 expand_mode = 1
+
+[node name="ShaderLayer" type="CanvasLayer" parent="." unique_id=972782181]
+
+[node name="DayNightShader" type="ColorRect" parent="ShaderLayer" unique_id=475987002]
+material = SubResource("ShaderMaterial_nnb31")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
