@@ -22,10 +22,6 @@ func trigger_invert_shader(enable: bool) -> void:
 	if shader_rect:
 		var mat = shader_rect.material
 		if mat is ShaderMaterial:
-			# HIER DIE KORREKTUR: Wir nutzen direkt das 'enable'!
-			# Wenn true -> 1.0, wenn false -> 0.0. Kein Togglen mehr!
+
 			var new_value = 1.0 if enable else 0.0
 			mat.set_shader_parameter("invert_amount", new_value)
-			print("Shader auf ", new_value, " gesetzt (erzwungen durch Parameter).")
-	else:
-		print("Fehler: DayNightShader wurde nicht gefunden!")
