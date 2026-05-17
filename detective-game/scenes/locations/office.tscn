@@ -7,7 +7,6 @@
 [ext_resource type="Script" uid="uid://ckhjmwj4mduqe" path="res://files.gd" id="4_yk55p"]
 [ext_resource type="Script" uid="uid://dfnb2v0a8awp" path="res://dialogue/dialogue_box/dialogue_entry.gd" id="5_gy4ni"]
 [ext_resource type="Script" uid="uid://biiu5ynvnlvlc" path="res://phone_office.gd" id="5_qv0li"]
-[ext_resource type="Shader" uid="uid://ghi7dn6nf483" path="res://scenes/level.gdshader" id="5_yk55p"]
 [ext_resource type="Script" uid="uid://ctol7mx6xrebc" path="res://dialogue/dialogue_box/dialogue.gd" id="6_elu7l"]
 [ext_resource type="Texture2D" uid="uid://b31l38ff0mto3" path="res://dialogue/portraits/detective.png" id="7_7p1mh"]
 [ext_resource type="Texture2D" uid="uid://d3fr7yvagr2m8" path="res://assets/files.png" id="8_qpsbx"]
@@ -16,10 +15,6 @@
 [ext_resource type="Texture2D" uid="uid://c7awr73eh706w" path="res://scenes/locations/office.png" id="12_qpsbx"]
 [ext_resource type="Resource" uid="uid://bvficlas6k8b8" path="res://third_try.tres" id="13_7p1mh"]
 [ext_resource type="PackedScene" uid="uid://d0r5c7oixeqlt" path="res://apartment_door.tscn" id="15_7p1mh"]
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_gdafm"]
-shader = ExtResource("5_yk55p")
-shader_parameter/invert_amount = 0.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hub07"]
 size = Vector2(27, 230)
@@ -58,16 +53,7 @@ metadata/_custom_type_script = "uid://ctol7mx6xrebc"
 
 [node name="Office" unique_id=1552120353 instance=ExtResource("1_ps4dc")]
 
-[node name="ShaderLayer" type="CanvasLayer" parent="." index="1" unique_id=1415348060]
-
-[node name="DayNightShader" type="ColorRect" parent="ShaderLayer" index="0" unique_id=1600853200]
-material = SubResource("ShaderMaterial_gdafm")
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 2
+[node name="ShaderLayer2" type="CanvasLayer" parent="." index="1" unique_id=1415348060]
 
 [node name="Player" parent="." index="2" unique_id=1033279704 instance=ExtResource("2_cf7xv")]
 position = Vector2(-52, 39)
