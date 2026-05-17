@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://c1qiyct5g6pqu"]
 
 [ext_resource type="PackedScene" uid="uid://bnx4bdviwaaec" path="res://interactable.tscn" id="1_8lca6"]
-[ext_resource type="Resource" uid="uid://xmn20f5shakm" path="res://dialogue/dialogues/phonecall.tres" id="2_q5x8q"]
+[ext_resource type="Resource" uid="uid://xmn20f5shakm" path="res://phone_dialogue.tres" id="2_q5x8q"]
 [ext_resource type="Texture2D" uid="uid://bn5o2x1lvp6s5" path="res://assets/phone.png" id="3_cfose"]
 
 [node name="Phone" type="Node2D" unique_id=1858461430]

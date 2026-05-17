@@ -1,23 +1,22 @@
 extends Area2D
 
-@export var dialogue: DialogueData
-@export var dialogue_interacted: DialogueData
+@export var dialogue: Dialogue
 @export var tooltip_text: String = ""
 
 @onready var tooltip = $Label
 
+signal interacted
 
 var player_in_range = false
-var interacted = false
 
 func _ready():
 	tooltip.hide()
 
 func _process(_delta):
 	if player_in_range and Input.is_action_just_pressed("interact"):
-		SignalBus.dialogue_started.emit(dialogue_interacted if interacted else dialogue)
-		interacted = true
-
+		interacted.emit()
+		if dialogue:
+			SignalBus.dialogue_started.emit(dialogue) #TODO: this shouldn't happen here. interactable shouldn't be hardwired to start a dialogue
 
 func _on_body_entered(body):
 	if body.name == "Player":

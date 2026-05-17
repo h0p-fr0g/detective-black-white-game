@@ -1,4 +1,5 @@
 extends Node2D
+class_name NPCBase
 
 @export var npc_name: String = "Person"
 @export var character_sprite: SpriteFrames

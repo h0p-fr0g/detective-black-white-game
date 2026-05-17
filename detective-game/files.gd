@@ -1,6 +1,6 @@
 extends "res://item.gd"
 
-@export var monologue_after_reading: DialogueData
+@export var monologue_after_reading: Dialogue
 
 var is_reading_in_office = false 
 
@@ -10,9 +10,9 @@ func _ready():
 		SignalBus.dialogue_started.connect(_on_phone_call_started)
 		SignalBus.popup_closed.connect(_on_popup_closed)
 
-func _on_phone_call_started(dialogue_data: DialogueData):
+func _on_phone_call_started(dialogue_data: Dialogue):
 	var phone = get_tree().current_scene.find_child("Phone", true, false)
-	if phone and (dialogue_data == phone.interactable.dialogue or dialogue_data == phone.interactable.dialogue_interacted):
+	if phone and (dialogue_data == phone.interactable.dialogue):
 		is_locked = false
 
 func _process(_delta):

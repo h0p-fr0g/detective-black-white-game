@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cjypl824k4ark"
-path="res://.godot/imported/ronald.png-6a0e601bc5f1f82edf33524d72ee8554.ctex"
+uid="uid://d182s0omgtwec"
+path="res://.godot/imported/portrait.png-d72de9bf377defd45c95279f7d906ed4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://dialogue/portraits/ronald.png"
-dest_files=["res://.godot/imported/ronald.png-6a0e601bc5f1f82edf33524d72ee8554.ctex"]
+source_file="res://npcs/neighbor/portrait.png"
+dest_files=["res://.godot/imported/portrait.png-d72de9bf377defd45c95279f7d906ed4.ctex"]
 
 [params]
 

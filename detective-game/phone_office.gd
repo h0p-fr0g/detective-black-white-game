@@ -52,9 +52,9 @@ func _process(delta):
 				tooltip_label.hide()
 				$Sprite2D.rotation = 0
 
-func _on_dialogue_started(dialogue_data: DialogueData):
+func _on_dialogue_started(dialogue: Dialogue):
 
-	if dialogue_data == interactable.dialogue or dialogue_data == interactable.dialogue_interacted:
+	if dialogue == interactable.dialogue:
 		if is_ringing:
 			is_ringing = false
 			$Sprite2D.rotation = 0

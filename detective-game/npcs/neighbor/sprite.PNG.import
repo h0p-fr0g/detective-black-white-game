@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://tgex3c1hpas"
-path="res://.godot/imported/william.png-ec8c129ed2c962c6a8a7b325ba78a7d8.ctex"
+uid="uid://b41oj4hckvp0e"
+path="res://.godot/imported/sprite.PNG-0c489b3bbca028ce997fcffb645c5d69.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://dialogue/portraits/william.png"
-dest_files=["res://.godot/imported/william.png-ec8c129ed2c962c6a8a7b325ba78a7d8.ctex"]
+source_file="res://npcs/neighbor/sprite.PNG"
+dest_files=["res://.godot/imported/sprite.PNG-0c489b3bbca028ce997fcffb645c5d69.ctex"]
 
 [params]
 
