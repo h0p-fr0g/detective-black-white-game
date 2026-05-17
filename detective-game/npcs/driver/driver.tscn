@@ -1,5 +1,13 @@
 [gd_scene format=3 uid="uid://i26u4rfyxa7"]
 
 [ext_resource type="PackedScene" uid="uid://ckchbjewye5x0" path="res://npc_base.tscn" id="1_xg6gc"]
+[ext_resource type="Resource" uid="uid://b5mj4fadkhhyb" path="res://npcs/driver/dialogue.tres" id="2_e5b5y"]
 
 [node name="Driver" unique_id=1002817240 instance=ExtResource("1_xg6gc")]
+npc_name = "William"
+
+[node name="Interactable" parent="." index="0" unique_id=750671946]
+dialogue = ExtResource("2_e5b5y")
+
+[node name="AnimatedSprite2D" parent="." index="1" unique_id=1501660920]
+scale = Vector2(0.1569512, 0.1569512)

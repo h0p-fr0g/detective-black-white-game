@@ -1,0 +1,94 @@
+[gd_resource type="Resource" script_class="Dialogue" format=3 uid="uid://b5mj4fadkhhyb"]
+
+[ext_resource type="Script" uid="uid://dfnb2v0a8awp" path="res://dialogue/dialogue_box/dialogue_entry.gd" id="1_lvi48"]
+[ext_resource type="Texture2D" uid="uid://cjypl824k4ark" path="res://npcs/driver/portrait.png" id="2_bl5gq"]
+[ext_resource type="Script" uid="uid://ctol7mx6xrebc" path="res://dialogue/dialogue_box/dialogue.gd" id="2_ukif2"]
+[ext_resource type="Texture2D" uid="uid://b31l38ff0mto3" path="res://dialogue/portraits/detective.png" id="3_hjjxt"]
+
+[sub_resource type="Resource" id="Resource_1w2t7"]
+script = ExtResource("1_lvi48")
+character_sprite = ExtResource("2_bl5gq")
+text = Array[String](["Detective! You’re here. "])
+metadata/_custom_type_script = "uid://dfnb2v0a8awp"
+
+[sub_resource type="Resource" id="Resource_rwekt"]
+script = ExtResource("1_lvi48")
+text = Array[String](["I assume you’re the driver who called in that night?"])
+metadata/_custom_type_script = "uid://dfnb2v0a8awp"
+
+[sub_resource type="Resource" id="Resource_253cf"]
+script = ExtResource("1_lvi48")
+character_sprite = ExtResource("2_bl5gq")
+text = Array[String](["Mm, yeah that’s me. "])
+metadata/_custom_type_script = "uid://dfnb2v0a8awp"
+
+[sub_resource type="Resource" id="Resource_bl5gq"]
+script = ExtResource("1_lvi48")
+text = Array[String](["Can you recount the description again for me? What did the person look like?"])
+metadata/_custom_type_script = "uid://dfnb2v0a8awp"
+
+[sub_resource type="Resource" id="Resource_hjjxt"]
+script = ExtResource("1_lvi48")
+character_sprite = ExtResource("2_bl5gq")
+text = Array[String](["Sure. He was a little older than I had been back then. ", "Brown hair, brown eyes, the usual."])
+metadata/_custom_type_script = "uid://dfnb2v0a8awp"
+
+[sub_resource type="Resource" id="Resource_rb0y5"]
+script = ExtResource("1_lvi48")
+text = Array[String](["Anything distinct? Something that would have made you able to pick him out from a crowd, perhaps? "])
+metadata/_custom_type_script = "uid://dfnb2v0a8awp"
+
+[sub_resource type="Resource" id="Resource_ykkhy"]
+script = ExtResource("1_lvi48")
+character_sprite = ExtResource("2_bl5gq")
+text = Array[String](["Not really. He was pretty average.", "...", "Then again, I’d be able to pick out that guy any day. I knew who my sister hung out with."])
+metadata/_custom_type_script = "uid://dfnb2v0a8awp"
+
+[sub_resource type="Resource" id="Resource_m7ful"]
+script = ExtResource("1_lvi48")
+text = Array[String](["Who was it? Why didn’t you say it-"])
+metadata/_custom_type_script = "uid://dfnb2v0a8awp"
+
+[sub_resource type="Resource" id="Resource_ff7gx"]
+script = ExtResource("1_lvi48")
+character_sprite = ExtResource("2_bl5gq")
+text = Array[String](["There was no sight of him anywhere. No evidence of him having ever met my sister.", "Everyone kept their mouth shut. ", "...", "But I finally found you, you gutter rat."])
+metadata/_custom_type_script = "uid://dfnb2v0a8awp"
+
+[sub_resource type="Resource" id="Resource_h77nh"]
+script = ExtResource("1_lvi48")
+text = Array[String](["What? Wait, you were the one called me about the case."])
+metadata/_custom_type_script = "uid://dfnb2v0a8awp"
+
+[sub_resource type="Resource" id="Resource_vxg6a"]
+script = ExtResource("1_lvi48")
+character_sprite = ExtResource("2_bl5gq")
+text = Array[String](["Took you some time to figure that out. ", "Though it seems like you actually forgot it. ", "Everything that you did. ", "The way you replaced me."])
+metadata/_custom_type_script = "uid://dfnb2v0a8awp"
+
+[sub_resource type="Resource" id="Resource_c4obf"]
+script = ExtResource("1_lvi48")
+text = Array[String](["..."])
+metadata/_custom_type_script = "uid://dfnb2v0a8awp"
+
+[sub_resource type="Resource" id="Resource_a517d"]
+script = ExtResource("1_lvi48")
+character_sprite = ExtResource("2_bl5gq")
+text = Array[String](["I told her that she should stop taking pity on others. ", "That she should stop hanging out with you. But she never listened."])
+metadata/_custom_type_script = "uid://dfnb2v0a8awp"
+
+[sub_resource type="Resource" id="Resource_pd15j"]
+script = ExtResource("1_lvi48")
+text = Array[String]([".........."])
+metadata/_custom_type_script = "uid://dfnb2v0a8awp"
+
+[sub_resource type="Resource" id="Resource_gn2cm"]
+script = ExtResource("1_lvi48")
+character_sprite = ExtResource("2_bl5gq")
+text = Array[String](["And look where that got her. ", "You dared to run away after that. ", "But now I have you here, with me. ", "Are you even gonna say anything or will you just stay silent? Huh?!"])
+metadata/_custom_type_script = "uid://dfnb2v0a8awp"
+
+[resource]
+script = ExtResource("2_ukif2")
+dialogue_entries = Array[ExtResource("1_lvi48")]([SubResource("Resource_1w2t7"), SubResource("Resource_rwekt"), SubResource("Resource_253cf"), SubResource("Resource_bl5gq"), SubResource("Resource_hjjxt"), SubResource("Resource_rb0y5"), SubResource("Resource_ykkhy"), SubResource("Resource_m7ful"), SubResource("Resource_ff7gx"), SubResource("Resource_h77nh"), SubResource("Resource_vxg6a"), SubResource("Resource_c4obf"), SubResource("Resource_a517d"), SubResource("Resource_pd15j"), SubResource("Resource_gn2cm")])
+metadata/_custom_type_script = "uid://ctol7mx6xrebc"

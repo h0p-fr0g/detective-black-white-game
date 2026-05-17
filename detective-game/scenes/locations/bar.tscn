@@ -2,8 +2,39 @@
 
 [ext_resource type="PackedScene" uid="uid://d1wut7tamf4x4" path="res://scenes/location.tscn" id="1_5dekh"]
 [ext_resource type="Texture2D" uid="uid://c8tvmjumj2gra" path="res://scenes/locations/bar.png" id="2_0r30a"]
+[ext_resource type="PackedScene" uid="uid://pcvy37xubkna" path="res://character.tscn" id="3_s3o5y"]
+[ext_resource type="PackedScene" uid="uid://d0r5c7oixeqlt" path="res://apartment_door.tscn" id="4_06a06"]
+[ext_resource type="PackedScene" uid="uid://i26u4rfyxa7" path="res://npcs/driver/driver.tscn" id="5_06a06"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_unida"]
+size = Vector2(27, 230)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uvwea"]
+size = Vector2(34.875, 249)
 
 [node name="Bar" unique_id=1552120353 instance=ExtResource("1_5dekh")]
 
 [node name="Background" parent="CanvasLayer" parent_id_path=PackedInt32Array(1448382970) index="0" unique_id=320484400]
 texture = ExtResource("2_0r30a")
+
+[node name="InvisibleWalls" type="StaticBody2D" parent="." index="2" unique_id=80277001]
+position = Vector2(-1, -1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InvisibleWalls" index="0" unique_id=324799998]
+position = Vector2(-258, 35)
+shape = SubResource("RectangleShape2D_unida")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="InvisibleWalls" index="1" unique_id=1142032974]
+position = Vector2(262, 26)
+shape = SubResource("RectangleShape2D_uvwea")
+
+[node name="Player" parent="." index="3" unique_id=1033279704 instance=ExtResource("3_s3o5y")]
+position = Vector2(131, 39)
+
+[node name="ApartmentDoor" parent="." index="4" unique_id=782799893 instance=ExtResource("4_06a06")]
+position = Vector2(243, 65)
+target_scene = "uid://c7g81efvnp34a"
+tooltip = "[E] leave bar"
+
+[node name="Driver" parent="." index="5" unique_id=1002817240 instance=ExtResource("5_06a06")]
+position = Vector2(-153, 16)
