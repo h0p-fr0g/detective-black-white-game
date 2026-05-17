@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://bvq4fnit1mkbl"]
+
+[ext_resource type="Script" uid="uid://c6qudhmcunds" path="res://desk.gd" id="1_t5y75"]
+[ext_resource type="PackedScene" uid="uid://bnx4bdviwaaec" path="res://interactable.tscn" id="2_se7ci"]
+
+[node name="Desk" type="Node2D" unique_id=229102061]
+script = ExtResource("1_t5y75")
+
+[node name="Interactable" parent="." unique_id=1201364754 instance=ExtResource("2_se7ci")]
+tooltip_text = "[E] inspect desk"
+
+[connection signal="interacted" from="Interactable" to="." method="_on_interactable_interacted"]

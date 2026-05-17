@@ -7,10 +7,11 @@
 [ext_resource type="Shader" uid="uid://ghi7dn6nf483" path="res://scenes/level.gdshader" id="5_m4eku"]
 [ext_resource type="PackedScene" uid="uid://dw0s5l2c1mnvg" path="res://floor_door.tscn" id="7_2bhhy"]
 [ext_resource type="Script" uid="uid://b7o0kup6fcwgo" path="res://dialogue/dialogue_box/dialogue_option.gd" id="8_i8ic6"]
-[ext_resource type="PackedScene" uid="uid://bnx4bdviwaaec" path="res://interactable.tscn" id="8_m4eku"]
 [ext_resource type="Script" uid="uid://dfnb2v0a8awp" path="res://dialogue/dialogue_box/dialogue_entry.gd" id="9_5w5rt"]
 [ext_resource type="Texture2D" uid="uid://b31l38ff0mto3" path="res://dialogue/portraits/detective.png" id="10_it25q"]
-[ext_resource type="Script" path="res://dialogue/dialogue_box/dialogue.gd" id="11_2uw7w"]
+[ext_resource type="Script" uid="uid://ctol7mx6xrebc" path="res://dialogue/dialogue_box/dialogue.gd" id="11_2uw7w"]
+[ext_resource type="PackedScene" uid="uid://crsr5br0owet0" path="res://picture.tscn" id="12_5w5rt"]
+[ext_resource type="PackedScene" uid="uid://bvq4fnit1mkbl" path="res://desk.tscn" id="13_2uw7w"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_5w5rt"]
 shader = ExtResource("5_m4eku")
@@ -30,24 +31,6 @@ metadata/_custom_type_script = "uid://dfnb2v0a8awp"
 [sub_resource type="Resource" id="Resource_2uw7w"]
 script = ExtResource("11_2uw7w")
 dialogue_entries = Array[ExtResource("9_5w5rt")]([SubResource("Resource_it25q")])
-
-[sub_resource type="Resource" id="Resource_i8ic6"]
-script = ExtResource("9_5w5rt")
-text = Array[String](["Dried blood covers the edge of the desk, remnants of it trailing down the side.", "This is where the victim had hit her head on the way down."])
-metadata/_custom_type_script = "uid://dfnb2v0a8awp"
-
-[sub_resource type="Resource" id="Resource_5w5rt"]
-script = ExtResource("11_2uw7w")
-dialogue_entries = Array[ExtResource("9_5w5rt")]([SubResource("Resource_i8ic6")])
-
-[sub_resource type="Resource" id="Resource_5onba"]
-script = ExtResource("9_5w5rt")
-text = Array[String](["The picture is bent around the edges, a black and white image of an older girl and a younger boy standing in a park, the former smiling while the later is awkwardly hunched. ", "On the other side of the photo is a list of numbers, barely visible, but he is able to make them out."])
-metadata/_custom_type_script = "uid://dfnb2v0a8awp"
-
-[sub_resource type="Resource" id="Resource_60bcd"]
-script = ExtResource("11_2uw7w")
-dialogue_entries = Array[ExtResource("9_5w5rt")]([SubResource("Resource_5onba")])
 
 [node name="Location" unique_id=1431993571 instance=ExtResource("1_cdlhe")]
 
@@ -85,12 +68,7 @@ shape = SubResource("RectangleShape2D_2bhhy")
 position = Vector2(161, 74)
 missing_clues_dialogue = SubResource("Resource_2uw7w")
 
-[node name="Desk" parent="." index="7" unique_id=1201364754 instance=ExtResource("8_m4eku")]
-position = Vector2(31, 73)
-dialogue = SubResource("Resource_5w5rt")
-tooltip_text = "[E] investigate desk"
+[node name="Desk" parent="." index="7" unique_id=229102061 instance=ExtResource("13_2uw7w")]
+position = Vector2(42, 76)
 
-[node name="Picture" parent="." index="8" unique_id=1789490117 instance=ExtResource("8_m4eku")]
-position = Vector2(-190, 111)
-dialogue = SubResource("Resource_60bcd")
-tooltip_text = "[E] investigate picture under mattress"
+[node name="Picture" parent="." index="8" unique_id=584623188 instance=ExtResource("12_5w5rt")]
