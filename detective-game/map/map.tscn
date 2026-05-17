@@ -23,10 +23,10 @@ texture = ExtResource("1_hgrid")
 expand_mode = 1
 
 [node name="Bar" parent="." unique_id=1857448138 instance=ExtResource("2_a0dt8")]
-offset_left = -382.0
-offset_top = 78.0
-offset_right = 22.0
-offset_bottom = 477.0
+offset_left = -386.0
+offset_top = 40.0
+offset_right = 18.0
+offset_bottom = 439.0
 focus_neighbor_left = NodePath("../Store")
 focus_neighbor_top = NodePath("../Apartments")
 focus_neighbor_right = NodePath("../Apartments")
@@ -36,18 +36,18 @@ texture_hover = ExtResource("3_kffv2")
 scene = ExtResource("3_lct0g")
 
 [node name="Store" parent="." unique_id=1982211455 instance=ExtResource("2_a0dt8")]
-offset_left = 25.0
-offset_top = -470.0
-offset_right = 429.0
-offset_bottom = -71.0
+offset_left = 20.999939
+offset_top = -505.0
+offset_right = 425.0
+offset_bottom = -106.0
 focus_neighbor_right = NodePath("../Bar")
 scene = ExtResource("5_k8tny")
 
 [node name="My Office" parent="." unique_id=603126600 instance=ExtResource("2_a0dt8")]
-offset_left = -689.0
-offset_top = -336.0
-offset_right = -285.0
-offset_bottom = 63.0
+offset_left = -684.0
+offset_top = -361.0
+offset_right = -280.0
+offset_bottom = 38.0
 focus_neighbor_top = NodePath("../Bar")
 focus_neighbor_right = NodePath("../Bar")
 texture_normal = ExtResource("4_7lyie")
@@ -55,10 +55,10 @@ texture_hover = ExtResource("4_7lyie")
 scene = ExtResource("7_lct0g")
 
 [node name="Apartments" parent="." unique_id=1379863327 instance=ExtResource("2_a0dt8")]
-offset_left = 245.0
-offset_top = -41.0
-offset_right = 649.0
-offset_bottom = 358.0
+offset_left = 251.0
+offset_top = -84.00003
+offset_right = 655.0
+offset_bottom = 315.0
 focus_neighbor_left = NodePath("../Bar")
 focus_neighbor_bottom = NodePath("../Bar")
 texture_normal = ExtResource("5_5jdw0")

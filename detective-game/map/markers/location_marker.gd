@@ -2,6 +2,8 @@ extends TextureButton
 
 @export var scene : PackedScene
 
+@onready var original_scale := scale
+
 func _ready() -> void:
 	$Label.text = name
 	
@@ -12,10 +14,10 @@ func _ready() -> void:
 
 func _process(delta) -> void:
 	if disabled:
-		scale = Vector2.ONE
+		scale = original_scale
 		return
 		
-	var target = Vector2(1.2, 1.2) if has_focus() or is_hovered() else Vector2.ONE
+	var target = original_scale * (1.2 if has_focus() or is_hovered() else 1.0)
 	scale = scale.lerp(target, delta * 10)
 	
 func _on_pressed() -> void:
