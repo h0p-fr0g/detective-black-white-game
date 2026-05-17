@@ -4,12 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://b41oj4hckvp0e" path="res://npcs/neighbor/sprite.PNG" id="2_7fqc5"]
 [ext_resource type="Script" uid="uid://b5toss73m20ku" path="res://npcs/neighbor/neighbor.gd" id="2_io7vj"]
 [ext_resource type="SpriteFrames" uid="uid://b52rqd2bkk627" path="res://npcs/neighbor/sprite_frames.tres" id="2_kgilj"]
-[ext_resource type="Script" uid="uid://b7o0kup6fcwgo" path="res://dialogue/dialogue_box/dialogue_option.gd" id="4_83l7l"]
-[ext_resource type="Script" uid="uid://dfnb2v0a8awp" path="res://dialogue/dialogue_box/dialogue_entry.gd" id="5_y2p1q"]
-[ext_resource type="Script" path="res://dialogue/dialogue_box/dialogue.gd" id="6_pnj0w"]
-
-[sub_resource type="Resource" id="Resource_5t78j"]
-script = ExtResource("6_pnj0w")
+[ext_resource type="Resource" uid="uid://ch0mfeeh4ff02" path="res://npcs/neighbor/dialogue.tres" id="4_io7vj"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_io7vj"]
 atlas = ExtResource("2_7fqc5")
@@ -59,7 +54,7 @@ script = ExtResource("2_io7vj")
 character_sprite = ExtResource("2_kgilj")
 
 [node name="Interactable" parent="." index="0" unique_id=750671946]
-dialogue = SubResource("Resource_5t78j")
+dialogue = ExtResource("4_io7vj")
 
 [node name="AnimatedSprite2D" parent="." index="1" unique_id=1501660920]
 scale = Vector2(0.17425258, 0.17425258)

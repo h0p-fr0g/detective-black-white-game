@@ -1,4 +1,91 @@
-[gd_resource type="Resource" format=3 uid="uid://ch0mfeeh4ff02"]
+[gd_resource type="Resource" script_class="Dialogue" format=3 uid="uid://ch0mfeeh4ff02"]
+
+[ext_resource type="Script" uid="uid://b7o0kup6fcwgo" path="res://dialogue/dialogue_box/dialogue_option.gd" id="1_dapi0"]
+[ext_resource type="Script" uid="uid://dfnb2v0a8awp" path="res://dialogue/dialogue_box/dialogue_entry.gd" id="2_10sol"]
+[ext_resource type="Texture2D" uid="uid://d182s0omgtwec" path="res://npcs/neighbor/portrait.png" id="3_44w73"]
+[ext_resource type="Script" uid="uid://ctol7mx6xrebc" path="res://dialogue/dialogue_box/dialogue.gd" id="4_qcm6j"]
+[ext_resource type="Texture2D" uid="uid://b31l38ff0mto3" path="res://dialogue/portraits/detective.png" id="5_it4hd"]
+
+[sub_resource type="Resource" id="Resource_pbc2k"]
+script = ExtResource("2_10sol")
+character_sprite = ExtResource("3_44w73")
+text = Array[String](["Nothing different from the usual. ", "Judith liked to have the radio on all the time when she was home. Which was more often than not."])
+metadata/_custom_type_script = "uid://dfnb2v0a8awp"
+
+[sub_resource type="Resource" id="Resource_8rwm4"]
+script = ExtResource("4_qcm6j")
+dialogue_entries = Array[ExtResource("2_10sol")]([SubResource("Resource_pbc2k")])
+metadata/_custom_type_script = "uid://ctol7mx6xrebc"
+
+[sub_resource type="Resource" id="Resource_uf3hs"]
+script = ExtResource("1_dapi0")
+text = "Did you happen to notice anything strange that night? "
+next_dialogue = SubResource("Resource_8rwm4")
+metadata/_custom_type_script = "uid://b7o0kup6fcwgo"
+
+[sub_resource type="Resource" id="Resource_k8ao7"]
+script = ExtResource("2_10sol")
+character_sprite = ExtResource("3_44w73")
+text = Array[String](["She was a kind girl. ", "First day she moved here, she brought cookies over. ", "...", "She wasn’t bothered by the state of this place, nor the people that lived here.", "...", "I think her brother was more concerned about it than she ever was. ", "It was why he visited when he could. ", "Including that day.", "...", "But I’m not sure. I wasn’t out on the balcony to see it. ", "Rainy days and I don’t get along, you see."])
+metadata/_custom_type_script = "uid://dfnb2v0a8awp"
+
+[sub_resource type="Resource" id="Resource_023tf"]
+script = ExtResource("4_qcm6j")
+dialogue_entries = Array[ExtResource("2_10sol")]([SubResource("Resource_k8ao7")])
+metadata/_custom_type_script = "uid://ctol7mx6xrebc"
+
+[sub_resource type="Resource" id="Resource_70jxk"]
+script = ExtResource("1_dapi0")
+text = "What can you tell me about Judith? "
+next_dialogue = SubResource("Resource_023tf")
+metadata/_custom_type_script = "uid://b7o0kup6fcwgo"
+
+[sub_resource type="Resource" id="Resource_sifky"]
+script = ExtResource("2_10sol")
+character_sprite = ExtResource("3_44w73")
+text = Array[String](["It is good to see you, Detective. "])
+metadata/_custom_type_script = "uid://dfnb2v0a8awp"
+
+[sub_resource type="Resource" id="Resource_a48t8"]
+script = ExtResource("2_10sol")
+text = Array[String](["You knew I was coming?"])
+metadata/_custom_type_script = "uid://dfnb2v0a8awp"
+
+[sub_resource type="Resource" id="Resource_w72qs"]
+script = ExtResource("2_10sol")
+character_sprite = ExtResource("3_44w73")
+text = Array[String](["I saw your car, Detective", "And I heard you moving around in the apartment next door."])
+metadata/_custom_type_script = "uid://dfnb2v0a8awp"
+
+[sub_resource type="Resource" id="Resource_t8h33"]
+script = ExtResource("2_10sol")
+text = Array[String](["It seems you pay attention to your surroundings."])
+metadata/_custom_type_script = "uid://dfnb2v0a8awp"
+
+[sub_resource type="Resource" id="Resource_ock2u"]
+script = ExtResource("2_10sol")
+character_sprite = ExtResource("3_44w73")
+text = Array[String](["Yes. More than I’d like to.", "...", "Now tell me, Detective, what can I help you with?"])
+metadata/_custom_type_script = "uid://dfnb2v0a8awp"
+
+[sub_resource type="Resource" id="Resource_n4t7f"]
+script = ExtResource("2_10sol")
+text = Array[String](["I am re-investigating the unsolved case involving an old neighbor of yours. Perhaps you remember her, Judith Fleming?"])
+metadata/_custom_type_script = "uid://dfnb2v0a8awp"
+
+[sub_resource type="Resource" id="Resource_obin4"]
+script = ExtResource("2_10sol")
+character_sprite = ExtResource("3_44w73")
+text = Array[String](["Yes, I do remember her. What of it?"])
+metadata/_custom_type_script = "uid://dfnb2v0a8awp"
+
+[sub_resource type="Resource" id="Resource_gskkf"]
+script = ExtResource("2_10sol")
+text = Array[String]([""])
+metadata/_custom_type_script = "uid://dfnb2v0a8awp"
 
 [resource]
+script = ExtResource("4_qcm6j")
+dialogue_entries = Array[ExtResource("2_10sol")]([SubResource("Resource_sifky"), SubResource("Resource_a48t8"), SubResource("Resource_w72qs"), SubResource("Resource_t8h33"), SubResource("Resource_ock2u"), SubResource("Resource_n4t7f"), SubResource("Resource_obin4"), SubResource("Resource_gskkf")])
+choices = Array[ExtResource("1_dapi0")]([SubResource("Resource_uf3hs"), SubResource("Resource_70jxk")])
 metadata/_custom_type_script = "uid://ctol7mx6xrebc"
