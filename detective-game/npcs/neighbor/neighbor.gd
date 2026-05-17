@@ -15,9 +15,13 @@ func _on_interacted() -> void:
 	
 	if GlobalFlags.talked_to_clerk:
 		if late_dialogue:
-			print("Clerk-Flag ist aktiv! Wechsle zu Folgedialog.")
 			$Interactable.dialogue = late_dialogue
-		else:
-			print("Warnung: Kein 'clerk_followup_dialogue' im Inspektor zugewiesen!")
 	
 	super._on_interacted()
+
+
+
+func _on_dialogue_finished(p_ended_dialogue: Dialogue) -> void:
+	if p_ended_dialogue == late_dialogue:
+		
+		GlobalFlags.second_neighbor_dialogue_finished = true

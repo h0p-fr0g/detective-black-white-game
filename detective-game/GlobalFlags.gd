@@ -7,6 +7,7 @@ var first_time_in_apartments: bool = true
 var desk_investigated: bool = false
 var picture_found: bool = false
 var talked_to_clerk: bool = false   
+var second_neighbor_dialogue_finished: bool = false
 
 #Locations
 var location_office_unlocked: bool = true 
